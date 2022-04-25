@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Step.3 LED 껏다켜기_1 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="Step.3 LED 껏다켜기_2" href="step_4.html" />
+    <link rel="prev" title="Step.2 설정" href="step_2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level1.html">레벨 1</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv1_4_Sw_Start.html">코딩 맛보기</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">Step.1 설치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">Step.2 설정</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step.3 LED 껏다켜기_1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_4.html">Step.3 LED 껏다켜기_2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_5_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_6_Temperature.html">온도 읽기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_7_Extrude.html">필라멘트 연결하기</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level3.html">레벨 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test.html">test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test2.html">test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level1.html">레벨 1</a> &raquo;</li>
+          <li><a href="../Lv1_4_Sw_Start.html">코딩 맛보기</a> &raquo;</li>
+      <li>Step.3 LED 껏다켜기_1</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="step-3-led-1">
+<h1>Step.3 LED 껏다켜기_1<a class="headerlink" href="#step-3-led-1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">먼저 엔트리에 대해 살짝 알아볼겸 간단하게 LED를 껏다 켜는 과정을 진행해봅니다.</div>
+<div class="line">이는 엔트리와 SW 코딩에 관한 이해를 높이는데 도움이 됩니다.</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">이번 SW 코딩의 목표 :</div>
+<div class="line"><span class="blackbold">LED 가 껐다가 켜지는 것이 계속 반복되는 동작을 만들어 보기</span></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_1.png"><img alt="../../_images/Step3_1.png" class="align-center" src="../../_images/Step3_1.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 첫 번째로 화면에 있는 <span class="blackbold">시작하기 버튼을 클릭했을 때</span> 블록과 아래 블록들을 드래그하여 왼편이나 오른쪽 아래 휴지통으로 이동시켜, 지워줍니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_2.png"><img alt="../../_images/Step3_2.png" class="align-center" src="../../_images/Step3_2.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 시작 블록을 클릭합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_3.png"><img alt="../../_images/Step3_3.png" class="align-center" src="../../_images/Step3_3.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">시작하기 버튼을 클릭했을 때</span> 블록을 오른쪽으로 이동시켜 줍니다. 이 블록 아래쪽에는 화살표가 있습니다. 이 것의 의미는 <span class="blackbold">시작하기</span> 버튼을 누르면 아래 블록을 실행하라라는 뜻입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 이제 아래에 붙일 버튼을 찾아봅니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_4.png"><img alt="../../_images/Step3_4.png" class="align-center" src="../../_images/Step3_4.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 흐름 블록을 클릭합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_5.png"><img alt="../../_images/Step3_5.png" class="align-center" src="../../_images/Step3_5.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">10번 반복하기</span> 블록을 드래그 하여. <span class="blackbold">시작하기 버튼을 클릭했을 때</span> 버튼 아래에 놓아줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 이제 시작버튼을 누르면 무언가 10번 반복을 합니다. 아직 ‘무언가’가 없기 때문에 넣어줘야 합니다.</div>
+<div class="line"><span class="blackcircle">●</span> 숫자 10은 원하는 숫자로 변경할 수 있습니다. 반복횟수 10을 지우고 원하는 숫자를 입력하면 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_6.png"><img alt="../../_images/Step3_6.png" class="align-center" src="../../_images/Step3_6.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 하드웨어 블록을 클릭합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_7.png"><img alt="../../_images/Step3_7.png" class="align-center" src="../../_images/Step3_7.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">디지털 0 번 핀 켜기</span> 블록 2개를 <span class="blackbold">10번 반복하기</span> 블록 안에 넣어줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 블록은 하나씩 2번 이동시켜 주면 됩니다.</div>
+<div class="line"><span class="blackcircle">●</span> <span class="blackbold">디지털 0 번 핀 켜기</span> 블록은 디지털 핀의 신호를 주겠다는 뜻입니다. 신호를 주게 되면, 약간의 전류가 흐를 수 있게 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_8.png"><img alt="../../_images/Step3_8.png" class="align-center" src="../../_images/Step3_8.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">디지털 0</span> 이라고 되어 있는 부분을 13으로 변경시켜 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 2개의 블록 모두 변경 시켜줍니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_9.png"><img alt="../../_images/Step3_9.png" class="align-center" src="../../_images/Step3_9.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 아두이노 보드에는 13개의 디지털 핀이 있으며, 디지털 13번핀은 LED에 연결되어 있습니다.</div>
+<div class="line"><span class="blackcircle">●</span> 이 LED 전구를 껏다 켰다 작동시켜볼 계획입니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_10.png"><img alt="../../_images/Step3_10.png" class="align-center" src="../../_images/Step3_10.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">켜기</span> 이라고 되어 있는 부분을 <span class="blackbold">끄기</span> 로 변경시켜 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 여기까지 블록을 완성시키면, <span class="blackbold">시작하기</span> 버튼을 누르면 13핀에 연결된 전구가 꺼졋다 켜졌다를 10회 반복하게 되게끔 만들었습니다.</div>
+<div class="line"><span class="blackcircle">●</span> <span class="blackbold">시작하기</span> 버튼을 누르고 작동이 제대로 하는지 확인합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_11.gif"><img alt="../../_images/Step3_11.gif" class="align-center" src="../../_images/Step3_11.gif" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 아마도 위와 같이 작동하지 않을 겁니다. 어디가 잘못된 것일까요?</div>
+<div class="line"><span class="blackcircle">●</span> 영상 이미지와 여러분이 만든 블록간의 차이가 무엇인지 한번 살펴보세요.</div>
+<div class="line"><span class="blackcircle">●</span> 충분히 생각해보셨다면, 다음 과정으로 이동합니다.</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_2.html" class="btn btn-neutral float-left" title="Step.2 설정" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step_4.html" class="btn btn-neutral float-right" title="Step.3 LED 껏다켜기_2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

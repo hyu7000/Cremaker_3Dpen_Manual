@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>배열 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="함수" href="step_7.html" />
+    <link rel="prev" title="반복문" href="step_5.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level2.html">레벨 2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_5_LED_Example.html">LED 전구 On, Off</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv2_6_Arduino_Basic.html">아두이노 기초</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">여러 형태의 자료</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">변수</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">연산자</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_4.html">조건문</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_5.html">반복문</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">배열</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_7.html">함수</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_7_Button.html">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_9_Temp.html">온도 조절</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_11_FullCode.html">프로그램 작성</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../level3.html">레벨 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test.html">test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test2.html">test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level2.html">레벨 2</a> &raquo;</li>
+          <li><a href="../Lv2_6_Arduino_Basic.html">아두이노 기초</a> &raquo;</li>
+      <li>배열</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>배열<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">배열은 여러개의 변수들을 나열한 것입니다.</div>
+<div class="line">예를들어 학교의 반에 학생들의 수학 점수들을 1번 학생부터 끝번 학생까지 나열한 것이 배열이라 보시면 됩니다.</div>
+<div class="line">먼저 배열도 변수처럼 선언을 해야합니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitlesmall">배열의 선언</span></div>
+<div class="line">배열의 선언을 하는 방법은 변수를 선언하는 것과 유사합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step6_1.jpg"><img alt="../../_images/Step6_1.jpg" class="align-center" src="../../_images/Step6_1.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">배열은 변수의 선언과 비슷하지만 배열의 이름 옆에 길이를 작성해줍니다. 각각의 배열은 10개의 변수를 가진 배열이 됩니다.</div>
+<div class="line">또한 배열의 이름도 <a class="reference internal" href="step_2.html#targetl2c6s2-1"><span class="std std-ref">변수의 이름 규칙</span></a> 에 맞게 작성해야합니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitlesmall">배열의 초기화</span></div>
+<div class="line">배열의 초기화도 마찬가지로 변수의 초기화랑 유사합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step6_2.jpg"><img alt="../../_images/Step6_2.jpg" class="align-center" src="../../_images/Step6_2.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">배열의 초기화도 2가지 방식이 있습니다. 선언과 동시에 초기화, 혹은 선언 이후 초기화를 할 수 있습니다.</div>
+<div class="line">선언과 동시에 초기화를 할 경우에는 여러 항목을 동시에 할 수 있지만, 선언 이후에 초기화를 하려면, 각각 따로 따로 초기화를 진행해야합니다.</div>
+<div class="line"><br /></div>
+<div class="line">값을 초기화, 저장하거나 값을 확인하는 것을 접근한다 합니다.</div>
+<div class="line">배열의 첫 항목은 ‘배열이름[0]’ 으로 접근합니다. int level[3]은 3개의 int형 변수의 배열입니다.</div>
+<div class="line">level[0]에 접근을 하게 되면, level 배열의 첫번째 항목에 접근이 됩니다.</div>
+<div class="line">level[1]에 접근을 하게 되면, level 배열의 두번째 항목에 접근이 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line">※실제 코드에서는 <span class="blackbold">한글 사용이 불가능</span> 합니다. 한글로 표시한 것은 이해를 돕기 위함입니다.</div>
+<div class="line"><br /></div>
+<div class="line">아래 코드에서는 a에 어떤 값이 저장될지 생각해보세요.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">정답</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">a 변수에는 7 이 저장되었습니다.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="subtitlesmall">2차원 배열</span></div>
+<div class="line">배열은 응용이 될 수 있습니다. 예를 들어 <span class="blackbold">3명의 학생을 순서대로 영어, 수학 점수를 함께 배열로 나타내고 싶다</span> 면 배열로 어떻게 나타내야 할까요?</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step6_3.jpg"><img alt="../../_images/Step6_3.jpg" class="align-center" src="../../_images/Step6_3.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">2차원 배열을 이용하는 방법이 있습니다. 물론 2차 말고도 3,4~ 이어질 수 있습니다만, 아주 큰 차원의 배열을 다룰 일이 드뭅니다.</div>
+<div class="line">2차원 배열에 접근하는 방법도 1차원 배열과 동일합니다.</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step6_4.jpg"><img alt="../../_images/Step6_4.jpg" class="align-center" src="../../_images/Step6_4.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">int 형 변수 a에 score 변수에 있는 2번쨰 학생의 수학 점수(90점)를 저장하고 싶다면, 두번째 배열의, 두번째 항목에 접근해야 합니다.</div>
+<div class="line">접근하려면 첫번째 항목이 숫자 0 으로 시작되니 score[1][1]와 같이 접근해야 90 이라는 숫자에 접근할 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line">아래 코드에서는 a에 어떤 값이 저장될지 생각해보세요.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">boolean</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">52</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">}</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">score</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">score</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">정답</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">a 변수에는 false 이 저장되었습니다.</div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_5.html" class="btn btn-neutral float-left" title="반복문" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step_7.html" class="btn btn-neutral float-right" title="함수" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

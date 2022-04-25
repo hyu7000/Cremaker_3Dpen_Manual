@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>필라멘트 연결하기 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="레벨 2" href="../level2.html" />
+    <link rel="prev" title="Step.3 예열하기" href="Lv1_Temperature/step_3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../level1.html">레벨 1</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Lv1_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv1_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv1_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv1_4_Sw_Start.html">코딩 맛보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv1_5_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv1_6_Temperature.html">온도 읽기</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">필라멘트 연결하기</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../level2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level3.html">레벨 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test.html">test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test2.html">test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../level1.html">레벨 1</a> &raquo;</li>
+      <li>필라멘트 연결하기</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>필라멘트 연결하기<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">이제 필라멘트를 연결해보려 합니다.</div>
+<div class="line">필라멘트는 온도가 올라간 상태에서 모터로 밀어내야 노즐 쪽에서 나옵니다.</div>
+<div class="line">따라서 온도가 올라가지 않은 상태에서는 모터 작동이 안되고, 온도가 올라간 상태에서만 모터 작동이 되어야 합니다.</div>
+<div class="line">이 조건을 블록으로 만들어 봅니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_1.png"><img alt="../_images/Step1_1.png" class="align-center" src="../_images/Step1_1.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 모터 작동시키기와 온도 읽기에서 만들었던 블록들을 가져옵니다.</div>
+<div class="line"><span class="blackcircle">●</span> 혹여나 지웠다면 다시 만들어 보세요.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_2.png"><img alt="../_images/Step1_2.png" class="align-center" src="../_images/Step1_2.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <span class="blackbold">q 키를 눌렀을 때</span> 블록을 마우스 오른쪽 클릭합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 메뉴 중 코드 복사&amp;붙여넣기를 클릭합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_3.png"><img alt="../_images/Step1_3.png" class="align-center" src="../_images/Step1_3.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> 복사된 블록을 오른편으로 이동시켜줍니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_4.png"><img alt="../_images/Step1_4.png" class="align-center" src="../_images/Step1_4.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <span class="blackbold">q 키를 눌렀을 때</span> 블록에서 q를 클릭합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 원하는 키를 선택해줍니다. 그림에서는 w를 선택했습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_5.png"><img alt="../_images/Step1_5.png" class="align-center" src="../_images/Step1_5.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <span class="blackbold">디지털 6번 핀 켜기</span> 블록에서 켜기를 클릭합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 끄기로 변경해줍니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">여기까지하면 q와 w를 누르면 모터가 정회전, 역회전을 하게끔 됩니다. 여기에서 온도가 60도에 도달했을 때 모터가 움직일 수 있게 해야합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_6.png"><img alt="../_images/Step1_6.png" class="align-center" src="../_images/Step1_6.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 흐름 블록을 클릭합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_7.png"><img alt="../_images/Step1_7.png" class="align-center" src="../_images/Step1_7.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">만약 참 (이)라면 ~</span> 블록을 <span class="blackbold">q키를 눌럿을 때</span> 와 <span class="blackbold">w키를 눌럿을 때</span> 아래에 각각 이동시켜줍니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_8.png"><img alt="../_images/Step1_8.png" class="align-center" src="../_images/Step1_8.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">디지털 5번 핀 켜기</span> 블록을 드래그하여, <span class="blackbold">만일 참 (이)라면</span> 블록에 이동시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 두 군데 모두 같은 작업을 진행합니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">이제 ‘참’에 해당되는 부분이 온도가 60도에 도달했는지 여부를 넣어주면 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_9.png"><img alt="../_images/Step1_9.png" class="align-center" src="../_images/Step1_9.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 판단 블록을 클릭합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_10.png"><img alt="../_images/Step1_10.png" class="align-center" src="../_images/Step1_10.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">10 = 10</span> 블록을 <span class="blackbold">만일 참 (이)라면</span> 블록의 ‘참’에 이동시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 두 군데 모두 같은 작업을 진행합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_11.png"><img alt="../_images/Step1_11.png" class="align-center" src="../_images/Step1_11.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 자료 블록을 클릭합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_12.png"><img alt="../_images/Step1_12.png" class="align-center" src="../_images/Step1_12.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">온도 값 값</span> 블록을 <span class="blackbold">10 = 10</span> 블록의 오른편으로 이동시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 두 군데 모두 이동시켜 줍니다.</div>
+<div class="line"><span class="orangecircle">●</span> <span class="blackbold">10 = 온도 값 값</span> 블록의 왼쪽 값을 60으로 변경시켜줍니다.</div>
+<div class="line"><br /></div>
+<div class="line">현재 q, w 키를 누르면, 온도값이 60인지 확인하고, 60이라면 모터를 작동하도록 블록을 코딩하였습니다.</div>
+<div class="line">실제로 <span class="blackbold">시작하기</span> 버튼을 눌러 작동을 확인합니다.</div>
+<div class="line"><br /></div>
+<div class="line">여기까지 진행하느라 수고하셨습니다. 네이버 엔트리로 배워보는 과정은 여기가 마지막입니다. 이제 다음으로 실제 코드를 업로드를 해보고 직접 3D 펜을 사용해보시길 바랍니다.</div>
+<div class="line">업로드하는 방법은 <a class="reference internal" href="../uploadFw.html#targetuploadfw"><span class="std std-ref">여기</span></a> 를 클릭해주세요.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Lv1_Temperature/step_3.html" class="btn btn-neutral float-left" title="Step.3 예열하기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../level2.html" class="btn btn-neutral float-right" title="레벨 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
