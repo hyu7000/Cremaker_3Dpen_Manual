@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>전처리 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="delay와 시간" href="../Lv3_5_LED_Example.html" />
+    <link rel="prev" title="함수" href="step_8.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv3_4_Arduino_Basic.html">아두이노 기초</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">자료형</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">변수와 상수</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">연산자</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_4.html">조건문</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_5.html">반복문</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_6.html">배열</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_7.html">구조체</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_8.html">함수</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">전처리</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_5_LED_Example.html">delay와 시간</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test.html">test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test2.html">test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level3.html">레벨 3</a> &raquo;</li>
+          <li><a href="../Lv3_4_Arduino_Basic.html">아두이노 기초</a> &raquo;</li>
+      <li>전처리</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>전처리<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">아두이노를 업로드하신 경험이 있으시다면, 아두이노를 업로드하기 전에 컴파일을 진행하는 것을 보았을 겁니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step9_1.png"><img alt="../../_images/Step9_1.png" class="align-center" src="../../_images/Step9_1.png" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">컴파일은 보드(아두이노)가 이해할 수 있는 기계어로 변경해주는 것을 의미합니다. 이 컴파일 과정 전에 처리되는 과정이 하나 더 있습니다.</div>
+<div class="line">말 그대로 <span class="blackbold">전처리</span> 과정입니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step9_2.jpg"><img alt="../../_images/Step9_2.jpg" class="align-center" src="../../_images/Step9_2.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">종종 소스 코드에는 #define과 같은 코드가 있습니다. 이 코드들이 전처리문이라고 하는 코드들로, 전처리 과정에서 코드들로 변환이 됩니다.</div>
+<div class="line">그렇다면, 전처리문에는 어떤 것들이 있는지 알아봅니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step9_3.jpg"><img alt="../../_images/Step9_3.jpg" class="align-center" src="../../_images/Step9_3.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">다양한 전처리문이 있습니다만, 우리는 3D 펜에 사용될만한 코드들만 확인해보면 #include 와 #define 입니다.</div>
+<div class="line">#include는 라이브러리를 포함할 때 사용된다니 그렇다 하고, #define은 사용할만한 이유가 번뜩 생각나지 않으실 겁니다.</div>
+<div class="line">3D 펜 정도의 프로젝트에서 #define을 사용하면 좋은 예시를 한번 보겠습니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">digitalWrite 코드는 디지털 13번 핀 출력을 HIGH 로 출력하도록 하는 함수입니다. 여기에서는 어떤 정보를 얻을 수 있나요?</div>
+<div class="line">얻을 수 있는 정보는 13번 핀에 HIGH 가 출력된다. 입니다.</div>
+<div class="line">아래 코드는 전처리문을 포함시켰습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="cp">#define LED 13</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">이 코드에서는 하나의 정보를 더 얻어갈 수 있습니다. LED 에 연결된 핀에 HIGH가 출력된다. 라는 정보를 얻을 수 있습니다.</div>
+<div class="line">여기에서는 한 줄짜리 간단한 코드를 사용하였지만, 몇 백줄, 몇 만줄 코드를 다루게 되면, 이런 작은 습관은 도움이 됩니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">‘아니 그러면 굳이 전처리기를 써야되냐? 아래처럼 하면 안되냐?’ 고 묻고 싶으신 분들이 보여주는 코드입니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">int</span><span class="w"> </span><span class="n">led</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">led</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">‘어떠냐? 같은 정보를 얻어갈 수 있는데, 왜 전처리기를 써야 하냐?’ 고 물으실 수 있습니다. 하지만 이런 경우에는 int 자료형 변수가 선언이 되면, 보드에서 메모리를 차지하게 됩니다.</div>
+<div class="line">적은 수의 변수 선언은 문제가 되지 않지만, 많아질 수록 문제가 생길 수 있습니다.</div>
+<div class="line">전처리문는 컴파일하기전에 전처리되기 때문에 메모리를 차지하지 않게 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line">어려운 이야기 였을 수 있지만, 전처리문이 필요없지 않고 잘 쓰면 유용하다고 알아두시면 좋겠습니다.</div>
+<div class="line"><br /></div>
+<div class="line">전처리문을 사용할 때는 규칙이 있는데 이 규칙을 지켜서 코드를 작성해야 합니다.</div>
+<div class="line"><br /></div>
+<div class="line">1. 전처리문의 끝에는 ; 세미콜론을 붙이지 않음</div>
+<div class="line">2. 전처리문은 한줄에 하나씩 작성</div>
+<div class="line">3. 전처리문의 이름은 대문자로 작성해주는 관습이 있음.(전처리문임을 빠르게 인지하기 위함)</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_8.html" class="btn btn-neutral float-left" title="함수" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Lv3_5_LED_Example.html" class="btn btn-neutral float-right" title="delay와 시간" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

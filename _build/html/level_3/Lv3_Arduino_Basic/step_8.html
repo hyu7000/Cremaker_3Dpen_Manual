@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>함수 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="전처리" href="step_9.html" />
+    <link rel="prev" title="구조체" href="step_7.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv3_4_Arduino_Basic.html">아두이노 기초</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">자료형</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">변수와 상수</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">연산자</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_4.html">조건문</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_5.html">반복문</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_6.html">배열</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_7.html">구조체</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">함수</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_9.html">전처리</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_5_LED_Example.html">delay와 시간</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test.html">test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test2.html">test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level3.html">레벨 3</a> &raquo;</li>
+          <li><a href="../Lv3_4_Arduino_Basic.html">아두이노 기초</a> &raquo;</li>
+      <li>함수</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>함수<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">함수는 프로그래밍 코드가 복잡해 질수록 중요도가 높아집니다.</div>
+<div class="line">함수를 이해하고, 잘 사용하게 되면, 코드가 간단해지고, 반복적인 일을 덜어줍니다.</div>
+<div class="line">아래 이미지를 보여드리고, 차근 차근 설명드리겠습니다.</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step7_1.jpg" id="targetl3c6s7-1"><img alt="../../_images/Step7_1.jpg" class="align-center" id="targetl3c6s7-1" src="../../_images/Step7_1.jpg" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">그림처럼 함수는 어떤 값을 넣으면, 결과 값을 반환하는 기능을 합니다.</div>
+<div class="line">여기서 함수에 넣어주는 변수 a,b를 <span class="blackbold">매개변수</span> 라고 합니다.</div>
+<div class="line">아두이노에서 함수는 정의를 해주어야 사용할 수 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitlesmall">함수 정의</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step7_2.jpg"><img alt="../../_images/Step7_2.jpg" class="align-center" src="../../_images/Step7_2.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">오른쪽을 보시면, 더하기라는 함수 이름이 있습니다. 뭔지 모르지만 a와 b를 더하고, 그 계산된 값을 반환하는 것 같습니다. 함수 이름처럼 a와 b를 더한 값을 반환하는 함수입니다.</div>
+<div class="line">이처럼 함수가 어떤 동작을 하는지 코드로 작성하는 것을 함수를 정의한다고 표현합니다.</div>
+<div class="line"><br /></div>
+<div class="line">※실제 코드에서는 <span class="blackbold">한글 사용이 불가능</span> 합니다. 한글로 표시한 것은 이해를 돕기 위함입니다.</div>
+</div>
+<div class="line-block" id="targetl3c6s7-2-2-to-paragraph">
+<div class="line"><span class="subtitlesmall">함수의 자료형</span></div>
+<div class="line">마찬가지로 함수도 변수와 마찬가지로 자료형이 있습니다.</div>
+<div class="line">함수의 자료형은 반환(return)하는 결과값의 자료형과 동일해야 합니다.</div>
+<div class="line">오른쪽에 계산값이 int 형으로 정하였기 때문에, 함수의 자료형도 int가 되어야 합니다.</div>
+<div class="line"><br /></div>
+<div class="line">다만, 우리가 이전에 봤던 함수중에 void 자료형을 기억하실 겁니다.</div>
+<div class="line">아래는 LED를 껏다 켜고 할 때 사용했던 코드입니다. 마찬가지로 함수이지만, <span class="blackbold">결과값 반환이 없기 때문에 자료형이 void</span> 로 되어 있습니다.</div>
+<div class="line">void는 ‘아무것도 없는, 빈 공간’을 뜻 합니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">2</span><span class="w">   </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">3</span><span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">4</span><span class="w">   </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">5</span><span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">6</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="subtitlesmall">매개변수</span></div>
+<div class="line">다시 돌아와서, 함수에는 매개변수가 있습니다. 이는 함수이름 옆 괄호에 있는 변수들입니다. 외부에서 전달되는 값들이 대입되어, 함수 내부에서 사용됩니다.</div>
+<div class="line">매개변수는 여러 개가 될 수 있으며, 없을 수 도 있습니다. 필수 요소가 아니기 때문에, 매개변수가 없는 함수도 정상적인 함수입니다.</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="subtitlesmall">함수의 사용</span></div>
+<div class="line">그렇다면, 정의된 함수는 어떻게 사용하는지? 에 대한 궁금증이 생기실 겁니다.</div>
+<div class="line">위의 <span class="blackbold">더하기</span> 함수가 정의되어 있으면, 아래와 같이 사용됩니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step7_3.jpg"><img alt="../../_images/Step7_3.jpg" class="align-center" src="../../_images/Step7_3.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">int 형 변수 c,d,e가 각각 선언과 초기화되어 있는 상태입니다. e변수에 <span class="blackbold">더하기(c,d)</span> 함수가 적혀있습니다.</div>
+<div class="line">이렇게 함수 이름과 변수 c,d가 매개변수로 되도록 작성되면, 함수의 정의로 이동되어 <span class="blackbold">더하기(c,d)가 더하기(10,5)</span> 가 되어 함수가 실행됩니다.</div>
+<div class="line">매개변수가 10,5로 되어 있으니, 함수 내부에 있는 a,b 도 모두 변경됩니다.</div>
+<div class="line">결과값으로 10과 5가 더해진 값이 반환됩니다. 이렇게 함수이름과 매개변수를 입력하는 것을 <span class="blackbold">함수를 호출</span> 한다고 합니다.</div>
+</div>
+<div class="line-block">
+<div class="line">※실제 코드에서는 <span class="blackbold">한글 사용이 불가능</span> 합니다. 한글로 표시한 것은 이해를 돕기 위함입니다.</div>
+<div class="line"><br /></div>
+<div class="line">아래 코드에서는 a에 어떤 값이 저장될지 생각해보세요.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//float은 정수와 소수를 포함하는 실수형입니다.</span>
+<span class="linenos"> 2</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">area</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">pi</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">a 변수에는 50.24 이 저장되었습니다.</div>
+<div class="line">area 뜻은 면적으로 반지름이 주어졋을 때 원 넓이를 구하는 함수입니다.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="subtitlesmall">지역 변수, 전역 변수</span></div>
+<div class="line">함수를 배웠으니 변수에 대해서 하나 더 알고 가야 할 것이 있습니다. 바로 지역변수와 전역변수입니다.</div>
+<div class="line"><span class="blackbold">지역변수는 함수내에서만 사용가능</span> 하며, <span class="blackbold">전역변수는 코드 전체에서 사용</span> 할 수 있습니다.</div>
+<div class="line">위에 작성된 코드를 살짝 변경하였습니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//float은 정수와 소수를 포함하는 실수형입니다.</span>
+</span><span class="hll"><span class="linenos"> 2</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+</span><span class="hll"><span class="linenos"> 3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+</span><span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">area</span><span class="p">()</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 7</span><span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w"></span>
+</span><span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="mf">3.14</span><span class="p">;</span><span class="w"> </span><span class="c1">//c는 전역변수임으로 함수내에서 사용 가능</span>
+<span class="linenos">10</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span><span class="w"> </span><span class="c1">//pi는 지역변수로 함수 밖에서는 에러를 발생</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">a,b는 함수 밖 코드에서 작성되었기 때문에 전역변수입니다.</div>
+<div class="line">pi는 함수 안에서 작성되었기 때문에 지역변수입니다.</div>
+<div class="line">반면 c는 전역변수임으로 area 함수내에서도 사용되는 것을 볼 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line">아래에서는 어디에서 에러가 발생할지 생각해보세요.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="kt">float</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">72</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 4</span><span class="kt">float</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="kt">float</span><span class="w"> </span><span class="nf">avg</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">math</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">english</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">english</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">total</span><span class="o">/</span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">math</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">english</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">에러가 발생하는 라인은 13번줄 입니다.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_7.html" class="btn btn-neutral float-left" title="구조체" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step_9.html" class="btn btn-neutral float-right" title="전처리" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

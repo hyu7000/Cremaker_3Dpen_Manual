@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>조건문 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="반복문" href="step_5.html" />
+    <link rel="prev" title="연산자" href="step_3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level2.html">레벨 2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_5_LED_Example.html">LED 전구 On, Off</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv2_6_Arduino_Basic.html">아두이노 기초</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">여러 형태의 자료</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">변수</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">연산자</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">조건문</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_5.html">반복문</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_6.html">배열</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_7.html">함수</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_7_Button.html">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_9_Temp.html">온도 조절</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_11_FullCode.html">프로그램 작성</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../level3.html">레벨 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test.html">test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test2.html">test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level2.html">레벨 2</a> &raquo;</li>
+          <li><a href="../Lv2_6_Arduino_Basic.html">아두이노 기초</a> &raquo;</li>
+      <li>조건문</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>조건문<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">특정 상태에 따라 실행하는 코드가 다르게 설정해주는 것이 조건문입니다.</div>
+<div class="line">예를 들어 ‘학생 점수가 70점이상이면 A 로 표시하고, 70점 이하면 B 로 표시하라’ 라고 설정해주는데 필요한 것이 조건문입니다.</div>
+<div class="line">레벨2에서는 모든 조건문을 살펴보기보다 주로 많이 사용되는 것들을 위주로 설명합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_1.jpg"><img alt="../../_images/Step4_1.jpg" class="align-center" src="../../_images/Step4_1.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">위 그림에서 <span class="blackbold">점수 &gt; 70 인가?</span> 에 해당되는 부분이 조건문에 해당됩니다.</div>
+<div class="line">아두이노뿐만 아니라 대부분의 프로그래밍 언어에서 조건문은 유사한 방식으로 작동됩니다.</div>
+<div class="line">이 그림을 코드로 변경하면 다음과 같습니다.</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_2.jpg"><img alt="../../_images/Step4_2.jpg" class="align-center" src="../../_images/Step4_2.jpg" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">조건문은 if로 시작합니다. if(조건) 에서 ‘조건’ 부분이 참인지 거짓인지 판단하고, 결과에 따라 실행하는 부분이 다릅니다. else는 ‘그 밖에, 또 다른’ 뜻을 가지고 있기 때문에, 조건이 참이 아닐 경우에 실행됩니다.</div>
+<div class="line">else 부분은 필수가 아니기 때문에 코드에 있어도 되고, 없어도 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line">아래 코드에서는 a에 어떤 값이 저장될지 생각해보세요.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">b</span><span class="o">&gt;</span><span class="mi">70</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="o">&lt;</span><span class="mi">80</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">else</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">정답</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">a 변수에는 100이 저장되었습니다.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">또한 코드에서 중괄호는 여러군데 위치할 수 있습니다. 코드의 순서가 바뀌지 않는다면, 위치는 변경되어도 됩니다.</div>
+<div class="line">아래 코드 모두 같은 기능을 수행합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_3.jpg"><img alt="../../_images/Step4_3.jpg" class="align-center" src="../../_images/Step4_3.jpg" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">또한 아래와 같이 조건을 여러개를 설정하고 싶은 경우에도, 조건문을 활용할 수 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_4.jpg"><img alt="../../_images/Step4_4.jpg" class="align-center" src="../../_images/Step4_4.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">2개의 조건문을 사용하여, 조건에 따라 A, B, C를 구별할 수 있게 합니다. 이런 구조를 코드로 나타내면 다음과 같습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_5.jpg"><img alt="../../_images/Step4_5.jpg" class="align-center" src="../../_images/Step4_5.jpg" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">위와 같은 형식으로 조건이 2개뿐만 아니라 else if(조건)의 형태로 여러개의 조건들을 이어서 구성할 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line">아래 코드에서는 a에 어떤 값이 저장될지 생각해보세요.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&gt;</span><span class="mi">70</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&gt;</span><span class="mi">60</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;B&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&gt;</span><span class="mi">50</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;C&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">else</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;D&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">정답</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">a 변수에는 문자 D가 저장되었습니다.</div>
+<div class="line">‘ ‘ 기호는 문자임을 표시해주는 것 임으로 저장할 때는 함께 저장되지 않습니다.</div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_3.html" class="btn btn-neutral float-left" title="연산자" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step_5.html" class="btn btn-neutral float-right" title="반복문" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Step.2 온도 측정 하기 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="Step.3 예열하기" href="step_3.html" />
+    <link rel="prev" title="Step.1 온도 측정 원리" href="step_1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level1.html">레벨 1</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_4_Sw_Start.html">코딩 맛보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_5_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv1_6_Temperature.html">온도 읽기</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">Step.1 온도 측정 원리</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Step.2 온도 측정 하기</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">Step.3 예열하기</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_7_Extrude.html">필라멘트 연결하기</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level3.html">레벨 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test.html">test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test2.html">test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level1.html">레벨 1</a> &raquo;</li>
+          <li><a href="../Lv1_6_Temperature.html">온도 읽기</a> &raquo;</li>
+      <li>Step.2 온도 측정 하기</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="step-2">
+<h1>Step.2 온도 측정 하기<a class="headerlink" href="#step-2" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">이제 실제로 신호 값이 981 근처라면, 온도를 60도로 표기해보는 과정을 진행하려 합니다.</div>
+<div class="line">각각의 온도를 실시간으로 측정해 볼 수 있지만 과정이 매우 복잡해지기 때문에 하나의 온도 값을 예를 들어 진행하겠습니다.</div>
+<div class="line">저희가 해볼 방법으로는 온도표에서 60도일때 신호값이 981 임으로 신호값이 978~984사이에 있으면 60도로 인식하게 끔 해보겠습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_11.png"><img alt="../../_images/Step2_11.png" class="align-center" src="../../_images/Step2_11.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> 정지하기 버튼을 누르고, <span class="blackbold">신호 값 를 아날로그 A0 번 센서값 (으)로 정하기</span> 블록을 분리시켜 줍니다.</div>
+<div class="line"><span class="orangecircle">●</span> 흐름 블록을 클릭합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_21.png"><img alt="../../_images/Step2_21.png" class="align-center" src="../../_images/Step2_21.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">계속 반복하기</span> 블록을 이동시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 온도측정은 계속되어야 함으로 계속 반복하는 블록을 사용되어야 좋습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_31.png"><img alt="../../_images/Step2_31.png" class="align-center" src="../../_images/Step2_31.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">신호 값를 아날로그 A0 번 센서값 (으)로 정하기</span> 블록을 <span class="blackbold">계속 반복하기</span> 블록 안으로 이동시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 지금까지의 블록은 신호 값을 한번이 아니라 계속 측정하게 되어 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_41.png"><img alt="../../_images/Step2_41.png" class="align-center" src="../../_images/Step2_41.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">만약 참 (이)라면 ~ 아니면 ~</span> 블록을 이동시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 이 블록은 신호 값이 978~984 사이일때 온도값을 60으로 저장하기 위해 조건을 붙이는 블록입니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_5.jpg"><img alt="../../_images/Step2_5.jpg" class="align-center" src="../../_images/Step2_5.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">여기에서 참과 거짓에 대해서 알아보고 넘어가겠습니다. 이전에 보았던 달리기 1등 학생 변수입니다.</div>
+<div class="line">이 학생이 홍길동인지 검사를 하고 결과에 따라 참, 거짓이 결정됩니다.</div>
+<div class="line">맞는 값이나 문장이 나오면 참, 값이 다르거나 틀린 문장이 나오면 거짓이 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_6.jpg"><img alt="../../_images/Step2_6.jpg" class="align-center" src="../../_images/Step2_6.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">만약 참 (이)라면 ~ 아니면 ~</span> 의 블록은 다음과 같이 그려질 수 있습니다.</div>
+<div class="line">참일 경우와 거짓일 경우의 작업이 각각 다르게 할 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_71.png"><img alt="../../_images/Step2_71.png" class="align-center" src="../../_images/Step2_71.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">참 그리고 참</span> 블록을 <span class="blackbold">만일 참(이)라면 ~ 아니면 ~</span> 블록중에 <span class="blackbold">참</span> 부분으로 이동시켜 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> <span class="blackbold">참 그리고 참`</span> 블록은 왼쪽과 오른쪽이 모두 참이어야 <span class="blackbold">참</span> 으로 인식합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_8.jpg"><img alt="../../_images/Step2_8.jpg" class="align-center" src="../../_images/Step2_8.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">참 그리고 참</span> 과 같은 형태는 왼쪽 조건과 오른쪽 조건이 둘다 만족해야 합니다.</div>
+<div class="line">그림처럼 홍길동은 달리기와 턱걸이 모두 1등해야 1점을 얻을 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_9.jpg"><img alt="../../_images/Step2_9.jpg" class="align-center" src="../../_images/Step2_9.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">참 또는 참</span> 과 같은 형태는 왼쪽 조건과 오른쪽 조건중 하나만 만족해도 참 입니다.</div>
+<div class="line">그림처럼 홍길동은 달리기, 턱걸이 중 하나만 1등해도 1점을 얻을 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_10.png"><img alt="../../_images/Step2_10.png" class="align-center" src="../../_images/Step2_10.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">10≥10</span> 블록과 <span class="blackbold">10≤10</span> 블록을 각각 <span class="blackbold">참</span> 부분으로 이동시켜 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 이 부분에는 ‘신호 값이 978~984 사이일때 참이다’ 라고 인식하려 합니다.</div>
+<div class="line"><span class="blackcircle">●</span> ‘978 &lt; 신호 값’은 현재 신호값이 978 보다 큰가? 와</div>
+<div class="line"><span class="blackcircle">●</span> ‘984 &gt; 신호 값’은 현재 신호값이 984 보다 작은가? 를 동시에 확인하게 합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_111.png"><img alt="../../_images/Step2_111.png" class="align-center" src="../../_images/Step2_111.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> <span class="blackbold">아날로그 A0 번 센서값</span> 을 그림과 같이 각각 넣어주고, 숫자를 978, 984 변경시켜 줘야합니다.</div>
+<div class="line"><span class="orangecircle">●</span> 하드웨어 블록을 클릭합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">아날로그 A0 번 센서값</span> 블록을 <span class="blackbold">10≥10</span> 블록과 <span class="blackbold">10≤10</span> 블록의 오른쪽 칸에 이동시켜줍니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_12.png"><img alt="../../_images/Step2_12.png" class="align-center" src="../../_images/Step2_12.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 신호 값이 978~984 사이라면 온도 값을 60이라는 것을 알려줘야 하기 때문에 변수를 하나 더 만들어야 합니다.</div>
+<div class="line"><span class="orangecircle">●</span> 자료 블록을 클릭합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">변수 만들기</span> 를 눌러줍니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_13.png"><img alt="../../_images/Step2_13.png" class="align-center" src="../../_images/Step2_13.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 변수 이름을 <span class="blackbold">온도 값</span> 으로 입력합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">확인</span> 버튼을 누릅니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_14.png"><img alt="../../_images/Step2_14.png" class="align-center" src="../../_images/Step2_14.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 다음으로 나오는 화면은, 변수 속성등이 나옵니다. 이 부분은 설정을 변경하지 않고, 다시 블록으로 이동합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_15.png"><img alt="../../_images/Step2_15.png" class="align-center" src="../../_images/Step2_15.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">온도 값 를 10 (으)로 정하기</span> 블록을 <span class="blackbold">만일 ~(이)</span> 아래로 이동시켜줍니다.</div>
+<div class="line"><span class="orangecircle">●</span> <span class="blackbold">온도 값 를 10 (으)로 정하기</span> 블록의 숫자 10을 60으로 변경해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 신호 값이 978~984 사이라면 온도 값을 60으로 표시 하도록 블록을 구성하였습니다.</div>
+<div class="line"><br /></div>
+<div class="line">이제 가열 하는 블록을 만들어 실제로 온도를 높여 봅니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_1.html" class="btn btn-neutral float-left" title="Step.1 온도 측정 원리" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step_3.html" class="btn btn-neutral float-right" title="Step.3 예열하기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

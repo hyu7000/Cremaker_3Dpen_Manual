@@ -1,0 +1,45 @@
+delay와 시간
++++++++++++++++++++
+
+.. raw:: html
+
+    <style> 
+    .orangecircle {color:#ff5300; font-size:20px} 
+    .blackcircle {color:black; font-size:20px} 
+    .bluecircle {color:#3172f4; font-size:20px}
+    .skybluecircle {color:#00FFFF; font-size:20px}
+    .yellowcircle {color:#fbbc05; font-size:20px}
+    .subtitle {color:black; font-weight:bold; font-size:28px}
+    .blackbold {color:black; font-weight:bold;}
+    .redbold {color:red; font-weight:bold;}
+    </style>
+
+.. role:: orangecircle
+.. role:: blackcircle
+.. role:: bluecircle
+.. role:: skybluecircle
+.. role:: yellowcircle
+.. role:: subtitle
+.. role:: blackbold
+.. role:: redbold
+
+| 기본 예제로써 아두이노를 한번 쯤 해보셨다면, Blink 예제가 있습니다.
+| 여기에는 delay 함수가 있습니다.
+
+.. code-block:: c++
+
+   void loop() {
+      digitalWrite(LED_BUILTIN, HIGH);   
+      delay(1000);                       
+      digitalWrite(LED_BUILTIN, LOW);    
+      delay(1000);                       
+   }
+
+| 이 delay 함수는 코드가 복잡해질 수록 잘 사용하지 않습니다. 혹시 이유를 추측해보실까요?
+| delay 함수의 기능이 매개변수로 입력된 시간만큼 기다리는 것인데, 문제는 :blackbold:`기다린다` 에 있습니다.
+|
+| 3D 펜을 예로 들어 생각해봅니다. 3D 펜에는 지속적으로 해야할 작업이 있습니다.
+| 1. 버튼이 눌러져 있는지
+| 2. 온도는 얼마인지
+| 3. 예열On, Off
+| 4. 모터 작동

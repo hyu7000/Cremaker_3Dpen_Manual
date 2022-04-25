@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연산자 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="조건문" href="step_4.html" />
+    <link rel="prev" title="변수와 상수" href="step_2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv3_4_Arduino_Basic.html">아두이노 기초</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">자료형</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">변수와 상수</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">연산자</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_4.html">조건문</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_5.html">반복문</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_6.html">배열</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_7.html">구조체</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_8.html">함수</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_9.html">전처리</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_5_LED_Example.html">delay와 시간</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test.html">test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test2.html">test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level3.html">레벨 3</a> &raquo;</li>
+          <li><a href="../Lv3_4_Arduino_Basic.html">아두이노 기초</a> &raquo;</li>
+      <li>연산자</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>연산자<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">두개 이상의 값들을 어떤 연산을 처리해주는 것이 연산자입니다.</div>
+<div class="line">연산자의 종류는 여러분들이 잘알고 있는  +, - , x, / 와 같은 것들이 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text"><span class="subtitlesmall">연산자 종류</span></span><a class="headerlink" href="#id2" title="이 표에 대한 퍼머링크"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>기호</p></th>
+<th class="head"><p>의미</p></th>
+<th class="head"><p>사용 예</p></th>
+<th class="head"><p>a에 저장되는 값</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>=</p></td>
+<td><p>오른쪽 값을 왼쪽으로 저장</p></td>
+<td><p>a = 10;</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>+</cite></p></td>
+<td><p>왼쪽과 오른쪽 값을 더함</p></td>
+<td><p>a = 10 + 10;</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>-</cite></p></td>
+<td><p>왼쪽 값에서 오른쪽 값을 뺌</p></td>
+<td><p>a = 10 - 5;</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>*</cite></p></td>
+<td><p>왼쪽과 오른쪽 값을 곱함</p></td>
+<td><p>a = 10 * 2;</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-even"><td><p>/</p></td>
+<td><p>왼쪽 값을 오른쪽 값으로 나눈 값</p></td>
+<td><p>a = 9 / 3;</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>%</p></td>
+<td><p>왼쪽 값을 오른쪽 값으로 나눈 나머지</p></td>
+<td><p>a = 10 / 3;</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;</p></td>
+<td><p>왼쪽 값이 오른쪽 값보다 큰지 확인</p></td>
+<td><p>a = 10 &gt; 5;</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>&gt;=</p></td>
+<td><p>왼쪽 값이 오른쪽 값 이상인지 확인</p></td>
+<td><p>a = 10 &gt;= 20;</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;</p></td>
+<td><p>왼쪽 값이 오른쪽 값보다 작은지 확인</p></td>
+<td><p>a= 10 &lt; 5;</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;=</p></td>
+<td><p>왼쪽 값이 오른쪽 값 이하인지 확인</p></td>
+<td><p>a = 10 &lt;= 20;</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>==</p></td>
+<td><p>왼쪽 값과 오른쪽 값이 같은지 확인</p></td>
+<td><p>a = 10 == 10;</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>!=</p></td>
+<td><p>왼쪽 값과 오른쪽 값이 다른지 확인</p></td>
+<td><p>a = 10 != 10;</p></td>
+<td><p>false</p></td>
+</tr>
+<tr class="row-even"><td><p>&amp;&amp;</p></td>
+<td><p>양쪽 모두 참(true)이여야, 참</p></td>
+<td><p>a = (10==10) &amp;&amp; (20==20);</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-odd"><td><p>||</p></td>
+<td><p>양쪽 중 하나만 참(true)이면, 참</p></td>
+<td><p>a = (10==10) &amp;&amp; (20==30);</p></td>
+<td><p>true</p></td>
+</tr>
+<tr class="row-even"><td><p>!</p></td>
+<td><p>true면 false로, false면 true로 연산</p></td>
+<td><p>b = true; a = !b;</p></td>
+<td><p>false</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">여러 연산자들이 있지만 주로 사용하는 것들 위주로 표를 작성했습니다.</div>
+<div class="line">사칙연산이나 기존 수학기호를 그대로 사용하는 것이 많기 때문에 익숙하실 겁니다.</div>
+<div class="line">또한 위 연산자는 숫자에만 적용되는 것이 아니라 변수에도 적용이 됩니다.</div>
+<div class="line"><br /></div>
+</div>
+<table class="colwidths-given docutils align-center" id="id3">
+<caption><span class="caption-text"><span class="subtitlesmall">대입 관련 연산자</span></span><a class="headerlink" href="#id3" title="이 표에 대한 퍼머링크"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>기호</p></th>
+<th class="head"><p>사용 예</p></th>
+<th class="head"><p>동일한 코드</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>+=</p></td>
+<td><p>a += 10;</p></td>
+<td><p>a = a + 10;</p></td>
+</tr>
+<tr class="row-odd"><td><p>-=</p></td>
+<td><p>a -= 10;</p></td>
+<td><p>a = a - 10;</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>*=</cite></p></td>
+<td><p><cite>a *= 10;</cite></p></td>
+<td><p>a = a * 10;</p></td>
+</tr>
+<tr class="row-odd"><td><p>/=</p></td>
+<td><p>a /= 10;</p></td>
+<td><p>a = a / 10;</p></td>
+</tr>
+<tr class="row-even"><td><p>++</p></td>
+<td><p>a++; or ++a;</p></td>
+<td><p>a = a + 1;</p></td>
+</tr>
+<tr class="row-odd"><td><p>–</p></td>
+<td><p>a–; or –a;</p></td>
+<td><p>a = a - 1;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">대입 연산자의 경우 코드를 간소화 하기 위해 있고 대입 연산자를 사용하는 것과 동일한 코드를 풀어서 사용하는 것이 크게 상관이 없다.</div>
+<div class="line">다만 a++ 과 ++a 같은 경우 동일하게 1을 더하는 연산자이지만, 순서가 다릅니다.</div>
+<div class="line"><br /></div>
+<div class="line">예를 들어, 아래와 같은 코드에서 c, d가 다른 값으로 저장됩니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">++</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// c 에 2가 저장</span>
+<span class="linenos">4</span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// d 에 4가 저장</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">++ 와 같은 연산자는 증감연산자이며, 이 연산자 근처에 다른 연산자가 있느냐 없느냐에 따라 순서가 변경됩니다. 만약 다른 연산자가 있을 경우에 ++a와 같은 경우는 먼저 a = a + 1 과정을 거치고 다른 연산자를 계산합니다.</div>
+<div class="line">반면 a++ 와 같은 경우 다른 연산자를 먼저 연산하고, a = a + 1의 과정을 거치는 것이 차이점이 있습니다.</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">그렇다면, 아래의 연산에서는 a 변수에 어떤 값들이 저장될지 생각해보세요.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">Q1</span></div>
+<div class="line">int a = 1;</div>
+<div class="line">a = ++a + 1;</div>
+<div class="line"><span class="blackbold">Q2</span></div>
+<div class="line">int a = 2;</div>
+<div class="line">a = 2 + a * a;</div>
+<div class="line"><span class="blackbold">Q3</span></div>
+<div class="line">int b = 10;</div>
+<div class="line">float a = b / 3;</div>
+<div class="line"><span class="blackbold">Q4</span></div>
+<div class="line">bool a = true;</div>
+<div class="line">int b = 2, c = 3;</div>
+<div class="line">a = b &amp;&amp; c;</div>
+</div>
+<div class="line-block">
+<div class="line">정답</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">A1 : a는 2 입니다.</div>
+<div class="line">A2 : a는 6 입니다.</div>
+<div class="line">A3 : a는 3.0 입니다.</div>
+<div class="line">A4 : a는 true 입니다.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">생각한것과 다른 값이 나온것이 있나요? 아마 두 개 다른 값이 나왔을것이고 하나는 모르실 수 있을 겁니다.</div>
+<div class="line">보통 Q2는 연산자의 연산순서에 의한 실수가 있었을 것이라 생각합니다.</div>
+<div class="line">사칙연산도 덧셈, 뺄셈보다 곱셈, 나눗셈을 먼저해야 하는 것과 마찬가지입니다.</div>
+</div>
+<table class="colwidths-given docutils align-center" id="id4">
+<caption><span class="caption-text"><span class="subtitlesmall">연산자 우선순위</span></span><a class="headerlink" href="#id4" title="이 표에 대한 퍼머링크"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>우선순위</p></th>
+<th class="head"><p>연산자</p></th>
+<th class="head"><p>방향</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>() [] -&gt; . ++ –</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>sizeof ++ – &amp; ~ ! * + -</p></td>
+<td><p>&lt;-</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><cite>* / %</cite></p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><cite>+ -</cite></p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>&gt;&gt; &lt;&lt;</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>&gt; &gt;= &lt; &lt;=</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>== !=</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>&amp;</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>^</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p><cite>|</cite></p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>&amp;&amp;</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>||</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>?</p></td>
+<td><p>&lt;-</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p><cite>= += *= /= %= &amp;= |= &lt;&lt;= &gt;&gt;=</cite></p></td>
+<td><p>&lt;-</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>,</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line">위 표가 연산자 우선순위입니다. 모든 연산자들은 위와 같은 순서로 연산됩니다.</div>
+<div class="line">우선순위가 많더라도 겁먹지 마시고 굳이 기억하거나 외울 필요는 없습니다.</div>
+<div class="line">필요할 때 찾아보시면 되고, 연산이 헷갈려서, 값이 다르게 나올 것 같으면 괄호를 이용해서 순위를 먼저 지정해줍니다.</div>
+<div class="line">이런 순서로 되어 있구나 라고 슬쩍 보시고 넘어가시면 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line">생각한 것과 다르게 나온 것이 Q3 일 겁니다.</div>
+<div class="line">Q3는 실수 자료형에 float 자료형에 b/3 계산 값을 초기화(처음 값 저장)하는데 당연히 3.33333… 이 아닌가? 라고 생각하셨을 수 있습니다.</div>
+<div class="line">하지만 <span class="blackbold">‘b/3’ 연산이 먼저 진행</span> 됩니다. 여기에서 b는 실수가 아니라 정수임으로 b/3 은 정수로 결과값이 나옵니다.</div>
+<div class="line">a에 3.3333.. 값이 될려면 아래와 같이 작성되어야 합니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">3</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">마지막으로 아예 감이 잡히지 않은 Q4은 bool 자료형 변수에 int 자료형 변수값을 논리연산하여 대입했습니다. 숫자를 논리연산 할 수 있는 것이 궁금한데,</div>
+<div class="line">아두이노에서는 <span class="blackbold">숫자를 true, false로 구분</span> 합니다. 0은 false, 0이외의 숫자는 true 입니다. 따라서 2는 true, 3도 true 임으로 true &amp;&amp; true 는 true가 되는 것입니다.</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_2.html" class="btn btn-neutral float-left" title="변수와 상수" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step_4.html" class="btn btn-neutral float-right" title="조건문" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

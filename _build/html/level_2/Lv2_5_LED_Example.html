@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LED 전구 On, Off &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="아두이노 기초" href="Lv2_6_Arduino_Basic.html" />
+    <link rel="prev" title="아두이노 설치" href="Lv2_4_InstallArduino.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level1.html">레벨 1</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../level2.html">레벨 2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Lv2_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv2_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv2_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv2_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">LED 전구 On, Off</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv2_6_Arduino_Basic.html">아두이노 기초</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv2_7_Button.html">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv2_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv2_9_Temp.html">온도 조절</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv2_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv2_11_FullCode.html">프로그램 작성</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../level3.html">레벨 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test.html">test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test2.html">test</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../level2.html">레벨 2</a> &raquo;</li>
+      <li>LED 전구 On, Off</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="led-on-off">
+<h1>LED 전구 On, Off<a class="headerlink" href="#led-on-off" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">아두이노에 기본적으로 부착되어 있는 LED 전구를 껏다 켜보는 예제를 해보도록 하겠습니다.</div>
+<div class="line"><br /></div>
+<div class="line">※처음에는 코드 자체를 <span class="blackbold">완전히</span> 이해하려고 하지 않으셔도 됩니다.</div>
+<div class="line">깊이 원리를 파악하는 것은 난이도가 있습니다.</div>
+<div class="line">이 스텝에서는 간단하게 맛본다는 느낌으로 진행합니다.</div>
+<div class="line">여러분들이 키보드 타자를 치는 방법만 알면 컴퓨터를 어느 정도 사용할 수 있듯이, 아두이노 코드에 대해 다 알려고 하지 않으셔도 된다는 점을 기억해주세요.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_11.jpg"><img alt="../_images/Step1_11.jpg" class="align-center" src="../_images/Step1_11.jpg" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 이전 단계를 마쳣다면, 위와 같은 화면이 나타날 것입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 현재 미리 작성된 코드가 어떤건지 알기전에, 예제를 하나 불러오도록 하겠습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_25.png"><img alt="../_images/Step1_25.png" class="align-center" src="../_images/Step1_25.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 메뉴중 파일을 클릭합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 예제를 클릭합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 0.1Basic을 클릭합니다.</div>
+<div class="line"><span class="skybluecircle">●</span> Blink 예제를 클릭합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_34.png"><img alt="../_images/Step1_34.png" class="align-center" src="../_images/Step1_34.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 미리 작성된 Blink 예제가 나타납니다.</div>
+<div class="line"><span class="orangecircle">●</span> 여기에서 회색표시로 되어 있고 <span class="blackbold">/*</span> 와 <span class="blackbold">*/</span> 사이에 있는 코드들은 주석입니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">※ 주석은 직접적인 기능이나 역할을 하지 않습니다. 해당 코드에 대한 설명을 적어두거나 코드 변경시 주의사항 같은 부분을 설명해주는 역할을 합니다.</div>
+<div class="line">보통 주석은 // 뒤에 나오는 코드들이나 <span class="blackbold">/*</span> 와 <span class="blackbold">*/</span> 사이에 나오는 코드들이 해당됩니다.</div>
+<div class="line">현재 아두이노에서는 주석을 보기 쉽도록 <span class="blackbold">회색표시</span> 가 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// the setup function runs once when you press reset or power the board</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="c1">// initialize digital pin LED_BUILTIN as an output.</span>
+<span class="w">   </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 첫 주석을 건너띄고, 아래에는 코드와 함께 주석이 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line">주석을 먼저 살펴봅니다.</div>
+<div class="line"><span class="blackbold">the setup function runs once when you press reset or power the board</span></div>
+<div class="line">: 보드에 전원이 켜지면, 이 부분은 한번만 실행됩니다.</div>
+<div class="line"><span class="blackbold">initialize digital pin LED_BUILTIN as an output</span></div>
+<div class="line">: LED_BUILTIN 디지털 핀을 출력으로 설정합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 어떤 동작, 설정이 코드에 있는지 주석을 통해 알 수 있습니다.</div>
+<div class="line"><span class="blackcircle">●</span> setup() { } 코드에서 { 와 } 사이에 있는 코드는 <span class="blackbold">한번만 실행</span> 되는 것 을 알 수 있습니다.</div>
+<div class="line"><span class="blackcircle">●</span> void 라고 적힌 부분은 추후 내용에서 설명하겠습니다.</div>
+<div class="line"><span class="blackcircle">●</span> 실제 코드만 보면 아래와 같습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate" id="targetl2c5s1-5"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_5.jpg"><img alt="../_images/Step1_5.jpg" class="align-center" src="../_images/Step1_5.jpg" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">아직 뭐가 뭔지 모르지만 실제 코드는 간단해 보입니다.</div>
+<div class="line">pinMode라는 것은 디지털핀의 상태를 출력 혹은 입력으로 사용한다고 설정해주는 것입니다.</div>
+<div class="line">OUTPUT은 출력, INPUT은 입력을 의미합니다.</div>
+<div class="line">즉, 위 코드는 <span class="blackbold">LED_BUILTIN 핀</span> 을 <span class="blackbold">출력</span> 으로 사용하겠다고 메인 보드에게 알려주는 것입니다.</div>
+<div class="line">문장의 마지막에 ; 는 코드가 끝났음을 알려주는 기호입니다.</div>
+<div class="line"><br /></div>
+<div class="line">예를 들어 디지털 3번핀을 출력으로 사용하려면,</div>
+<div class="line"><span class="blackbold">pinMode(3, OUTPUT);</span> 을 입력해야합니다.</div>
+<div class="line"><br /></div>
+<div class="line">※ 출력핀으로 사용하겠다는 뜻이지 출력신호를 보내겠다는 것은 아닙니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate" id="targetl2c5s1-6-to-paragraph"><div class="highlight"><pre><span></span><span class="c1">// the loop function runs over and over again forever</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">   </span><span class="c1">// turn the LED on (HIGH is the voltage level)</span>
+<span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                       </span><span class="c1">// wait for a second</span>
+<span class="w">   </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">    </span><span class="c1">// turn the LED off by making the voltage LOW</span>
+<span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                       </span><span class="c1">// wait for a second</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 다음 부분에도 주석이 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">the loop function runs over and over again forever</span></div>
+<div class="line">: 이 루프(loop)는 무한히 반복됩니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> loop() {}에서는 { 와 } 사이에 있는 코드는 <span class="blackbold">무한히 반복</span> 됩니다.</div>
+<div class="line"><span class="blackcircle">●</span> 실제 코드만 보면 아래와 같습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_7.jpg"><img alt="../_images/Step1_7.jpg" class="align-center" src="../_images/Step1_7.jpg" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">이 부분이 실제 작동 코드입니다. digitalWrite는 digitalWrite(사용할 디지털핀, 출력 상태)입니다.</div>
+<div class="line">따라서 첫 코드를 해석해보자면, <span class="blackbold">LED_BUILTIN 핀을 HIGH로 변경한다</span> 입니다.</div>
+<div class="line">digitalWrite(LED_BUILTIN, LOW); 는 <span class="blackbold">LED_BUILTIN 핀을 LOW로 변경한다</span> 입니다.</div>
+<div class="line"><br /></div>
+<div class="line">HIGH 상태가 되면, 출력을 내보내는 것이고, LOW는 출력하지 않는 상태라고 보시면 됩니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_84.png"><img alt="../_images/Step1_84.png" class="align-center" src="../_images/Step1_84.png" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">그렇다면 LED_BUILTIN 핀 출력을 HIGH로 바꾸면, 무슨 변화가 있나? 라는 궁금증도 생기실 겁니다.</div>
+<div class="line">LED_BUILTIN 핀은 아두이노 나노에 부착된 LED 에 연결되어 있고, 아두이노 나노에서 HIGH 는 5V가 LOW는 0V가 공급됩니다. 즉 <span class="blackbold">HIGH가 되면, LED가 켜지게</span> 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line">결국 digitalWrite(LED_BUILTIN, HIGH); 와 digitalWrite(LED_BUILTIN, LOW);는</div>
+<div class="line">LED를 켜고 끄는 것을 의미합니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">   </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_BUILTIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"></span>
+<span class="w">   </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_9.jpg" id="targetl2c5s1-9"><img alt="../_images/Step1_9.jpg" class="align-center" id="targetl2c5s1-9" src="../_images/Step1_9.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">그러면 delay(1000); 는 무슨 의미인가 하면, delay의 뜻대로 1000ms(=1초) 동안 시간을 기다리라는 의미입니다.</div>
+<div class="line"><br /></div>
+<div class="line">최종적으로는 <span class="blackbold">LED가 켜짐 -&gt; 1초 기다리기 -&gt; LED가 꺼짐 -&gt; 1초 기다리기</span> 를 진행됩니다.</div>
+<div class="line"><a class="reference internal" href="#targetl2c5s1-6-to-paragraph"><span class="std std-ref">이전 주석</span></a> 에서 Loop는 무한히 반복된다 하였으므로, 이 코드가 업로드된 상태로 전원을 켜면, <span class="blackbold">LED가 켜짐 -&gt; 1초 기다리기 -&gt; LED가 꺼짐 -&gt; 1초 기다리기</span> 가 무한히 반복되게 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">어느정도 이해가 되셨나요?</div>
+<div class="line">아두이노를 배울 때 대부분이 접하는 첫 코드입니다.</div>
+<div class="line">이제 실제로 업로드를 해봅니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_103.png"><img alt="../_images/Step1_103.png" class="align-center" src="../_images/Step1_103.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 업로드전 보드의 종류를 선택을 해야 합니다.</div>
+<div class="line"><span class="orangecircle">●</span> 메뉴중 툴을 클릭합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 보드 항목을 클릭합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Arduino Nano 를 선택해줍니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_113.png"><img alt="../_images/Step1_113.png" class="align-center" src="../_images/Step1_113.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 이제는 USB 포트를 선택해야 합니다. 포트 번호는 USB 소켓 위치에 따라 다릅니다.</div>
+<div class="line"><span class="orangecircle">●</span> 메뉴중 툴을 클릭합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 포트 항목을 클릭합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 현재 활성화된 포트를 클릭합니다.</div>
+<div class="line">※다른 USB 연결된 것이 있으면 포트가 여러개 일 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_123.png"><img alt="../_images/Step1_123.png" class="align-center" src="../_images/Step1_123.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 마지막으로 왼편 상단의 <span class="blackbold">화살표 모양의 업로드 버튼</span> 을 눌러줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 업로드 후 아래와 같이 작동하는지 확인합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step3_11.gif"><img alt="../_images/Step3_11.gif" class="align-center" src="../_images/Step3_11.gif" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">정상적으로 작동한다면, 코드를 일부 수정하여, 2초마다 켜지고, 꺼지도록 해봅니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Lv2_4_InstallArduino.html" class="btn btn-neutral float-left" title="아두이노 설치" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Lv2_6_Arduino_Basic.html" class="btn btn-neutral float-right" title="아두이노 기초" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
