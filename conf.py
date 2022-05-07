@@ -12,9 +12,9 @@
 #
 import os
 import sys
-import myst_parser
 sys.path.insert(0, os.path.abspath('.'))
 
+autodoc_mock_imports = ["myst_parser"]
 
 # -- Project information -----------------------------------------------------
 
@@ -34,6 +34,7 @@ master_doc = 'index'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['myst_parser', 'sphinx_togglebutton', 'hoverxref.extension']
+
 source_suffix={
     '.rst': 'restructuredtext',
     '.txt': 'markdown',
