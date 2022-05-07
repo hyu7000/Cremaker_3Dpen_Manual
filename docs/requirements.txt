@@ -1,4 +1,8 @@
 # Defining the exact version will make sure things don't break
+<<<<<<< HEAD
 sphinx==5.0.0+
+=======
+sphinx==4.5.0
+>>>>>>> bdb7089d8cd29ffafe51e27e7c44d456f5e8d93f
 sphinx_rtd_theme==1.0.0
 readthedocs-sphinx-search==0.1.1
