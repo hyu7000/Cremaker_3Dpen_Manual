@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>예열 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="디스플레이" href="../Lv3_10_Display.html" />
+    <link rel="prev" title="온도 설정하기" href="step_3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_5_Arduino_Basic.html">아두이노 기초</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_6_Time.html">delay와 시간</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_7_Button.html">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv3_9_Temp.html">온도 조절</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">시리얼 통신</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">온도 측정하기</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">온도 설정하기</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">예열</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_11_FullCode.html">프로그램 작성</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level3.html">레벨 3</a> &raquo;</li>
+          <li><a href="../Lv3_9_Temp.html">온도 조절</a> &raquo;</li>
+      <li>예열</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="targetl3c9s4-0">
+<span id="id1"></span><h1>예열<a class="headerlink" href="#targetl3c9s4-0" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">이번 단계는 예열에 대해서 좀 더 자세하게 알아보도록 하겠습니다. 이전의 코드에서 예열을 하는 핵심 코드는 아래 코드입니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">노즐 열선과 연결된 디지털 9번핀을 HIGH 로 설정하게 되면, 모스펫을 통해 전류가 공급되어, 온도가 올라갑니다.</div>
+<div class="line">그리고 목표온도에 도달하면, LOW 로 변경하여 전류를 차단합니다. 이런 방식에는 문제가 하나 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_11.jpg"><img alt="../../_images/Step4_11.jpg" class="align-center" src="../../_images/Step4_11.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">OnOff 방식은 목표 온도에 도달해야만 Off가 됨으로 목표 온도에 도달이 어렵고, 출렁이는 것이 반복 됩니다.</div>
+<div class="line">보통 온도에 근접하려면, 목표온도에 도달하기 전에 Off가 되어야 근접하게 도달합니다.</div>
+<div class="line">이런 문제를 해결하는 제어가 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line">PID 제어라고 보통은 목표치에 도달을 부드럽게 해주는 제어방식입니다.</div>
+<div class="line">P는 비례, I는 적분, D는 미분을 뜻하며, 아래의 그림과 같이 부드럽게 올라갈 수 있도록 해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_21.jpg"><img alt="../../_images/Step4_21.jpg" class="align-center" src="../../_images/Step4_21.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">PID 제어는 주변에서 많이 사용됩니다. 에어컨, 히터의 온도유지, 전기레인지의 온도 유지, 가습기의 습도 유지, 드론의 균형유지등이 있습니다.</div>
+<div class="line">아래는 PID 제어의 수식입니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_31.jpg"><img alt="../../_images/Step4_31.jpg" class="align-center" src="../../_images/Step4_31.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">적분이 있고 미분도 있고, 식 자체가 어렵게 느껴질 수 있습니다. 하지만 이걸 이해하는것은 지금 3D 펜을 만드는덴 필요하지 않습니다. 우리는 어떻게 사용하는지만 알고 있으면 됩니다.</div>
+<div class="line">사용 법은 Kp, Ki, Kd 값을 조절하는 것입니다. 자세한 설명보다 그림을 보도록 하겠습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_4.gif"><img alt="../../_images/Step4_4.gif" class="align-center" src="../../_images/Step4_4.gif" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">※ 위 영상이미지의 출처는 <a class="reference external" href="https://ko.wikipedia.org/wiki/PID_%EC%A0%9C%EC%96%B4%EA%B8%B0">https://ko.wikipedia.org/wiki/PID_%EC%A0%9C%EC%96%B4%EA%B8%B0</a> 입니다.</div>
+<div class="line"><br /></div>
+<div class="line">위 이미지 처럼 Kp와 Ki, Kd 값이 변경됨에 따라 목표 온도에 도달하고, 도달 후의 그래프가 달라집니다.</div>
+<div class="line">이렇게 동작하는 부분을 코드로 작성해보려 합니다.</div>
+<div class="line">미분과 적분에 대해 배운적이 없거나 이해가 어려우신 분들은 아래 단계는 훑어보고 넘어가셔도 됩니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">float</span><span class="w"> </span><span class="n">Kp</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">Ki</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Kd</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">2</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 오차 변수</span>
+<span class="linenos">3</span><span class="kt">float</span><span class="w"> </span><span class="n">integral</span><span class="p">,</span><span class="w"> </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// 적분 미분 변수</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="kt">void</span><span class="w"> </span><span class="nf">getPIDoutput</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">targetTemp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">actualValue</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">7</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">outputValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">8</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">먼저 getPIDoutput 이라는 함수를 만들어 줍니다. 함수의 매개변수는 targetTemp(목표온도), curTemp(현재온도) 로 되어 있습니다.</div>
+<div class="line">다양한 변수도 생성했습니다. Error는 오류라는 뜻이 아니고 여기에서는 오차라는 뜻으로 사용됩니다. 목표온도와 현재온도의 차이라고 보시면 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line">integral은 적분 값을 저장하는 변수, derivaitve는 미분 값을 저장하는 변수입니다.</div>
+<div class="line">PID 값은 각각 15,1,1 로 설정한 상태이며, dT는 적분, 미분을 위한 변수입니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kt">float</span><span class="w"> </span><span class="n">Kp</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">Ki</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Kd</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 오차 변수</span>
+<span class="linenos"> 3</span><span class="kt">float</span><span class="w"> </span><span class="n">integral</span><span class="p">,</span><span class="w"> </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// 적분 미분 변수</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kt">void</span><span class="w"> </span><span class="nf">getPIDoutput</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">targetTemp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">actualValue</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">outputValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// 에러 값 저장</span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">targetTemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">actualValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// 적분 값 저장</span>
+<span class="linenos">13</span><span class="w">    </span><span class="n">integral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sumError</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">error</span><span class="o">*</span><span class="n">dT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">적분 값은 측정의 한계로 인해 근사적으로 계산됩니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_51.jpg"><img alt="../../_images/Step4_51.jpg" class="align-center" src="../../_images/Step4_51.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">위와 같이 목표온도-설정온도의 차이를 dT 만큼 곱하면, 그림 상의 파란색 사각형 하나의 면적으로 계산되어서 옵니다.</div>
+<div class="line">그렇다면 dT가 왜 0.05초 인가? 라고 궁금할 수 있을 겁니다. 이후 최종 코드에서 함수를 0.05초마다 한 번씩 실행되도록 코드를 작성할 것이기 때문에 미리 0.05로 설정하였습니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kt">float</span><span class="w"> </span><span class="n">Kp</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">Ki</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Kd</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 오차 변수</span>
+<span class="linenos"> 3</span><span class="kt">float</span><span class="w"> </span><span class="n">integral</span><span class="p">,</span><span class="w"> </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// 적분 미분 변수</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kt">void</span><span class="w"> </span><span class="nf">getPIDoutput</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">targetTemp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">actualValue</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">outputValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// 에러 값 저장</span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">error</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">targetTemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">actualValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// 적분 값 저장</span>
+<span class="linenos">13</span><span class="w">    </span><span class="n">integral</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">sumError</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">error</span><span class="o">*</span><span class="n">dT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// 미분 값 저장</span>
+<span class="linenos">16</span><span class="w">    </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">previousError</span><span class="p">)</span><span class="o">/</span><span class="n">dT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">미분 값은 이전 오차와 현재 오차간의 차이를 기울기 형태로 나타냅니다. 기울기를 측정하면 이전 오차 변수(previousError)에 현재 오차 값을 저장합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step4_61.jpg"><img alt="../../_images/Step4_61.jpg" class="align-center" src="../../_images/Step4_61.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">현재 오차(설정온도와 현재온도간의 차이)와 이전 오차간의 차이를 알면, 미분값을 근사적으로 계산할 수 있습니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kt">float</span><span class="w"> </span><span class="n">Kp</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">Ki</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Kd</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 오차 변수</span>
+<span class="linenos"> 3</span><span class="kt">float</span><span class="w"> </span><span class="n">integral</span><span class="p">,</span><span class="w"> </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// 적분 미분 변수</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="kt">void</span><span class="w"> </span><span class="nf">getPIDoutput</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">targetTemp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">actualValue</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">outputValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// 에러 값 저장</span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">error</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">targetTemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">actualValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="c1">// 적분 값 저장</span>
+<span class="linenos">13</span><span class="w">    </span><span class="n">integral</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">sumError</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">error</span><span class="o">*</span><span class="n">dT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// 미분 값 저장</span>
+<span class="linenos">16</span><span class="w">    </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">error</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">previousError</span><span class="p">)</span><span class="o">/</span><span class="n">dT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">    </span><span class="c1">// PID 계산</span>
+<span class="linenos">20</span><span class="w">    </span><span class="n">outputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kp</span><span class="o">*</span><span class="n">error</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Ki</span><span class="o">*</span><span class="n">integral</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Kp</span><span class="o">*</span><span class="n">derivaitve</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">    </span><span class="c1">// output 값이 0~255 범위를 벗어나면 최대, 최소 값을 대신 저장</span>
+<span class="linenos">23</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">outputValue</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">        </span><span class="n">outputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">outputValue</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">        </span><span class="n">outputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="w">    </span><span class="c1">// 계산된 결과값을 디지털 9번핀에 analogWrite 로 입력</span>
+<span class="linenos">33</span><span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">outputValue</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">34</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">최종적으로 계산되어 반환되는 outputValue 를 노즐 열선과 연결된 디지털 9번핀(D9)에 analogWrite 함수로 입력해주면 됩니다.</div>
+<div class="line">디지털 핀에 analogWrite 함수가 사용가능한 이유는 PWM 핀이기 때문입니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="kt">int</span><span class="w"> </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// A0 신호 값 저장용</span>
+<span class="linenos">  2</span><span class="kt">int</span><span class="w"> </span><span class="n">curTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">  3</span><span class="kt">int</span><span class="w"> </span><span class="n">targetTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">  4</span><span class="kt">int</span><span class="w"> </span><span class="n">presetIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">  5</span><span class="kt">bool</span><span class="w"> </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 예열 상태를 확인하는 확인하는 bool 변수</span>
+<span class="linenos">  6</span>
+<span class="linenos">  7</span><span class="w">                 </span><span class="c1">// 기본, PCL, PLA</span>
+<span class="linenos">  8</span><span class="kt">int</span><span class="w"> </span><span class="n">presetTemp</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">  </span><span class="mi">60</span><span class="p">,</span><span class="w">  </span><span class="mi">200</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">  9</span>
+<span class="linenos"> 10</span><span class="kt">int</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="mi">23</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="linenos"> 11</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 12</span><span class="w">    </span><span class="p">{</span><span class="mi">1023</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 13</span><span class="w">    </span><span class="p">{</span><span class="mi">1008</span><span class="p">,</span><span class="mi">10</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 14</span><span class="w">    </span><span class="p">{</span><span class="mi">994</span><span class="p">,</span><span class="mi">20</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 15</span><span class="w">    </span><span class="p">{</span><span class="mi">990</span><span class="p">,</span><span class="mi">30</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 16</span><span class="w">    </span><span class="p">{</span><span class="mi">985</span><span class="p">,</span><span class="mi">40</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 17</span><span class="w">    </span><span class="p">{</span><span class="mi">983</span><span class="p">,</span><span class="mi">50</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 18</span><span class="w">    </span><span class="p">{</span><span class="mi">981</span><span class="p">,</span><span class="mi">60</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 19</span><span class="w">    </span><span class="p">{</span><span class="mi">978</span><span class="p">,</span><span class="mi">70</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 20</span><span class="w">    </span><span class="p">{</span><span class="mi">975</span><span class="p">,</span><span class="mi">80</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 21</span><span class="w">    </span><span class="p">{</span><span class="mi">965</span><span class="p">,</span><span class="mi">90</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 22</span><span class="w">    </span><span class="p">{</span><span class="mi">959</span><span class="p">,</span><span class="mi">100</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 23</span><span class="w">    </span><span class="p">{</span><span class="mi">952</span><span class="p">,</span><span class="mi">110</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 24</span><span class="w">    </span><span class="p">{</span><span class="mi">948</span><span class="p">,</span><span class="mi">120</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 25</span><span class="w">    </span><span class="p">{</span><span class="mi">941</span><span class="p">,</span><span class="mi">130</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 26</span><span class="w">    </span><span class="p">{</span><span class="mi">932</span><span class="p">,</span><span class="mi">140</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 27</span><span class="w">    </span><span class="p">{</span><span class="mi">920</span><span class="p">,</span><span class="mi">150</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 28</span><span class="w">    </span><span class="p">{</span><span class="mi">908</span><span class="p">,</span><span class="mi">160</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 29</span><span class="w">    </span><span class="p">{</span><span class="mi">890</span><span class="p">,</span><span class="mi">170</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 30</span><span class="w">    </span><span class="p">{</span><span class="mi">875</span><span class="p">,</span><span class="mi">180</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 31</span><span class="w">    </span><span class="p">{</span><span class="mi">845</span><span class="p">,</span><span class="mi">190</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 32</span><span class="w">    </span><span class="p">{</span><span class="mi">820</span><span class="p">,</span><span class="mi">200</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 33</span><span class="w">    </span><span class="p">{</span><span class="mi">790</span><span class="p">,</span><span class="mi">210</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 34</span><span class="w">    </span><span class="p">{</span><span class="mi">765</span><span class="p">,</span><span class="mi">220</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 35</span><span class="p">};</span><span class="w"> </span><span class="c1">// 온도테이블</span>
+<span class="linenos"> 36</span>
+<span class="linenos"> 37</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 38</span><span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="linenos"> 39</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 40</span>
+<span class="linenos"> 41</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 42</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 43</span>
+<span class="linenos"> 44</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 45</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 46</span>
+<span class="linenos"> 47</span><span class="kt">float</span><span class="w"> </span><span class="n">Kp</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">Ki</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Kd</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 48</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 오차 변수</span>
+<span class="linenos"> 49</span><span class="kt">float</span><span class="w"> </span><span class="n">integral</span><span class="p">,</span><span class="w"> </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// 적분 미분 변수</span>
+<span class="linenos"> 50</span>
+<span class="linenos"> 51</span><span class="c1">// pid 계산을 하고, 결과값을 HEATER_EN 핀에 적용</span>
+<span class="linenos"> 52</span><span class="kt">void</span><span class="w"> </span><span class="nf">getPIDoutput</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">targetTemp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">actualValue</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 53</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 54</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">outputValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 55</span>
+<span class="linenos"> 56</span><span class="w">    </span><span class="c1">// 에러 값 저장</span>
+<span class="linenos"> 57</span><span class="w">    </span><span class="n">error</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">targetTemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">actualValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 58</span>
+<span class="linenos"> 59</span><span class="w">    </span><span class="c1">// 적분 값 저장</span>
+<span class="linenos"> 60</span><span class="w">    </span><span class="n">integral</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">integral</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">error</span><span class="o">*</span><span class="n">dT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 61</span>
+<span class="linenos"> 62</span><span class="w">    </span><span class="c1">// 미분 값 저장</span>
+<span class="linenos"> 63</span><span class="w">    </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">error</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">previousError</span><span class="p">)</span><span class="o">/</span><span class="n">dT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 64</span><span class="w">    </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 65</span>
+<span class="linenos"> 66</span><span class="w">    </span><span class="c1">// PID 계산</span>
+<span class="linenos"> 67</span><span class="w">    </span><span class="n">outputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kp</span><span class="o">*</span><span class="n">error</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Ki</span><span class="o">*</span><span class="n">integral</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Kp</span><span class="o">*</span><span class="n">derivaitve</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 68</span>
+<span class="linenos"> 69</span><span class="w">    </span><span class="c1">// output 값이 0~255 범위를 벗어나면 최대, 최소 값을 대신 저장</span>
+<span class="linenos"> 70</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">outputValue</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 71</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 72</span><span class="w">        </span><span class="n">outputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 73</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 74</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">outputValue</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 75</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 76</span><span class="w">        </span><span class="n">outputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 77</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 78</span>
+<span class="linenos"> 79</span><span class="w">    </span><span class="c1">// outputValue 가 0이라면 예열이 되지 않음으로, isHeating 변수를 false로 저장</span>
+<span class="linenos"> 80</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">outputValue</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 81</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 82</span><span class="w">        </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 83</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 84</span><span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="linenos"> 85</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 86</span><span class="w">        </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 87</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 88</span>
+<span class="linenos"> 89</span><span class="w">    </span><span class="c1">// 계산된 결과값을 디지털 9번핀에 analogWrite 로 입력</span>
+<span class="linenos"> 90</span><span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">outputValue</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 91</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 92</span>
+<span class="linenos"> 93</span><span class="c1">// 신호 값을 보정하여 온도 값을 추측해내는 계산 함수</span>
+<span class="linenos"> 94</span><span class="kt">int</span><span class="w"> </span><span class="nf">tempCali</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">valueA0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 95</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 96</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">ratioTemp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 97</span>
+<span class="linenos"> 98</span><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">23</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 99</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">100</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">valueA0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">101</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">102</span><span class="w">            </span><span class="n">ratioTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">valueA0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">103</span>
+<span class="linenos">104</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ratioTemp</span><span class="o">*</span><span class="p">(</span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">105</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">106</span>
+<span class="linenos">107</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">108</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">109</span>
+<span class="linenos">110</span><span class="c1">// 아날로그 A0 핀의 신호 값을 디지털 9번핀(열선)이 HIGH인 상태에서 체크하도록 하는 함수</span>
+<span class="linenos">111</span><span class="kt">void</span><span class="w"> </span><span class="nf">checkA0</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">112</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">113</span><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
+<span class="linenos">114</span><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">115</span><span class="w">    </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 아날로그 신호 값을 tempValueA0 저장</span>
+<span class="linenos">116</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isHeating</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">117</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">118</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
+<span class="linenos">119</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">120</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">121</span>
+<span class="linenos">122</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">123</span><span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="linenos">124</span><span class="w">    </span><span class="n">checkA0</span><span class="p">();</span><span class="w"> </span><span class="c1">// 아날로그 A0의 신호 값을 가져오는 함수</span>
+<span class="linenos">125</span>
+<span class="linenos">126</span><span class="w">    </span><span class="n">curTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tempCali</span><span class="p">(</span><span class="n">tempValueA0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 온도 보상 함수 호출</span>
+<span class="linenos">127</span>
+<span class="linenos">128</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;신호 값 : &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">129</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">tempValueA0</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">130</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;, 현재 온도 값 : &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">131</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">curTemp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">132</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;, 설정 온도 값 : &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">133</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">targetTemp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">134</span>
+<span class="linenos">135</span><span class="w">    </span><span class="n">getPIDoutput</span><span class="p">(</span><span class="n">targetTemp</span><span class="p">,</span><span class="w"> </span><span class="n">curTemp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">136</span>
+<span class="linenos">137</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">138</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">139</span><span class="w">        </span><span class="n">presetIndex</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">140</span><span class="w">        </span><span class="n">targetTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">presetTemp</span><span class="p">[</span><span class="n">presetIndex</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">141</span>
+<span class="linenos">142</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">presetIndex</span><span class="o">&gt;</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">143</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">144</span><span class="w">          </span><span class="n">presetIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">145</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">146</span>
+<span class="linenos">147</span><span class="w">        </span><span class="c1">// 적분값 리셋</span>
+<span class="linenos">148</span><span class="w">        </span><span class="n">integral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">149</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">150</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">151</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">152</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">153</span><span class="w">        </span><span class="n">presetIndex</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">154</span><span class="w">        </span><span class="n">targetTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">presetTemp</span><span class="p">[</span><span class="n">presetIndex</span><span class="p">];</span><span class="w"></span>
+<span class="linenos">155</span>
+<span class="linenos">156</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">presetIndex</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">157</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">158</span><span class="w">          </span><span class="n">presetIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">159</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">160</span>
+<span class="linenos">161</span><span class="w">        </span><span class="c1">// 적분값 리셋</span>
+<span class="linenos">162</span><span class="w">        </span><span class="n">integral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">163</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">164</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">165</span>
+<span class="linenos">166</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">167</span>
+<span class="linenos">168</span><span class="o">|</span><span class="w"> </span><span class="n">getPIDoutput</span><span class="w"> </span><span class="n">함수에서</span><span class="w"> </span><span class="n">isHeating</span><span class="w"> </span><span class="n">의</span><span class="w"> </span><span class="n">변수를</span><span class="w"> </span><span class="n">변경시켜주는</span><span class="w"> </span><span class="n">코드를</span><span class="w"> </span><span class="n">추가하였습니다</span><span class="p">.</span><span class="w"> </span><span class="n">신호</span><span class="w"> </span><span class="n">값을</span><span class="w"> </span><span class="n">읽는</span><span class="w"> </span><span class="n">부분에서</span><span class="w"> </span><span class="n">현재</span><span class="w"> </span><span class="n">예열중인지</span><span class="w"> </span><span class="n">아닌지를</span><span class="w"> </span><span class="n">아는</span><span class="w"> </span><span class="n">것이</span><span class="w"> </span><span class="n">중요하기</span><span class="w"> </span><span class="n">떄문입니다</span><span class="p">.</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_3.html" class="btn btn-neutral float-left" title="온도 설정하기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Lv3_10_Display.html" class="btn btn-neutral float-right" title="디스플레이" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

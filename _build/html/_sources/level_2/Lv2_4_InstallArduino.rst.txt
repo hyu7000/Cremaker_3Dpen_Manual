@@ -142,15 +142,4 @@
 |
 |
 
-.. image:: ../images/UploadFW/Step1_13.png
-   :width: 600
-   :align: center
-
-|
-| :blackcircle:`●` 이제 시간과 관련된 코드를 다운로드 해보려 합니다.
-| :yellowcircle:`●` 검색창에 everytimer 를 입력합니다.
-| :blackcircle:`●` 검색 결과에서 everytimer 이름이고, by Alessio Leoncini 로 표시된 부분을 찾아줍니다.
-| :orangecircle:`●` 오른편의 설치 버튼을 눌러줍니다.
-|
-
 | 이제 코딩을 할 준비가 완료되었습니다. 다음 단계로 갑니다.

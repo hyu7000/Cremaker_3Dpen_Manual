@@ -152,15 +152,18 @@
     }
 
 | 위의 코드처럼 작성되지만, 위의 코드는 문제가 있습니다. 온도가 계속 상승하는 것만 있기 때문에 적절한 온도일때, 예열을 중단해주어야 합니다. 
-| 예열을 할때와 하지 않을 때의 아날로그 신호 값이 약간의 차이가 있습니다. 그래서 예열 후 analogRead 로 신호 값을 기준으로 측정합니다. 이 순서는 다음 코드 작성함에 있어서 중요합니다.
+| 예열을 할때와 하지 않을 때의 아날로그 신호 값이 약간의 차이가 있습니다. 그래서 예열을 하지 않을 때 analogRead 로 신호 값을 조정합니다. 이 순서는 다음 코드 작성함에 있어서 중요합니다.
+| 레벨2에서는 예열 OnOff에 따라 신호 값이 차이나는 이유는 전원의 저항 때문이라고 알고 계시면 됩니다.
 |
 | 온도가 60도 이상올라갈 경우 예열을 중단하는 코드를 작성하면 다음과 같이 작성될 수 있습니다.
 
 .. _targetL2C9S2_2_5:
 
 .. code-block:: c++
-    :emphasize-lines: 15, 16, 17, 18, 19, 21
     :linenos:
+
+    int tempValueA0 = 0; // A0 신호 값 저장용
+    bool isHeating = false; // 온도가 목표보다 높은지 확인하는 bool 변수
 
     void setup() {
         // put your setup code here, to run once:
@@ -170,22 +173,36 @@
     }
 
     void loop() {
-        // put your main code here, to run repeatedly:
-        digitalWrite(9, HIGH);
-        delay(5); // 약간의 대기시간 추가
+        // put your main code here, to run repeatedly: 
+        digitalWrite(9, HIGH); // 예열 시작
+        delay(1);
+        tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
+        if(isHeating)
+        {
+            digitalWrite(9, LOW); // 예열 종료
+        }
 
-        Serial.println(analogRead(A0));        
+        Serial.println(tempValueA0);        
 
-        if(analogRead(A0) < 981)
+        if(tempValueA0 < 981)
         {
             digitalWrite(9, LOW); // 예열 종료
             delay(5); // 약간의 대기시간 추가
+
+            isHeating = true;
+        }
+        else
+        {
+            digitalWrite(9, HIGH); // 예열 시작
+            delay(5); // 약간의 대기시간 추가
+
+            isHeating = false;
         }
 
-        delay(10); // 예열을 위한 대기시간 추가
     }
 
-| 먼저 예열이 시작된 상태로 아날로그 신호 값을 읽습니다. (10줄)
+| 먼저 예열이 시작된 상태로 아날로그 신호 값을 읽습니다. (12줄)
+| 예열되고 있지 않은 상태라면, 아날로그 신호 값을 조정합니다. 디지털 9번핀이 HIGH인 상태와 LOW 상태에 따라 아날로그 A0 의 신호값이 약간의 오차가 있기 때문에 이 오차를 보정하기 위해서 아날로그 A0 신호를 읽기전에 디지털 9번핀을 HIGH 로 출력해줍니다.
 | 읽어온 아날로그 신호값이 981일때 온도가 60도 임으로 981값보다 아래면, 예열을 중단하고, 981값보다 크면 예열을 시작하는 코드를 추가하였습니다. 약간의 시간차를 두기 위해 :ref:`delay <targetL2C5S1_9>` 함수를 추가했습니다.
 | 
 | 업로드를 하고, 신호 값을 확인 하기 위해, 시리얼 모니터를 켜줍니다.
@@ -216,7 +233,9 @@
     .. code-block:: c++
         :linenos: 
 
-        bool isHeating = false; // 예열 상태 확인용
+        int tempValueA0 = 0; // A0 신호 값 저장용
+        bool isPressedBtn = false; // 버튼이 눌러졌는지 확인하는 bool 변수
+        bool isHeating = false; // 온도가 목표보다 높은지 확인하는 bool 변수
 
         void setup() {
             // put your setup code here, to run once:
@@ -230,7 +249,7 @@
 
         void loop() {
             // put your main code here, to run repeatedly:
-            if(!isHeating) // isHeating이 false일때 true를 반환하고, 아래를 실행합니다.
+            if(!isPressedBtn) // isPressedBtn이 false일때 true를 반환하고, 아래를 실행합니다.
             {           
                 digitalWrite(9, LOW); // 예열 종료
                 delay(5);
@@ -239,26 +258,46 @@
 
                 if(digitalRead(11)==LOW)
                 {
-                    isHeating = true;
+                    isPressedBtn = true;
                 }
             }
-            else // isHeating이 true일때 아래를 실행합니다.
+            else // isPressedBtn이 true일때 아래를 실행합니다.
             {
-                digitalWrite(9, HIGH); // 예열 시작
-                delay(5);
-                Serial.println(analogRead(A0)); // 신호 값을 시리얼 모니터에 출력
+                tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
 
-                if(analogRead(A0) < 981)
+                digitalWrite(9, HIGH); // 예열 시작
+                delay(1);
+                tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
+                if(!isHeating)
+                {
+                    digitalWrite(9, LOW); // 예열 종료
+                }
+
+                Serial.print("ON "); // 예열이 되고 있음을 시리얼 모니터에 표시
+
+                Serial.println(tempValueA0); // 신호 값을 시리얼 모니터에 출력
+
+                if(tempValueA0 < 981)
                 {
                     digitalWrite(9, LOW); // 예열 종료
                     delay(5); // 약간의 대기시간 추가
-                }
 
-                delay(10);
+                    isHeating = false;
+                }
+                else
+                {
+                    digitalWrite(9, HIGH); // 예열 시작
+                    delay(5); // 약간의 대기시간 추가
+
+                    isHeating = true;
+                }
 
                 if(digitalRead(12)==LOW)
                 {
-                    isHeating = false;
+                    isPressedBtn = false;
                 }
             }
         }
+
+        | int tempValue를 선언하고 ?줄에서 analogRead(A0) 값을 저장했습니다. 
+        | ?+2 줄에서 if(tempValue < 981) 대신 if(analogRead(A0) < 981)를 사용할 수도 있었지만, 함수를 호출하는 것 보다 변수에 접근하는 것이 더 연산속도가 빠르기 때문입니다.

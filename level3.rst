@@ -10,4 +10,8 @@
    level_3/Lv3_4_InstallArduino
    level_3/Lv3_5_Arduino_Basic
    level_3/Lv3_6_Time
-   
+   level_3/Lv3_7_Button
+   level_3/Lv3_8_Motor
+   level_3/Lv3_9_Temp
+   level_3/Lv3_10_Display
+   level_3/Lv3_11_FullCode

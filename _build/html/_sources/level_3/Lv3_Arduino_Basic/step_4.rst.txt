@@ -129,7 +129,7 @@
 | C, C++, 아두이노에서 사용하는 조건문중에 switch 가 있습니다.
 |
 
-.. image:: ../../images/Lv3/Chapter_4/Step4_6.jpg
+.. image:: ../../images/Lv3/Chapter_5/Step4_6.jpg
    :width: 700
    :align: center
 
@@ -137,7 +137,7 @@
 | switch 문은 if ~ else if와 유사하게 작동합니다. 여러가지 조건들을 검사하여 맞는 조건의 코드를 동작합니다.
 |
 
-.. image:: ../../images/Lv3/Chapter_4/Step4_7.jpg
+.. image:: ../../images/Lv3/Chapter_5/Step4_7.jpg
    :width: 700
    :align: center
 

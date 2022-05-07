@@ -59,7 +59,7 @@
 | 이와 같은 자료들을 다루고 싶은 경우에 배열과 같이 나타내려면 어떻게 해야할까요?
 |
 
-.. image:: ../../images/Lv3/Chapter_4/Step7_1.jpg
+.. image:: ../../images/Lv3/Chapter_5/Step7_1.jpg
    :width: 700
    :align: center
 
@@ -68,7 +68,7 @@
 | 이때 사용되는 것이 구조체 입니다. 
 |
 
-.. image:: ../../images/Lv3/Chapter_4/Step7_2.jpg
+.. image:: ../../images/Lv3/Chapter_5/Step7_2.jpg
    :width: 500
    :align: center
 
@@ -96,7 +96,7 @@
 | 구조체를 선언하는 방법은 아래와 같습니다.
 |
 
-.. image:: ../../images/Lv3/Chapter_4/Step7_3.jpg
+.. image:: ../../images/Lv3/Chapter_5/Step7_3.jpg
    :width: 500
    :align: center
 

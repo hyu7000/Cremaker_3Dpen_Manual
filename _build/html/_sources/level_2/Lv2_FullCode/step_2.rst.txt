@@ -37,7 +37,8 @@
 
     #include "ssd1306.h" // 라이브러리 포함
 
-    bool isHeating = false; // 예열 상태 표시용
+    bool isPressedBtn = false; // 버튼이 눌러졌는지 확인하는 bool 변수
+    bool isHeating = false; // 온도가 목표보다 높은지 확인하는 bool 변수
 
     void setup() 
     {
@@ -88,8 +89,9 @@
 
         #include "ssd1306.h" // 라이브러리 포함
 
-        bool isHeating = false; // 예열 상태 확인용
-        int tempValue = 0; // A0 신호 값 저장용
+        bool isPressedBtn = false; // 버튼이 눌러졌는지 확인하는 bool 변수
+        bool isHeating = false; // 온도가 목표보다 높은지 확인하는 bool 변수
+        int tempValueA0 = 0; // A0 신호 값 저장용
 
         void setup() 
         {
@@ -120,38 +122,51 @@
         void loop() 
         {
             // put your main code here, to run repeatedly:
-            if(!isHeating) // isHeating이 false면 아래 코드 실행
+            if(!isPressedBtn) // isPressedBtn이 false면 아래 코드 실행
             {                
                 digitalWrite(9, LOW); // 예열 종료
                 delay(5);
 
                 if(digitalRead(11)==LOW)
                 {
-                    isHeating = true;
+                    isPressedBtn = true;
 
                     ssd1306_fillScreen(0x00);  // 화면 초기화
                     // 예열 중일 경우 Heating 표시
                     ssd1306_printFixedN (0, 0, "Heating", STYLE_NORMAL, FONT_SIZE_2X);
                 }
             }
-            else // isHeating이 true면 아래 코드 실행
+            else // isPressedBtn이 true면 아래 코드 실행
             {
+                tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
+
                 digitalWrite(9, HIGH); // 예열 시작
-                delay(5);
+                delay(1);
+                tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
+                if(!isHeating)
+                {
+                    digitalWrite(9, LOW); // 예열 종료
+                }
 
-                tempValue = analogRead(A0);
-
-                if(tempValue < 981) // 온도 60도 유지
+                if(tempValueA0 < 981) // 온도 60도 유지
                 {
                     digitalWrite(9, LOW); // 예열 종료
                     delay(5);
+
+                    isHeating = false;
+                }
+                else
+                {
+                    digitalWrite(9, HIGH); // 예열 시작
+                    delay(5); 
+
+                    isHeating = true;
                 }
 
-                delay(10);
 
                 if(digitalRead(12)==LOW)
                 {
-                    isHeating = false;
+                    isPressedBtn = false;
 
                     ssd1306_fillScreen(0x00);  // 화면 초기화
                     // 예열 중이 아닐 경우 OFF 표시
@@ -160,5 +175,4 @@
             }
         }
 
-        | int tempValue를 선언하고 ?줄에서 analogRead(A0) 값을 저장했습니다. 
-        | ?+2 줄에서 if(tempValue < 981) 대신 if(analogRead(A0) < 981)를 사용할 수도 있었지만, 함수를 호출하는 것 보다 변수에 접근하는 것이 더 연산속도가 빠르기 때문입니다.
+        

@@ -38,8 +38,9 @@
 | ※ 60도 근처일 때 신호 값은 :blackbold:`979< 신호값 <983` 사이로 설정
 | 3. bool 변수를 사용하여 온도가 60도 근처일 경우를 판단하도록 작성
 | 4. 온도가 60도 근처에 도달 할 경우, 디스플레이에 OK 표시
-| 5. A,B 버튼에 따라 모터는 서로 다른 방향으로 회전하도록 동작
-| 6. 모터의 회전속도는 시계, 반시계 모두 150으로 설정
+| 5. 예열을 하지 않거나, 온도가 60도 근처가 아닐 경우 디스플레이에 OFF 표시
+| 6. A,B 버튼에 따라 모터는 서로 다른 방향으로 회전하도록 동작
+| 7. 모터의 회전속도는 시계, 반시계 모두 150으로 설정
 |
 | 작성후 잘 동작하는지 확인하고, 아래 코드와 비교합니다.
 
@@ -51,9 +52,10 @@
 
         #include "ssd1306.h" // 라이브러리 포함
 
-        bool isHeating = false; // 예열 상태 확인용
+        bool isPressedBtn = false; // 버튼이 눌러졌는지 확인하는 bool 변수
         bool is60Deg = false; // 온도 도달 상태 확인용
-        int tempValue = 0; // A0 신호 값 저장용
+        bool isHeating = false; // 온도가 목표보다 높은지 확인하는 bool 변수
+        int tempValueA0 = 0; // A0 신호 값 저장용
 
         void setup() 
         {
@@ -84,40 +86,66 @@
         void loop() 
         {
             // put your main code here, to run repeatedly:
-            if(!isHeating) // isHeating이 false면 아래 코드 실행
+            if(!isPressedBtn) // isPressedBtn이 false면 아래 코드 실행
             {                
                 digitalWrite(9, LOW); // 예열 종료
                 delay(5);
 
                 if(digitalRead(11)==LOW)
                 {
-                    isHeating = true;
+                    isPressedBtn = true;
 
                     ssd1306_fillScreen(0x00);  // 화면 초기화
                     // 예열 중일 경우 Heating 표시
                     ssd1306_printFixedN (0, 0, "Heating", STYLE_NORMAL, FONT_SIZE_2X);
                 }
             }
-            else // isHeating이 true면 아래 코드 실행
+            else // isPressedBtn이 true면 아래 코드 실행
             {
                 digitalWrite(9, HIGH); // 예열 시작
-                delay(5);
+                delay(1);
+                tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
+                if(!isHeating)
+                {
+                    digitalWrite(9, LOW); // 예열 종료
+                }
 
-                tempValue = analogRead(A0);
-
-                if(tempValue < 981) // 온도 60도 유지
+                if(tempValueA0 < 981) // 온도 60도 유지
                 {
                     digitalWrite(9, LOW); // 예열 종료
                     delay(5);
+
+                    isHeating = false;
+                }
+                else
+                {
+                    digitalWrite(9, HIGH); // 예열 시작
+                    delay(5); // 약간의 대기시간 추가
+
+                    isHeating = true;
                 }
 
-                if(tempValue>979 && tempValue<983 && !is60Deg) // 온도가 60도에 도달했는지 확인
-                {
-                    is60Deg = true;
+                if(tempValueA0>979 && tempValueA0<983) // 온도가 60도에 도달했는지 확인
+                {                   
+                    if(is60Deg == false)
+                    {
+                        ssd1306_fillScreen(0x00);  // 화면 초기화
+                        // 예열 중일 경우 Heating 표시
+                        ssd1306_printFixedN (0, 0, "OK", STYLE_NORMAL, FONT_SIZE_2X);
 
-                    ssd1306_fillScreen(0x00);  // 화면 초기화
-                    // 예열 중일 경우 Heating 표시
-                    ssd1306_printFixedN (0, 0, "OK", STYLE_NORMAL, FONT_SIZE_2X);
+                        is60Deg = true;
+                    }                    
+                }
+                else
+                {
+                    if(is60Deg == true)
+                    {
+                        is60Deg = false;
+
+                        ssd1306_fillScreen(0x00);  // 화면 초기화
+                        // 60도 근처가 아닐시 OFF 표시
+                        ssd1306_printFixedN (0, 0, "OFF", STYLE_NORMAL, FONT_SIZE_2X);  
+                    }
                 }
 
                 if(is60Deg) // 온도가 도달된 상태라면, 모터가 움직일 수 있음
@@ -125,25 +153,23 @@
                     if(digitalRead(8)==LOW) // A 버튼 눌렸을 경우
                     {
                         digitalWrite(6,LOW);
-                        analogWrite(10,150);
+                        analogWrite(10,150); //모터 속도 150 설정
                     }
                     else if(digitalRead(7)==LOW) // B 버튼 눌렸을 경우
                     {
                         digitalWrite(6,HIGH);
-                        analogWrite(10,150);
+                        analogWrite(10,150); //모터 속도 150 설정
                     }
                     else
                     {
                         digitalWrite(6,LOW);
-                        analogWrite(10,0);
+                        analogWrite(10,0); //모터 속도 0 설정
                     }
                 }
 
-                delay(10);
-
                 if(digitalRead(12)==LOW)
                 {
-                    isHeating = false;
+                    isPressedBtn = false;
 
                     ssd1306_fillScreen(0x00);  // 화면 초기화
                     // 예열 중이 아닐 경우 OFF 표시

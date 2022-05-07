@@ -86,8 +86,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../level3.html">레벨 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test.html">test</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test2.html">test</a></li>
 </ul>
 
         </div>
@@ -248,6 +246,7 @@
 </div>
 <div class="line-block">
 <div class="line">다음으로는 10,8 위치에 “Cremaker” 문자를 노말스타일에, 크기를 2배로 출력되도록 설정해보세요.</div>
+<div class="line">글자를 2배 사이즈로 사용하려면, ssd1306_printFixedN를 사용해야합니다. (ssd1306_printFixed과 다릅니다.)</div>
 <div class="line">작성하고 업로드 후, 아래 코드와 비교해보세요.</div>
 <div class="line"><br /></div>
 <div class="line">※ 안타깝게도, 한글은 지원되지 않습니다.</div>
@@ -263,7 +262,7 @@
 <span class="linenos"> 8</span><span class="w">    </span><span class="n">ssd1306_setFixedFont</span><span class="p">(</span><span class="n">ssd1306xled_font6x8</span><span class="p">);</span><span class="w"></span>
 <span class="linenos"> 9</span><span class="w">    </span><span class="n">ssd1306_flipHorizontal</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">// x 화면 대칭 회전</span>
 <span class="linenos">10</span><span class="w">    </span><span class="n">ssd1306_flipVertical</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">    </span><span class="c1">// y 화면 대칭 회전</span>
-<span class="linenos">11</span><span class="w">    </span><span class="n">ssd1306_printFixed</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w">  </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cremaker&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="n">ssd1306_printFixedN</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w">  </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Cremaker&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
 <span class="linenos">12</span><span class="p">}</span><span class="w"></span>
 <span class="linenos">13</span>
 <span class="linenos">14</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"></span>

@@ -87,8 +87,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../level3.html">레벨 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test.html">test</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test2.html">test</a></li>
 </ul>
 
         </div>
@@ -138,37 +136,38 @@
 </div>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ssd1306.h&quot;</span><span class="c1"> // 라이브러리 포함</span><span class="cp"></span>
 <span class="linenos"> 2</span>
-<span class="hll"><span class="linenos"> 3</span><span class="kt">bool</span><span class="w"> </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 예열 상태 표시용</span>
-</span><span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
-<span class="linenos"> 8</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">   </span><span class="c1">// A 버튼</span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">   </span><span class="c1">// B 버튼</span>
-<span class="linenos">10</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// C 버튼</span>
-<span class="linenos">11</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// D 버튼</span>
-<span class="linenos">12</span>
-<span class="linenos">13</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 모터 활성화</span>
-<span class="linenos">14</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 모터 방향</span>
-<span class="linenos">15</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">        </span><span class="c1">// 모터 속도</span>
-<span class="linenos">16</span>
-<span class="linenos">17</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 열선</span>
-<span class="linenos">18</span>
-<span class="linenos">19</span><span class="w">    </span><span class="n">ssd1306_128x32_i2c_init</span><span class="p">();</span><span class="w"> </span><span class="c1">// 32로 변경</span>
-<span class="linenos">20</span><span class="w">    </span><span class="n">ssd1306_fillScreen</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">  </span><span class="c1">// 화면 초기화</span>
-<span class="linenos">21</span><span class="w">    </span><span class="n">ssd1306_setFixedFont</span><span class="p">(</span><span class="n">ssd1306xled_font6x8</span><span class="p">);</span><span class="w"> </span><span class="c1">// 폰트 설정</span>
-<span class="linenos">22</span><span class="w">    </span><span class="n">ssd1306_flipHorizontal</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// x 화면 대칭 회전</span>
-<span class="linenos">23</span><span class="w">    </span><span class="n">ssd1306_flipVertical</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">   </span><span class="c1">// y 화면 대칭 회전</span>
-<span class="linenos">24</span>
-<span class="linenos">25</span><span class="w">    </span><span class="c1">// &quot;cremaker&quot; 문자표시</span>
-<span class="linenos">26</span><span class="w">    </span><span class="n">ssd1306_printFixedN</span><span class="w"> </span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cremaker&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">27</span><span class="p">}</span><span class="w"></span>
-<span class="linenos">28</span>
-<span class="linenos">29</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"></span>
-<span class="linenos">30</span><span class="p">{</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
-<span class="linenos">32</span>
-<span class="linenos">33</span><span class="p">}</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 3</span><span class="kt">bool</span><span class="w"> </span><span class="n">isPressedBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 버튼이 눌러졌는지 확인하는 bool 변수</span>
+</span><span class="linenos"> 4</span><span class="kt">bool</span><span class="w"> </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 온도가 목표보다 높은지 확인하는 bool 변수</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">   </span><span class="c1">// A 버튼</span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">   </span><span class="c1">// B 버튼</span>
+<span class="linenos">11</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// C 버튼</span>
+<span class="linenos">12</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// D 버튼</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 모터 활성화</span>
+<span class="linenos">15</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 모터 방향</span>
+<span class="linenos">16</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">        </span><span class="c1">// 모터 속도</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 열선</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="w">    </span><span class="n">ssd1306_128x32_i2c_init</span><span class="p">();</span><span class="w"> </span><span class="c1">// 32로 변경</span>
+<span class="linenos">21</span><span class="w">    </span><span class="n">ssd1306_fillScreen</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">  </span><span class="c1">// 화면 초기화</span>
+<span class="linenos">22</span><span class="w">    </span><span class="n">ssd1306_setFixedFont</span><span class="p">(</span><span class="n">ssd1306xled_font6x8</span><span class="p">);</span><span class="w"> </span><span class="c1">// 폰트 설정</span>
+<span class="linenos">23</span><span class="w">    </span><span class="n">ssd1306_flipHorizontal</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// x 화면 대칭 회전</span>
+<span class="linenos">24</span><span class="w">    </span><span class="n">ssd1306_flipVertical</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">   </span><span class="c1">// y 화면 대칭 회전</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="w">    </span><span class="c1">// &quot;cremaker&quot; 문자표시</span>
+<span class="linenos">27</span><span class="w">    </span><span class="n">ssd1306_printFixedN</span><span class="w"> </span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cremaker&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">28</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">31</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">32</span><span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -187,80 +186,91 @@
 <div class="toggle docutils container">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ssd1306.h&quot;</span><span class="c1"> // 라이브러리 포함</span><span class="cp"></span>
 <span class="linenos"> 2</span>
-<span class="linenos"> 3</span><span class="kt">bool</span><span class="w"> </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 예열 상태 확인용</span>
-<span class="linenos"> 4</span><span class="kt">int</span><span class="w"> </span><span class="n">tempValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// A0 신호 값 저장용</span>
-<span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">   </span><span class="c1">// A 버튼</span>
-<span class="linenos">10</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">   </span><span class="c1">// B 버튼</span>
-<span class="linenos">11</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// C 버튼</span>
-<span class="linenos">12</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// D 버튼</span>
-<span class="linenos">13</span>
-<span class="linenos">14</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 모터 활성화 핀</span>
-<span class="linenos">15</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 모터 방향 핀</span>
-<span class="linenos">16</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">        </span><span class="c1">// 모터 속도 핀</span>
-<span class="linenos">17</span>
-<span class="linenos">18</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 열선</span>
-<span class="linenos">19</span>
-<span class="linenos">20</span><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">     </span><span class="c1">// 모터 활성화</span>
-<span class="linenos">21</span>
-<span class="linenos">22</span><span class="w">    </span><span class="n">ssd1306_128x32_i2c_init</span><span class="p">();</span><span class="w"> </span><span class="c1">// 32로 변경</span>
-<span class="linenos">23</span><span class="w">    </span><span class="n">ssd1306_fillScreen</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">  </span><span class="c1">// 화면 초기화</span>
-<span class="linenos">24</span><span class="w">    </span><span class="n">ssd1306_setFixedFont</span><span class="p">(</span><span class="n">ssd1306xled_font6x8</span><span class="p">);</span><span class="w"> </span><span class="c1">// 폰트 설정</span>
-<span class="linenos">25</span><span class="w">    </span><span class="n">ssd1306_flipHorizontal</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// x 화면 대칭 회전</span>
-<span class="linenos">26</span><span class="w">    </span><span class="n">ssd1306_flipVertical</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">   </span><span class="c1">// y 화면 대칭 회전</span>
-<span class="linenos">27</span>
-<span class="linenos">28</span><span class="w">    </span><span class="c1">// &quot;cremaker&quot; 문자표시</span>
-<span class="linenos">29</span><span class="w">    </span><span class="n">ssd1306_printFixedN</span><span class="w"> </span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cremaker&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">30</span><span class="p">}</span><span class="w"></span>
-<span class="linenos">31</span>
-<span class="linenos">32</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"></span>
-<span class="linenos">33</span><span class="p">{</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
-<span class="linenos">35</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isHeating</span><span class="p">)</span><span class="w"> </span><span class="c1">// isHeating이 false면 아래 코드 실행</span>
-<span class="linenos">36</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
-<span class="linenos">38</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">39</span>
-<span class="linenos">40</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">41</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">42</span><span class="w">            </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">43</span>
-<span class="linenos">44</span><span class="w">            </span><span class="n">ssd1306_fillScreen</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">  </span><span class="c1">// 화면 초기화</span>
-<span class="linenos">45</span><span class="w">            </span><span class="c1">// 예열 중일 경우 Heating 표시</span>
-<span class="linenos">46</span><span class="w">            </span><span class="n">ssd1306_printFixedN</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Heating&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">47</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">48</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">49</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="c1">// isHeating이 true면 아래 코드 실행</span>
-<span class="linenos">50</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">51</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
-<span class="linenos">52</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 3</span><span class="kt">bool</span><span class="w"> </span><span class="n">isPressedBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 버튼이 눌러졌는지 확인하는 bool 변수</span>
+<span class="linenos"> 4</span><span class="kt">bool</span><span class="w"> </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 온도가 목표보다 높은지 확인하는 bool 변수</span>
+<span class="linenos"> 5</span><span class="kt">int</span><span class="w"> </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// A0 신호 값 저장용</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="linenos">10</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">   </span><span class="c1">// A 버튼</span>
+<span class="linenos">11</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">   </span><span class="c1">// B 버튼</span>
+<span class="linenos">12</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// C 버튼</span>
+<span class="linenos">13</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// D 버튼</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 모터 활성화 핀</span>
+<span class="linenos">16</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 모터 방향 핀</span>
+<span class="linenos">17</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">        </span><span class="c1">// 모터 속도 핀</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">         </span><span class="c1">// 열선</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">     </span><span class="c1">// 모터 활성화</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">    </span><span class="n">ssd1306_128x32_i2c_init</span><span class="p">();</span><span class="w"> </span><span class="c1">// 32로 변경</span>
+<span class="linenos">24</span><span class="w">    </span><span class="n">ssd1306_fillScreen</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">  </span><span class="c1">// 화면 초기화</span>
+<span class="linenos">25</span><span class="w">    </span><span class="n">ssd1306_setFixedFont</span><span class="p">(</span><span class="n">ssd1306xled_font6x8</span><span class="p">);</span><span class="w"> </span><span class="c1">// 폰트 설정</span>
+<span class="linenos">26</span><span class="w">    </span><span class="n">ssd1306_flipHorizontal</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// x 화면 대칭 회전</span>
+<span class="linenos">27</span><span class="w">    </span><span class="n">ssd1306_flipVertical</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">   </span><span class="c1">// y 화면 대칭 회전</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="w">    </span><span class="c1">// &quot;cremaker&quot; 문자표시</span>
+<span class="linenos">30</span><span class="w">    </span><span class="n">ssd1306_printFixedN</span><span class="w"> </span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cremaker&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">31</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">34</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="linenos">36</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isPressedBtn</span><span class="p">)</span><span class="w"> </span><span class="c1">// isPressedBtn이 false면 아래 코드 실행</span>
+<span class="linenos">37</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">38</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
+<span class="linenos">39</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">            </span><span class="n">isPressedBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">44</span>
+<span class="linenos">45</span><span class="w">            </span><span class="n">ssd1306_fillScreen</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">  </span><span class="c1">// 화면 초기화</span>
+<span class="linenos">46</span><span class="w">            </span><span class="c1">// 예열 중일 경우 Heating 표시</span>
+<span class="linenos">47</span><span class="w">            </span><span class="n">ssd1306_printFixedN</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Heating&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">48</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">49</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">50</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="c1">// isPressedBtn이 true면 아래 코드 실행</span>
+<span class="linenos">51</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">52</span><span class="w">        </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 아날로그 신호 값을 tempValueA0 저장</span>
 <span class="linenos">53</span>
-<span class="linenos">54</span><span class="w">        </span><span class="n">tempValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">55</span>
-<span class="linenos">56</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">tempValue</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="w"> </span><span class="c1">// 온도 60도 유지</span>
-<span class="linenos">57</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">58</span><span class="w">            </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
-<span class="linenos">59</span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">54</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
+<span class="linenos">55</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">56</span><span class="w">        </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 아날로그 신호 값을 tempValueA0 저장</span>
+<span class="linenos">57</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isHeating</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">58</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">59</span><span class="w">            </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
 <span class="linenos">60</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="linenos">61</span>
-<span class="linenos">62</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">63</span>
-<span class="linenos">64</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">65</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">66</span><span class="w">            </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">67</span>
-<span class="linenos">68</span><span class="w">            </span><span class="n">ssd1306_fillScreen</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">  </span><span class="c1">// 화면 초기화</span>
-<span class="linenos">69</span><span class="w">            </span><span class="c1">// 예열 중이 아닐 경우 OFF 표시</span>
-<span class="linenos">70</span><span class="w">            </span><span class="n">ssd1306_printFixedN</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OFF&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">71</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">72</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">73</span><span class="p">}</span><span class="w"></span>
-<span class="linenos">74</span>
-<span class="linenos">75</span><span class="o">|</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tempValue를</span><span class="w"> </span><span class="n">선언하고</span><span class="w"> </span><span class="o">?</span><span class="n">줄에서</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">)</span><span class="w"> </span><span class="n">값을</span><span class="w"> </span><span class="n">저장했습니다</span><span class="p">.</span><span class="w"></span>
-<span class="linenos">76</span><span class="o">|</span><span class="w"> </span><span class="o">?+</span><span class="mi">2</span><span class="w"> </span><span class="n">줄에서</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">tempValue</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="w"> </span><span class="n">대신</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="n">를</span><span class="w"> </span><span class="n">사용할</span><span class="w"> </span><span class="n">수도</span><span class="w"> </span><span class="n">있었지만</span><span class="p">,</span><span class="w"> </span><span class="n">함수를</span><span class="w"> </span><span class="n">호출하는</span><span class="w"> </span><span class="n">것</span><span class="w"> </span><span class="n">보다</span><span class="w"> </span><span class="n">변수에</span><span class="w"> </span><span class="n">접근하는</span><span class="w"> </span><span class="n">것이</span><span class="w"> </span><span class="n">더</span><span class="w"> </span><span class="n">연산속도가</span><span class="w"> </span><span class="n">빠르기</span><span class="w"> </span><span class="n">때문입니다</span><span class="p">.</span><span class="w"></span>
+<span class="linenos">62</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="w"> </span><span class="c1">// 온도 60도 유지</span>
+<span class="linenos">63</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">64</span><span class="w">            </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
+<span class="linenos">65</span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">66</span>
+<span class="linenos">67</span><span class="w">            </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">68</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">69</span><span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">70</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">71</span><span class="w">            </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
+<span class="linenos">72</span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">73</span>
+<span class="linenos">74</span><span class="w">            </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">75</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">76</span>
+<span class="linenos">77</span>
+<span class="linenos">78</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">79</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">80</span><span class="w">            </span><span class="n">isPressedBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">81</span>
+<span class="linenos">82</span><span class="w">            </span><span class="n">ssd1306_fillScreen</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">  </span><span class="c1">// 화면 초기화</span>
+<span class="linenos">83</span><span class="w">            </span><span class="c1">// 예열 중이 아닐 경우 OFF 표시</span>
+<span class="linenos">84</span><span class="w">            </span><span class="n">ssd1306_printFixedN</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OFF&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">85</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">86</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">87</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

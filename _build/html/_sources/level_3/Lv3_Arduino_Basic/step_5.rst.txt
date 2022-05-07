@@ -67,7 +67,7 @@
 | for 반복문뿐아니라 while 반복문도 있습니다.
 | 
 
-.. image:: ../../images/Lv3/Chapter_4/Step5_3.jpg
+.. image:: ../../images/Lv3/Chapter_5/Step5_3.jpg
    :width: 600
    :align: center
 
@@ -75,7 +75,7 @@
 | for문과 비슷하지만 초기값과 증감이 없습니다. 조건만 맞으면, 무한히 반복하게 됩니다.
 | 
 
-.. image:: ../../images/Lv3/Chapter_4/Step5_4.jpg
+.. image:: ../../images/Lv3/Chapter_5/Step5_4.jpg
    :width: 300
    :align: center
 

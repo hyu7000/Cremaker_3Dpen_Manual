@@ -19,7 +19,5 @@
    level3
    uploadFw
    manual
-   test
-   test2
    
 

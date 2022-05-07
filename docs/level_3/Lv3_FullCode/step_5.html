@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모터 작동 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="마무리" href="step_6.html" />
+    <link rel="prev" title="예열 및 디스플레이 표시" href="step_4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_5_Arduino_Basic.html">아두이노 기초</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_6_Time.html">delay와 시간</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_7_Button.html">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_9_Temp.html">온도 조절</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv3_11_FullCode.html">프로그램 작성</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">초기 설정 코드</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">온도 표시</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">재료별 리스트</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_4.html">예열 및 디스플레이 표시</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">모터 작동</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_6.html">마무리</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level3.html">레벨 3</a> &raquo;</li>
+          <li><a href="../Lv3_11_FullCode.html">프로그램 작성</a> &raquo;</li>
+      <li>모터 작동</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>모터 작동<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">이제 실제로 모터를 작동하는 코드를 추가해보려 합니다. 모터는 온도가 예열된 상태에서만 작동해야합니다. 버튼을 눌러도 온도가 높지 않다면, 출력이 되지 않게끔 해야 합니다.</div>
+<div class="line">따라서 여기에서는 <span class="blackbold">온도에 따라 모터가 작동되도록</span> 코드를 구현하는 것이 목표입니다.</div>
+<div class="line"><br /></div>
+<div class="line">모터 작동 코드를 추가하기전에 현재온도가 목표온도에 근접했는지 확인할 수 있는 코드를 작성해주어야 합니다. 보통 상태를 확인하는 코드는 bool 변수를 사용하면 좋습니다.</div>
+<div class="line"><br /></div>
+<div class="line">※ 전체코드를 계속해서 보여주는 것은 코드가 길기 때문에 작성된 코드에서 추가될 부분만 설명드리겠습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// 모터로 재료를 밀어낼 준비가 된 상태인지 확인하는 bool 변수 선언</span>
+<span class="linenos"> 2</span><span class="kt">bool</span><span class="w"> </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1">// 현재 상태가 모터를 작동시킬수 있는지 확인하는 함수</span>
+<span class="linenos"> 5</span><span class="kt">void</span><span class="w"> </span><span class="nf">checkForReadyToExt</span><span class="p">()</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">curTemp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">setTemperature</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">현재온도가 목표온도에서 5도 차이내에 있다면, 모터를 작동시킬 수 있도록 isReadyToExt 변수를 true로 변경해줍니다.</div>
+<div class="line">현재온도가 목표온도보다 높은 경우에는 모터가 작동하는데 문제가 없기 때문에, 온도가 낮은 경우만 고려하였습니다.</div>
+<div class="line"><br /></div>
+<div class="line">하지만 고려해야할 것이 하나 더 있습니다. 어떤 것이 문제가 있을지 한번 생각해보시고 아래 버튼을 눌러 수정된 코드를 확인해보세요.</div>
+<div class="line"><br /></div>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// 모터로 재료를 밀어낼 준비가 된 상태인지 확인하는 bool 변수 선언</span>
+<span class="linenos"> 2</span><span class="kt">bool</span><span class="w"> </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1">// 현재 상태가 모터를 작동시킬수 있는지 확인하는 함수</span>
+<span class="linenos"> 5</span><span class="kt">void</span><span class="w"> </span><span class="nf">checkForReadyToExt</span><span class="p">()</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="c1">// 설정온도가 0 이라면, isReadyToExt 변수를 false로 저장</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">setTemperature</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">        </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">curTemp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">setTemperature</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">16</span><span class="w">        </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">22</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">문제는 설정온도가 0 이면, 현재온도보다 항상 낮은 상태가 되니 isReadyToExt 변수가 true 로 저장될 것입니다.</div>
+<div class="line">그렇다면 예열이 되지 않은 상태에서도 모터가 움직이게 됩니다.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">위 함수에서 저장되는 isReadyToExt 변수를 사용하여 모터 작동코드를 작성하면 아래와 같습니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// 방향을 알기 위한 true, false를 전처리문으로 선언</span>
+<span class="linenos"> 2</span><span class="cp">#define EXT_DIR true</span>
+<span class="linenos"> 3</span><span class="cp">#define REV_DIR false</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="cm">/*</span>
+<span class="linenos"> 6</span><span class="cm"> * 방향과 속도를 정하여 모터를 작동시키는 함수, 0이면 정지, 255면 최대속도로 통일</span>
+<span class="linenos"> 7</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos"> 8</span><span class="kt">void</span><span class="w"> </span><span class="nf">workMotor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">dir</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 9</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="c1">// 모터를 작동시킬 준비가 되지 않았다면, 함수를 종료</span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isReadyToExt</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">dir</span><span class="o">==</span><span class="n">EXT_DIR</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="o">-</span><span class="n">speed</span><span class="p">);</span><span class="w"> </span><span class="c1">// HIGH일 경우 스피드를 반전</span>
+<span class="linenos">20</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">dir</span><span class="o">==</span><span class="n">REV_DIR</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">        </span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">speed</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">26</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">모터를 작동하는 함수 앞에 isReadyToExt 의 변수를 확인하는 코드를 추가하여, 온도상태에 따라 모터를 작동시키거나 함수를 종료합니다.</div>
+<div class="line"><br /></div>
+<div class="line">3D 펜에서 재료를 밀어내거나 제거하는 모터의 동작은 다음과 같이 진행됩니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step5_1.gif"><img alt="../../_images/Step5_1.gif" class="align-center" src="../../_images/Step5_1.gif" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">재료를 밀어내는데에는 밀어내다가 버튼을 손에서 떼면, 살짝 뒤로 당겨줍니다. 이는 필라멘트 재료의 특성 때문에 흘러내림을 방지하기 위함입니다. 이 동작을 <span class="blackbold">리트렉션</span> 이라고 합니다.</div>
+<div class="line"><br /></div>
+<div class="line">아래는 재료를 제거하는 동작입니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step5_2.gif"><img alt="../../_images/Step5_2.gif" class="align-center" src="../../_images/Step5_2.gif" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">제거하는 동작에는 모터가 오랫동안 회전하여 재료를 전체 다 제거합니다. 또한 이 긴 시간동안 모터만 작동시키게 할 수는 없습니다. 온도도 확인해야하고, 디스플레이에 표시도 해야되기 때문입니다.</div>
+<div class="line"><br /></div>
+<div class="line">그렇기 때문에, 현재 상태파악하고 모터를 작업시킬 함수가 하나 더 필요합니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">// 동작 상태를 나타낼 수 있는 숫자를 표시</span>
+<span class="linenos"> 2</span><span class="cp">#define STOP    0 </span><span class="c1">// 모터 정지</span>
+<span class="linenos"> 3</span><span class="cp">#define EXTRUDE 1 </span><span class="c1">// 재료 토출</span>
+<span class="linenos"> 4</span><span class="cp">#define REVERSE 2 </span><span class="c1">// 재료 제거</span>
+<span class="linenos"> 5</span><span class="cp">#define RETRACT 3 </span><span class="c1">// 재료 리트렉션</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1">// 동작 상태를 확인할 수 있는 변수 선언</span>
+<span class="linenos"> 8</span><span class="kt">int</span><span class="w"> </span><span class="n">stateAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1">// 시간을 카운트 할 수 있는 변수 선언</span>
+<span class="linenos">11</span><span class="kt">int</span><span class="w"> </span><span class="n">timeWork</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="cm">/*</span>
+<span class="linenos">14</span><span class="cm"> * 상태 값에 따라 각각의 모터 동작 수행</span>
+<span class="linenos">15</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos">16</span><span class="kt">void</span><span class="w"> </span><span class="nf">workAction</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">17</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">stateAction</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">20</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">STOP</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">21</span><span class="w">            </span><span class="n">workMotor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">EXT_DIR</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">22</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">EXTRUDE</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">            </span><span class="n">workMotor</span><span class="p">(</span><span class="n">setMotorSpeed</span><span class="p">,</span><span class="w"> </span><span class="n">EXT_DIR</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">REVERSE</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">29</span><span class="w">            </span><span class="n">timeWork</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">            </span><span class="n">workMotor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="n">REV_DIR</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">31</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">RETRACT</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">34</span><span class="w">            </span><span class="n">timeWork</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">35</span><span class="w">            </span><span class="n">workMotor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="n">REV_DIR</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">36</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">37</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">38</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">setMotorSpeed 는 기존에 선언된 것으로 재료리스트의 속도 값이 저장되는 변수입니다.</div>
+<div class="line">동작상태가 여러개이다 보니, bool 변수 대신 int 변수를 사용했습니다. 또한 전처리문으로 코드를 파악하기 쉽도록 하였습니다.</div>
+<div class="line"><br /></div>
+<div class="line">timeWork 변수는 시간을 측정하는데 사용합니다. 예를 들어 아래와 같은 코드가 있다면, timeWork이 0이 되기 까지 1초가 걸립니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kt">int</span><span class="w"> </span><span class="n">timeWork</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 2</span><span class="kt">long</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">10</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">11</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">12</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">        </span><span class="n">timeWork</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">15</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">이와 같은 원리로 timeWork의 변수를 선언하였습니다.</div>
+<div class="line"><br /></div>
+<div class="line">기존 코드에서 workMotor, workAction, isReadyToExt 함수를 추가하여 코드를 작성해봅니다.</div>
+<div class="line">1. A 버튼을 누른 상태면, 모터가 필라멘트 토출되는 방향으로 회전.</div>
+<div class="line">2. A 버튼을 누른 상태에서 떼면, 모터가 필라멘트 제거되는 방향으로 1초 동안 회전.</div>
+<div class="line">3. B 버튼을 누르면, 모터가 필라멘트 제거되는 방향으로 10초동안 회전.</div>
+<div class="line">4. A,B 버튼을 누르지 않으면, 모터는 정지 하도록 합니다.</div>
+<div class="line"><br /></div>
+<div class="line">작성후 아래의 코드와 비교해봅니다.</div>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ssd1306.h&quot;</span><span class="c1"> // 라이브러리 포함</span><span class="cp"></span>
+<span class="linenos">  2</span>
+<span class="linenos">  3</span><span class="cp">#define BTN_A           8      </span><span class="c1">// A버튼</span>
+<span class="linenos">  4</span><span class="cp">#define BTN_B           7      </span><span class="c1">// B버튼</span>
+<span class="linenos">  5</span><span class="cp">#define BTN_C           11     </span><span class="c1">// C버튼</span>
+<span class="linenos">  6</span><span class="cp">#define BTN_D           12     </span><span class="c1">// D버튼</span>
+<span class="linenos">  7</span>
+<span class="linenos">  8</span><span class="cp">#define MOTOR_EN        5      </span><span class="c1">// 모터 활성화 핀</span>
+<span class="linenos">  9</span><span class="cp">#define MOTOR_DIR       6      </span><span class="c1">// 모터 방향 핀</span>
+<span class="linenos"> 10</span><span class="cp">#define MOTOR_SPEED     10     </span><span class="c1">// 모터 속도 핀</span>
+<span class="linenos"> 11</span>
+<span class="linenos"> 12</span><span class="cp">#define HEATER_EN       9      </span><span class="c1">// 열선 핀</span>
+<span class="linenos"> 13</span>
+<span class="linenos"> 14</span><span class="cp">#define TEMP_IN         A0     </span><span class="c1">// 온도 읽는 핀</span>
+<span class="linenos"> 15</span>
+<span class="linenos"> 16</span><span class="cp">#define VALUE_TEMPTB    0      </span><span class="c1">// 온도 테이블의 신호 값 인덱스</span>
+<span class="linenos"> 17</span><span class="cp">#define CELSIUS_TEMPTB  1      </span><span class="c1">// 온도 테이블의 온도 값 인덱스</span>
+<span class="linenos"> 18</span>
+<span class="linenos"> 19</span><span class="cp">#define MATERIAL_COUNT  3      </span><span class="c1">// material 구조체 배열의 갯수</span>
+<span class="linenos"> 20</span>
+<span class="linenos"> 21</span><span class="c1">// 동작 상태를 나타낼 수 있는 숫자를 표시</span>
+<span class="linenos"> 22</span><span class="cp">#define STOP            0 </span><span class="c1">// 모터 정지</span>
+<span class="linenos"> 23</span><span class="cp">#define EXTRUDE         1 </span><span class="c1">// 재료 토출</span>
+<span class="linenos"> 24</span><span class="cp">#define REVERSE         2 </span><span class="c1">// 재료 제거</span>
+<span class="linenos"> 25</span><span class="cp">#define RETRACT         3 </span><span class="c1">// 재료 리트렉션</span>
+<span class="linenos"> 26</span>
+<span class="linenos"> 27</span><span class="c1">// 모터 방향을 알기 위한 true, false를 전처리문으로 선언</span>
+<span class="linenos"> 28</span><span class="cp">#define EXT_DIR         true</span>
+<span class="linenos"> 29</span><span class="cp">#define REV_DIR         false</span>
+<span class="linenos"> 30</span>
+<span class="linenos"> 31</span><span class="n">String</span><span class="w"> </span><span class="n">strToShow</span><span class="p">;</span><span class="w">              </span><span class="c1">// 디스플레이에 보여줄 문자열을 저장하는 변수</span>
+<span class="linenos"> 32</span>
+<span class="linenos"> 33</span><span class="kt">bool</span><span class="w"> </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 온도가 목표보다 높은지 확인하는 bool 변수</span>
+<span class="linenos"> 34</span><span class="kt">bool</span><span class="w"> </span><span class="n">isNeedUpdateScreen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">      </span><span class="c1">// 업데이트가 필요한지 확인하는 bool 변수 생성</span>
+<span class="linenos"> 35</span><span class="kt">bool</span><span class="w"> </span><span class="n">isPressedA_BTN</span><span class="p">,</span><span class="w"> </span><span class="n">isPressedB_BTN</span><span class="p">,</span><span class="w"> </span><span class="n">isPressedC_BTN</span><span class="p">,</span><span class="w"> </span><span class="n">isPressedD_BTN</span><span class="p">;</span><span class="w"> </span><span class="c1">// 버튼이 눌러져 있는지 확인하는 bool 변수 생성</span>
+<span class="linenos"> 36</span><span class="kt">bool</span><span class="w"> </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 모터로 재료를 밀어낼 준비가 된 상태인지 확인하는 bool 변수 선언</span>
+<span class="linenos"> 37</span>
+<span class="linenos"> 38</span><span class="kt">int</span><span class="w"> </span><span class="n">stateAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 동작 상태를 확인할 수 있는 변수 선언</span>
+<span class="linenos"> 39</span><span class="kt">int</span><span class="w"> </span><span class="n">timeWork</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 시간을 카운트 할 수 있는 변수 선언</span>
+<span class="linenos"> 40</span><span class="kt">int</span><span class="w"> </span><span class="n">curTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 현재온도</span>
+<span class="linenos"> 41</span>
+<span class="linenos"> 42</span><span class="kt">long</span><span class="w"> </span><span class="n">timeInterval</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span><span class="w"> </span><span class="c1">// 50ms 에 1회씩 작동하기 위한 시간 변수</span>
+<span class="linenos"> 43</span>
+<span class="linenos"> 44</span><span class="kt">int</span><span class="w"> </span><span class="n">material_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">        </span><span class="c1">// 재료 구조체 배열의 위치를 가리키는 인덱스</span>
+<span class="linenos"> 45</span><span class="kt">int</span><span class="w"> </span><span class="n">setTemperature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">        </span><span class="c1">// 설정된 온도</span>
+<span class="linenos"> 46</span><span class="kt">int</span><span class="w"> </span><span class="n">setMotorSpeed</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">        </span><span class="c1">// 설정된 모터 속도</span>
+<span class="linenos"> 47</span>
+<span class="linenos"> 48</span><span class="c1">// 온도, 속도, 재료명을 포함한 구조체 선언</span>
+<span class="linenos"> 49</span><span class="k">struct</span><span class="w"> </span><span class="nc">setting</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 50</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">temperature</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 51</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">motorSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 52</span><span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">materialName</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 53</span><span class="p">};</span><span class="w"></span>
+<span class="linenos"> 54</span>
+<span class="linenos"> 55</span><span class="k">struct</span><span class="w"> </span><span class="nc">setting</span><span class="w"> </span><span class="n">materials</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;OFF&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PCL&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="s">&quot;PLA&quot;</span><span class="p">}};</span><span class="w"></span>
+<span class="linenos"> 56</span>
+<span class="linenos"> 57</span><span class="cm">/*</span>
+<span class="linenos"> 58</span><span class="cm"> *  온도 테이블 배열</span>
+<span class="linenos"> 59</span><span class="cm"> *  첫번째 항목은 신호 값, 두번째 항목은 온도 값</span>
+<span class="linenos"> 60</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos"> 61</span><span class="kt">int</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="mi">23</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 62</span><span class="w">    </span><span class="p">{</span><span class="mi">1023</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 63</span><span class="w">    </span><span class="p">{</span><span class="mi">1008</span><span class="p">,</span><span class="mi">10</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 64</span><span class="w">    </span><span class="p">{</span><span class="mi">994</span><span class="p">,</span><span class="mi">20</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 65</span><span class="w">    </span><span class="p">{</span><span class="mi">990</span><span class="p">,</span><span class="mi">30</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 66</span><span class="w">    </span><span class="p">{</span><span class="mi">985</span><span class="p">,</span><span class="mi">40</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 67</span><span class="w">    </span><span class="p">{</span><span class="mi">983</span><span class="p">,</span><span class="mi">50</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 68</span><span class="w">    </span><span class="p">{</span><span class="mi">981</span><span class="p">,</span><span class="mi">60</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 69</span><span class="w">    </span><span class="p">{</span><span class="mi">978</span><span class="p">,</span><span class="mi">70</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 70</span><span class="w">    </span><span class="p">{</span><span class="mi">975</span><span class="p">,</span><span class="mi">80</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 71</span><span class="w">    </span><span class="p">{</span><span class="mi">965</span><span class="p">,</span><span class="mi">90</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 72</span><span class="w">    </span><span class="p">{</span><span class="mi">959</span><span class="p">,</span><span class="mi">100</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 73</span><span class="w">    </span><span class="p">{</span><span class="mi">952</span><span class="p">,</span><span class="mi">110</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 74</span><span class="w">    </span><span class="p">{</span><span class="mi">948</span><span class="p">,</span><span class="mi">120</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 75</span><span class="w">    </span><span class="p">{</span><span class="mi">941</span><span class="p">,</span><span class="mi">130</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 76</span><span class="w">    </span><span class="p">{</span><span class="mi">932</span><span class="p">,</span><span class="mi">140</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 77</span><span class="w">    </span><span class="p">{</span><span class="mi">920</span><span class="p">,</span><span class="mi">150</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 78</span><span class="w">    </span><span class="p">{</span><span class="mi">908</span><span class="p">,</span><span class="mi">160</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 79</span><span class="w">    </span><span class="p">{</span><span class="mi">890</span><span class="p">,</span><span class="mi">170</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 80</span><span class="w">    </span><span class="p">{</span><span class="mi">875</span><span class="p">,</span><span class="mi">180</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 81</span><span class="w">    </span><span class="p">{</span><span class="mi">845</span><span class="p">,</span><span class="mi">190</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 82</span><span class="w">    </span><span class="p">{</span><span class="mi">820</span><span class="p">,</span><span class="mi">200</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 83</span><span class="w">    </span><span class="p">{</span><span class="mi">790</span><span class="p">,</span><span class="mi">210</span><span class="p">},</span><span class="w"></span>
+<span class="linenos"> 84</span><span class="w">    </span><span class="p">{</span><span class="mi">765</span><span class="p">,</span><span class="mi">220</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 85</span><span class="p">};</span><span class="w"></span>
+<span class="linenos"> 86</span>
+<span class="linenos"> 87</span><span class="cm">/*</span>
+<span class="linenos"> 88</span><span class="cm"> * 입력받은 문자를 디스플레이 좌표에 표시</span>
+<span class="linenos"> 89</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos"> 90</span><span class="kt">void</span><span class="w"> </span><span class="nf">showTextToScreen</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 91</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 92</span><span class="w">    </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos"> 93</span><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span><span class="w"></span>
+<span class="linenos"> 94</span><span class="w">    </span><span class="n">text</span><span class="p">.</span><span class="n">toCharArray</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span><span class="n">text</span><span class="p">.</span><span class="n">length</span><span class="p">());</span><span class="w"></span>
+<span class="linenos"> 95</span><span class="w">    </span><span class="n">ssd1306_printFixedN</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">STYLE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="n">FONT_SIZE_2X</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 96</span><span class="p">}</span><span class="w"></span>
+<span class="linenos"> 97</span>
+<span class="linenos"> 98</span><span class="cm">/*</span>
+<span class="linenos"> 99</span><span class="cm"> * 현재 상태가 모터를 작동시킬수 있는지 확인하는 함수</span>
+<span class="linenos">100</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos">101</span><span class="kt">void</span><span class="w"> </span><span class="nf">checkForReadyToExt</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">102</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">103</span><span class="w">    </span><span class="c1">// 설정온도가 0 이라면, isReadyToExt 변수를 false로 저장</span>
+<span class="linenos">104</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">setTemperature</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">105</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">106</span><span class="w">        </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">107</span><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">108</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">109</span>
+<span class="linenos">110</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">curTemp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">setTemperature</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">111</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">112</span><span class="w">        </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">113</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">114</span><span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">115</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">116</span><span class="w">        </span><span class="n">isReadyToExt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">117</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">118</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">119</span>
+<span class="linenos">120</span><span class="cm">/*</span>
+<span class="linenos">121</span><span class="cm"> * 방향과 속도를 정하여 모터를 작동시키는 함수, 0이면 정지, 255면 최대속도로 통일</span>
+<span class="linenos">122</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos">123</span><span class="kt">void</span><span class="w"> </span><span class="nf">workMotor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">dir</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">124</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">125</span><span class="w">    </span><span class="c1">// 모터를 작동시킬 준비가 되지 않았다면, 함수를 종료</span>
+<span class="linenos">126</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isReadyToExt</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">127</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">128</span><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">129</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">130</span>
+<span class="linenos">131</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">dir</span><span class="o">==</span><span class="n">EXT_DIR</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">132</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">133</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">134</span><span class="w">        </span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="o">-</span><span class="n">speed</span><span class="p">);</span><span class="w"> </span><span class="c1">// HIGH일 경우 스피드를 반전</span>
+<span class="linenos">135</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">136</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">dir</span><span class="o">==</span><span class="n">REV_DIR</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">137</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">138</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">139</span><span class="w">        </span><span class="n">analogWrite</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">speed</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">140</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">141</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">142</span>
+<span class="linenos">143</span><span class="cm">/*</span>
+<span class="linenos">144</span><span class="cm"> * 상태 값에 따라 각각의 모터 동작 수행</span>
+<span class="linenos">145</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos">146</span><span class="kt">void</span><span class="w"> </span><span class="nf">workAction</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">147</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">148</span><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">stateAction</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">149</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">150</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">STOP</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">151</span><span class="w">            </span><span class="n">workMotor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">EXT_DIR</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">152</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">153</span>
+<span class="linenos">154</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">EXTRUDE</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">155</span><span class="w">            </span><span class="n">workMotor</span><span class="p">(</span><span class="mi">255</span><span class="o">*</span><span class="n">setMotorSpeed</span><span class="o">/</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">EXT_DIR</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">156</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">157</span>
+<span class="linenos">158</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">REVERSE</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">159</span><span class="w">            </span><span class="n">timeWork</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">160</span><span class="w">            </span><span class="n">workMotor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="n">REV_DIR</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">161</span><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">timeWork</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">162</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">163</span><span class="w">                </span><span class="n">stateAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STOP</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">164</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">165</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">166</span>
+<span class="linenos">167</span><span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nl">RETRACT</span><span class="p">:</span><span class="w"></span>
+<span class="linenos">168</span><span class="w">            </span><span class="n">timeWork</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">169</span><span class="w">            </span><span class="n">workMotor</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="n">REV_DIR</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">170</span><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">timeWork</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">171</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">172</span><span class="w">                </span><span class="n">stateAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STOP</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">173</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">174</span><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">175</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">176</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">177</span>
+<span class="linenos">178</span><span class="cm">/*</span>
+<span class="linenos">179</span><span class="cm"> * 아날로그 A0 핀의 신호 값을 디지털 9번핀(열선)이 HIGH인 상태에서 체크하도록 하는 함수</span>
+<span class="linenos">180</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos">181</span><span class="kt">int</span><span class="w"> </span><span class="nf">checkA0</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">182</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">183</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">184</span>
+<span class="linenos">185</span><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
+<span class="linenos">186</span><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">187</span>
+<span class="linenos">188</span><span class="w">    </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 아날로그 신호 값을 tempValueA0 저장</span>
+<span class="linenos">189</span>
+<span class="linenos">190</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isHeating</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">191</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">192</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
+<span class="linenos">193</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">194</span>
+<span class="linenos">195</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tempValueA0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">196</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">197</span>
+<span class="linenos">198</span><span class="cm">/*</span>
+<span class="linenos">199</span><span class="cm"> * 온도를 읽고, 정확한 온도로 계산 후 결과 값을 화면에 표시하고 반환하는 함수</span>
+<span class="linenos">200</span><span class="cm"> * VALUE_TEMPTB = 0, CELSIUS_TEMPTB = 1 으로 온도표의 각 항목을 지시함</span>
+<span class="linenos">201</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos">202</span><span class="kt">int</span><span class="w"> </span><span class="nf">getTemperature</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">203</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">204</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">ratioTemp</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">205</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">tempADU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">checkA0</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">206</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">207</span>
+<span class="linenos">208</span><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">23</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
+<span class="linenos">209</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">tempADU</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">VALUE_TEMPTB</span><span class="p">])</span><span class="w"></span>
+<span class="linenos">210</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">211</span><span class="w">            </span><span class="n">ratioTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">tempADU</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">VALUE_TEMPTB</span><span class="p">])</span><span class="o">/</span><span class="p">(</span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">][</span><span class="n">VALUE_TEMPTB</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">VALUE_TEMPTB</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">212</span>
+<span class="linenos">213</span><span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">CELSIUS_TEMPTB</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ratioTemp</span><span class="o">*</span><span class="p">(</span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">CELSIUS_TEMPTB</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">temptable</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">][</span><span class="n">CELSIUS_TEMPTB</span><span class="p">]);</span><span class="w"></span>
+<span class="linenos">214</span>
+<span class="linenos">215</span><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">216</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">217</span><span class="w">                </span><span class="n">strToShow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;00&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">result</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">218</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">219</span><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">220</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">221</span><span class="w">                </span><span class="n">strToShow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">result</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">222</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">223</span><span class="w">            </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">224</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">225</span><span class="w">                </span><span class="n">strToShow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">result</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">226</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">227</span>
+<span class="linenos">228</span><span class="w">            </span><span class="n">showTextToScreen</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="n">strToShow</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">229</span>
+<span class="linenos">230</span><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">231</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">232</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">233</span>
+<span class="linenos">234</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="linenos">235</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">236</span>
+<span class="linenos">237</span><span class="kt">float</span><span class="w"> </span><span class="n">Kp</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="n">Ki</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Kd</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">238</span><span class="kt">int16_t</span><span class="w"> </span><span class="n">error</span><span class="p">,</span><span class="w"> </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 오차 변수</span>
+<span class="linenos">239</span><span class="kt">float</span><span class="w"> </span><span class="n">integral</span><span class="p">,</span><span class="w"> </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// 적분 미분 변수</span>
+<span class="linenos">240</span>
+<span class="linenos">241</span><span class="cm">/*</span>
+<span class="linenos">242</span><span class="cm">* pid 계산을 하고, 결과값을 HEATER_EN 핀에 적용</span>
+<span class="linenos">243</span><span class="cm">*/</span><span class="w"></span>
+<span class="linenos">244</span><span class="kt">void</span><span class="w"> </span><span class="nf">getPIDoutput</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">targetTemp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">actualValue</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">245</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">246</span><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">outputValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">247</span>
+<span class="linenos">248</span><span class="w">    </span><span class="c1">// 에러 값 저장</span>
+<span class="linenos">249</span><span class="w">    </span><span class="n">error</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">targetTemp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">actualValue</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">250</span>
+<span class="linenos">251</span><span class="w">    </span><span class="c1">// 적분 값 저장</span>
+<span class="linenos">252</span><span class="w">    </span><span class="n">integral</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">integral</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">error</span><span class="o">*</span><span class="n">dT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">253</span>
+<span class="linenos">254</span><span class="w">    </span><span class="c1">// 미분 값 저장</span>
+<span class="linenos">255</span><span class="w">    </span><span class="n">derivaitve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">error</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">previousError</span><span class="p">)</span><span class="o">/</span><span class="n">dT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">256</span><span class="w">    </span><span class="n">previousError</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">error</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">257</span>
+<span class="linenos">258</span><span class="w">    </span><span class="c1">// PID 계산</span>
+<span class="linenos">259</span><span class="w">    </span><span class="n">outputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kp</span><span class="o">*</span><span class="n">error</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Ki</span><span class="o">*</span><span class="n">integral</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Kp</span><span class="o">*</span><span class="n">derivaitve</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">260</span>
+<span class="linenos">261</span><span class="w">    </span><span class="c1">// output 값이 0~255 범위를 벗어나면 최대, 최소 값을 대신 저장</span>
+<span class="linenos">262</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">outputValue</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">263</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">264</span><span class="w">        </span><span class="n">outputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">265</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">266</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">outputValue</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">267</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">268</span><span class="w">        </span><span class="n">outputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">269</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">270</span>
+<span class="linenos">271</span><span class="w">    </span><span class="c1">// outputValue 가 0이라면 예열이 되지 않음으로, isHeating 변수를 false로 저장</span>
+<span class="linenos">272</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">outputValue</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">273</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">274</span><span class="w">        </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">275</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">276</span><span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">277</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">278</span><span class="w">        </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">279</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">280</span>
+<span class="linenos">281</span><span class="w">    </span><span class="c1">// 계산된 결과값을 디지털 9번핀에 analogWrite 로 입력</span>
+<span class="linenos">282</span><span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">HEATER_EN</span><span class="p">,</span><span class="n">outputValue</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">283</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">284</span>
+<span class="linenos">285</span><span class="cm">/*</span>
+<span class="linenos">286</span><span class="cm"> * 버튼이 눌러졌는지 확인하고, 해당버튼에 맞는 코드 실행</span>
+<span class="linenos">287</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos">288</span><span class="kt">void</span><span class="w"> </span><span class="nf">checkBtnPressed</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">289</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">290</span><span class="w">    </span><span class="c1">// A버튼이 눌리고, B버튼이 눌리지 않았을 경우 실행</span>
+<span class="linenos">291</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BTN_A</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BTN_B</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">292</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">293</span><span class="w">        </span><span class="c1">// A 버튼이 눌러져 있으면(isPressedA_BTN 가 true), 아래 코드 건너뜀</span>
+<span class="linenos">294</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isPressedA_BTN</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">295</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">296</span><span class="w">            </span><span class="n">stateAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EXTRUDE</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">297</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">298</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">299</span><span class="w">    </span><span class="c1">// B버튼이 눌리고, A버튼이 눌리지 않았을 경우 실행</span>
+<span class="linenos">300</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BTN_A</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BTN_B</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">301</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">302</span><span class="w">        </span><span class="c1">// B 버튼이 눌러져 있으면(isPressedB_BTN 가 true), 아래 코드 건너뜀</span>
+<span class="linenos">303</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isPressedB_BTN</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">304</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">305</span><span class="w">            </span><span class="c1">// 동작 상태를 필라멘트 제거로 변경하고,</span>
+<span class="linenos">306</span><span class="w">            </span><span class="c1">// 시간을 10초 동안 작동하도록 timeWork 변수에 값 저장</span>
+<span class="linenos">307</span><span class="w">            </span><span class="n">stateAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">REVERSE</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">308</span><span class="w">            </span><span class="n">timeWork</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">309</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">310</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">311</span><span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">312</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">313</span><span class="w">        </span><span class="c1">// A, B 버튼 모두 눌리지 않을 경우, 변수 값 변경</span>
+<span class="linenos">314</span><span class="w">        </span><span class="n">isPressedA_BTN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">315</span><span class="w">        </span><span class="n">isPressedB_BTN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">316</span>
+<span class="linenos">317</span><span class="w">        </span><span class="c1">// 동작 상태를 리렉션으로 변경하고,</span>
+<span class="linenos">318</span><span class="w">        </span><span class="c1">// 시간을 1초 동안 작동하도록 timeWork 변수에 값 저장</span>
+<span class="linenos">319</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">stateAction</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EXTRUDE</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">320</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">321</span><span class="w">            </span><span class="n">stateAction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RETRACT</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">322</span><span class="w">            </span><span class="n">timeWork</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">323</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">324</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">325</span>
+<span class="linenos">326</span>
+<span class="linenos">327</span><span class="w">    </span><span class="c1">// C버튼이 눌리고, D버튼이 눌리지 않았을 경우 실행</span>
+<span class="linenos">328</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BTN_C</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BTN_D</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">329</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">330</span><span class="w">        </span><span class="c1">// C 버튼이 눌러져 있으면(isPressedC_BTN 가 true), 아래 코드 건너뜀</span>
+<span class="linenos">331</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isPressedC_BTN</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">332</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">333</span><span class="w">            </span><span class="c1">// 구조체 배열의 인덱스로 사용될 변수 값 1 증가</span>
+<span class="linenos">334</span><span class="w">            </span><span class="n">material_index</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">335</span><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">material_index</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MATERIAL_COUNT</span><span class="mi">-1</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">336</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">337</span><span class="w">                </span><span class="n">material_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">338</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">339</span>
+<span class="linenos">340</span><span class="w">            </span><span class="c1">// 디스플레이 업데이트를 할 수 있도록 변수 변경</span>
+<span class="linenos">341</span><span class="w">            </span><span class="n">isNeedUpdateScreen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">342</span>
+<span class="linenos">343</span><span class="w">            </span><span class="c1">// 버튼 상태 변수 변경</span>
+<span class="linenos">344</span><span class="w">            </span><span class="n">isPressedC_BTN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">345</span>
+<span class="linenos">346</span><span class="w">            </span><span class="c1">// 적분 값 리셋</span>
+<span class="linenos">347</span><span class="w">            </span><span class="n">integral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">348</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">349</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">350</span><span class="w">    </span><span class="c1">// D버튼이 눌리고, C버튼이 눌리지 않았을 경우 실행</span>
+<span class="linenos">351</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BTN_C</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">digitalRead</span><span class="p">(</span><span class="n">BTN_D</span><span class="p">))</span><span class="w"></span>
+<span class="linenos">352</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">353</span><span class="w">        </span><span class="c1">// D 버튼이 눌러져 있으면(isPressedD_BTN 가 true), 아래 코드 건너뜀</span>
+<span class="linenos">354</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isPressedD_BTN</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">355</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">356</span><span class="w">            </span><span class="c1">// 구조체 배열의 인덱스로 사용될 변수 값 1 감소</span>
+<span class="linenos">357</span><span class="w">            </span><span class="n">material_index</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">358</span><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">material_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">359</span><span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">360</span><span class="w">                </span><span class="n">material_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MATERIAL_COUNT</span><span class="mi">-1</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">361</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">362</span>
+<span class="linenos">363</span><span class="w">            </span><span class="c1">// 디스플레이 업데이트를 할 수 있도록 변수 변경</span>
+<span class="linenos">364</span><span class="w">            </span><span class="n">isNeedUpdateScreen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">365</span>
+<span class="linenos">366</span><span class="w">            </span><span class="c1">// 버튼 상태 변수 변경</span>
+<span class="linenos">367</span><span class="w">            </span><span class="n">isPressedD_BTN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">368</span>
+<span class="linenos">369</span><span class="w">            </span><span class="c1">// 적분 값 리셋</span>
+<span class="linenos">370</span><span class="w">            </span><span class="n">integral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">371</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">372</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">373</span><span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">374</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">375</span><span class="w">        </span><span class="c1">// C, D 버튼 모두 눌리지 않을 경우, 변수 값 변경</span>
+<span class="linenos">376</span><span class="w">        </span><span class="n">isPressedC_BTN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">377</span><span class="w">        </span><span class="n">isPressedD_BTN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">378</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">379</span>
+<span class="linenos">380</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">381</span>
+<span class="linenos">382</span><span class="cm">/*</span>
+<span class="linenos">383</span><span class="cm"> * 화면에 표시될 재료명, 목표속도, 목표온도를 업데이트</span>
+<span class="linenos">384</span><span class="cm"> */</span><span class="w"></span>
+<span class="linenos">385</span><span class="kt">void</span><span class="w"> </span><span class="nf">updateMaterial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">386</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">387</span><span class="w">    </span><span class="c1">// isNeedUpdate 변수가 false 이면 함수를 종료함</span>
+<span class="linenos">388</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isNeedUpdateScreen</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">389</span>
+<span class="linenos">390</span><span class="w">    </span><span class="c1">// 목표 온도, 속도 항목에 현재 인덱스의 구조체 값을 저장</span>
+<span class="linenos">391</span><span class="w">    </span><span class="n">setTemperature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">materials</span><span class="p">[</span><span class="n">index</span><span class="p">].</span><span class="n">temperature</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">392</span><span class="w">    </span><span class="n">setMotorSpeed</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">materials</span><span class="p">[</span><span class="n">index</span><span class="p">].</span><span class="n">motorSpeed</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">393</span>
+<span class="linenos">394</span><span class="w">    </span><span class="c1">// 화면 클리어</span>
+<span class="linenos">395</span><span class="w">    </span><span class="n">ssd1306_clearScreen</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">396</span>
+<span class="linenos">397</span><span class="w">    </span><span class="c1">// 화면에 목표 온도, 재료 명, 속도를 표시</span>
+<span class="linenos">398</span><span class="w">    </span><span class="c1">// 재료명은 좌표 0,0 에 표시</span>
+<span class="linenos">399</span><span class="w">    </span><span class="c1">// 목표 속도는 좌표 80, 0 에 표시</span>
+<span class="linenos">400</span><span class="w">    </span><span class="c1">// 목표 온도는 좌표 52, 16 에 표시</span>
+<span class="linenos">401</span><span class="w">    </span><span class="n">strToShow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">materials</span><span class="p">[</span><span class="n">index</span><span class="p">].</span><span class="n">materialName</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">402</span><span class="w">    </span><span class="n">showTextToScreen</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">strToShow</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">403</span>
+<span class="linenos">404</span><span class="w">    </span><span class="n">strToShow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">setMotorSpeed</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;%&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">405</span><span class="w">    </span><span class="n">showTextToScreen</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">strToShow</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">406</span>
+<span class="linenos">407</span><span class="w">    </span><span class="n">strToShow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">setTemperature</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">408</span><span class="w">    </span><span class="n">showTextToScreen</span><span class="p">(</span><span class="mi">52</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="n">strToShow</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">409</span>
+<span class="linenos">410</span><span class="w">    </span><span class="c1">// 화면을 계속해서 업데이트 하지 않도록 방지하는 bool 변수 변경</span>
+<span class="linenos">411</span><span class="w">    </span><span class="n">isNeedUpdateScreen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">412</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">413</span>
+<span class="linenos">414</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">415</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">416</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BTN_A</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">417</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BTN_B</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">418</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BTN_C</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">419</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">BTN_D</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">420</span>
+<span class="linenos">421</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">MOTOR_EN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">422</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">MOTOR_DIR</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">423</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">MOTOR_SPEED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">424</span>
+<span class="linenos">425</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">HEATER_EN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">426</span>
+<span class="linenos">427</span><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">MOTOR_EN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 모터 활성화</span>
+<span class="linenos">428</span>
+<span class="linenos">429</span><span class="w">    </span><span class="n">ssd1306_128x32_i2c_init</span><span class="p">();</span><span class="w"> </span><span class="c1">// 32로 변경</span>
+<span class="linenos">430</span><span class="w">    </span><span class="n">ssd1306_fillScreen</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span><span class="w">  </span><span class="c1">// 화면 초기화</span>
+<span class="linenos">431</span><span class="w">    </span><span class="n">ssd1306_setFixedFont</span><span class="p">(</span><span class="n">ssd1306xled_font6x8</span><span class="p">);</span><span class="w"> </span><span class="c1">// 폰트 설정</span>
+<span class="linenos">432</span><span class="w">    </span><span class="n">ssd1306_flipHorizontal</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// x 화면 대칭 회전</span>
+<span class="linenos">433</span><span class="w">    </span><span class="n">ssd1306_flipVertical</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">   </span><span class="c1">// y 화면 대칭 회전</span>
+<span class="linenos">434</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">435</span>
+<span class="linenos">436</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">437</span><span class="p">{</span><span class="w"></span>
+<span class="linenos">438</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">millis</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">timeInterval</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">439</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">440</span><span class="w">        </span><span class="n">curTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getTemperature</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">441</span><span class="w">        </span><span class="n">updateMaterial</span><span class="p">(</span><span class="n">material_index</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">442</span><span class="w">        </span><span class="n">checkBtnPressed</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">443</span><span class="w">        </span><span class="n">getPIDoutput</span><span class="p">(</span><span class="n">setTemperature</span><span class="p">,</span><span class="w"> </span><span class="n">curTemp</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">444</span><span class="w">        </span><span class="n">checkForReadyToExt</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">445</span><span class="w">        </span><span class="n">workAction</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">446</span>
+<span class="linenos">447</span><span class="w">        </span><span class="n">timeInterval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">millis</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">448</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">449</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_4.html" class="btn btn-neutral float-left" title="예열 및 디스플레이 표시" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step_6.html" class="btn btn-neutral float-right" title="마무리" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -28,7 +28,7 @@
 | 아두이노를 업로드하신 경험이 있으시다면, 아두이노를 업로드하기 전에 컴파일을 진행하는 것을 보았을 겁니다.
 |
 
-.. image:: ../../images/Lv3/Chapter_4/Step9_1.png
+.. image:: ../../images/Lv3/Chapter_5/Step9_1.png
    :width: 500
    :align: center
 
@@ -37,7 +37,7 @@
 | 말 그대로 :blackbold:`전처리` 과정입니다.
 |
 
-.. image:: ../../images/Lv3/Chapter_4/Step9_2.jpg
+.. image:: ../../images/Lv3/Chapter_5/Step9_2.jpg
    :width: 700
    :align: center
 
@@ -46,7 +46,7 @@
 | 그렇다면, 전처리문에는 어떤 것들이 있는지 알아봅니다.
 |
  
-.. image:: ../../images/Lv3/Chapter_4/Step9_3.jpg
+.. image:: ../../images/Lv3/Chapter_5/Step9_3.jpg
    :width: 700
    :align: center
 

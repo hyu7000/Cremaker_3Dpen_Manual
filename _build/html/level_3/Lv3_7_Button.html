@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스위치 버튼 사용 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="모터 작동시키기" href="Lv3_8_Motor.html" />
+    <link rel="prev" title="delay와 시간" href="Lv3_6_Time.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_5_Arduino_Basic.html">아두이노 기초</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_6_Time.html">delay와 시간</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_9_Temp.html">온도 조절</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_11_FullCode.html">프로그램 작성</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual.html">사용 매뉴얼</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../level3.html">레벨 3</a> &raquo;</li>
+      <li>스위치 버튼 사용</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tartgetl3c7s1-1">
+<span id="id1"></span><h1>스위치 버튼 사용<a class="headerlink" href="#tartgetl3c7s1-1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">본격적으로 3D 펜에 활용되는 기능들을 구현해봅니다.</div>
+<div class="line">먼저 살펴볼 것은 버튼 입니다. 이번 챕터에서는 <span class="blackbold">버튼을 이용해서 LED를 껏다가 킬수있도록</span> 구현하는 것이 목표입니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">[실제 사진추가]</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">3D 펜에 버튼은 총 4개가 있습니다. 앞쪽 2개(A,B) 뒤쪽 2개(C,D) 입니다.</div>
+<div class="line">이 버튼은 각각 아두이노에 연결되어 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_12.jpg"><img alt="../_images/Step1_12.jpg" class="align-center" src="../_images/Step1_12.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">위와 같이 A,B,C,D 버튼은 각각 아두이노 디지털 핀의 D8,D7,D11,D12에 연결되어 있습니다. 그렇다면, 이제 버튼이 눌릴 때 마다 신호를 받게 하는 코드를 작성해볼 겁니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_26.png"><img alt="../_images/Step1_26.png" class="align-center" src="../_images/Step1_26.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 먼저 아두이노를 실행하고, 메뉴에서 파일 - 새 파일을 선택합니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// put your setup code here, to run once:</span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// put your main code here, to run repeatedly:</span>
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">약간의 코드가 작성된 채로 나옵니다. 먼저 setup 함수에 ‘디지털 핀 8을 INPUT으로 사용한다’와’디지털 13번핀(LED)을 OUTPUT으로 사용한다’라는 코드를 작성합니다.</div>
+<div class="line">버튼이 눌렸을 때의 신호를 인지해야하기 때문에 INPUT으로 설정합니다.</div>
+<div class="line"><br /></div>
+<div class="line">※ 1개의 버튼을 먼저 예시로 들겠습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="w"> </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"></span>
+<span class="w"> </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">이처럼 pinMode를 사용하여 작성되면, 각 핀의 상태 설정이 완료됩니다.</div>
+<div class="line">INPUT 대신 INPUT_PULLUP 작성된 이유가 궁금할 겁니다. 단순히 INPUT을 하게 되면, 간혹 좋지 못한 신호를 얻을 수 있습니다. 이걸 노이즈라고 합니다.</div>
+<div class="line">디지털 신호는 0,1로 이루어져 있습니다. 이 0, 1을 구분하는 방법은 전압을 기준으로 합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_17.jpg"><img alt="../_images/Step1_17.jpg" class="align-center" src="../_images/Step1_17.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">그래프를 보시는 것과 같이 디지털 신호는 전압이 2.5 ~ 5V 일때 신호 값 1에 해당하는 HIGH로 감지합니다.</div>
+<div class="line">전압이 0 ~ 0.6V 일 때는 LOW으로 감지합니다. 0 ~ 5V 사이에는 HIGH도 아니고 LOW 아닌 구간이 있습니다.</div>
+<div class="line">전압이 위와 같은 구간에 있을 때, 아두이노는 신호 값이 0인지 1인지 정확히 인지하지 못하고, 0 으로 인지했다가 1로 인지했다가 반복합니다.</div>
+<div class="line">주로 스위치, 버튼이 연결되어 있을 때 발생합니다. 해결 방법으로는 강제로 전압을 높이거나 낮추어 것으로 풀업, 풀다운 방법이 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line">하드웨어로 풀업과 풀다운을 구성하는 방법은 다음과 같습니다. 풀업과 풀다운은 저항과 GND를 통해서 전압을 조절합니다.</div>
+<div class="line">아래는 풀업의 방식입니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_21.jpg"><img alt="../_images/Step1_21.jpg" class="align-center" src="../_images/Step1_21.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">저항이 5V 쪽에 연결되어 있습니다.</div>
+<div class="line">스위치가 닫히지 않았을 경우에는 +5V에서 디지털 8번핀(D8)로 전류가 흐르며, HIGH로 인식하게 됩니다.</div>
+<div class="line">스위치가 닫힌 경우라면 D8에서 나오는 플로팅 구간의 전압(0.6 ~ 2.5v)의 전류가 GND로 흘려보내 전압이 0이되고, LOW로 인식하게 됩니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_33.jpg"><img alt="../_images/Step1_33.jpg" class="align-center" src="../_images/Step1_33.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">풀다운의 경우는 저항이 GND 쪽에 연결되어 있습니다.</div>
+<div class="line">스위치가 닫힌 경우라면 +5V에서 디지털 8번핀(D8)로 전류가 흐르며, HIGH로 인식하게 됩니다.</div>
+<div class="line">스위치가 닫히지 않은 경우라면 D8에서 나오는 플로팅 구간의 전압(0.6 ~ 2.5v)의 전류가 GND로 흘려보내 전압이 0이되고, LOW로 인식하게 됩니다.</div>
+<div class="line"><br /></div>
+<div class="line">아두이노는 소프트웨어 풀업을 지원합니다. 따라서 pinMode 함수에서 상태를 INPUT_PULLUP 으로 설정할 수 있습니다. 하드웨어 풀업 없이 버튼을 사용할 경우에는 INPUT_PULLUP을 사용하도록 합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">※ 작성 시 대소문자 구별에 주의하세요. 모든 코드는 대소문자 구별을 합니다.</span></div>
+<div class="line"><br /></div>
+<div class="line">다음으로는 무한히 반복되는 loop 함수에서 버튼이 눌렸을 때, LED 를 켜고 끄는 코드를 작성해보겠습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">     </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_31.jpg"><img alt="../_images/Step1_31.jpg" class="align-center" src="../_images/Step1_31.jpg" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">digitalRead 함수는 디지털핀의 상태를 읽어오는 기능을 합니다. 3D 펜에서 스위치 버튼은 누르게 되면 각 핀에 0V(LOW)로 인식됩니다.</div>
+<div class="line">즉 <span class="blackbold">if(digitalRead(8) == LOW)</span> 를 해석하면 <span class="blackbold">디지털 8번핀이 눌리면</span> 과 동일합니다. 즉 디지털 8번 버튼을 누르면 LED를 켜라 라는 코드입니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step1_44.png" id="targetl3c7s1-4"><img alt="../_images/Step1_44.png" class="align-center" id="targetl3c7s1-4" src="../_images/Step1_44.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 작성된 코드를 업로드 해봅니다. 업로드 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">[버튼 사진 추가]</div>
+<div class="line"><br /></div>
+<div class="line">버튼을 누르면, 아두이노의 LED가 켜집니다. 다만 한번 켜지고 꺼지진 않습니다.</div>
+<div class="line">이제 <span class="blackbold">다른 버튼을 코드에 추가하여, LED가 꺼지도록</span> 해봅니다.</div>
+<div class="line"><br /></div>
+<div class="line">스스로 작성을 해보고, 업로드도 해봅니다. 작동이 정상적으로 되는지 확인하고, 아래 코드와 비교 해봅니다.</div>
+</div>
+<div class="toggle docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="n">LOW</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Lv3_6_Time.html" class="btn btn-neutral float-left" title="delay와 시간" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Lv3_8_Motor.html" class="btn btn-neutral float-right" title="모터 작동시키기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
