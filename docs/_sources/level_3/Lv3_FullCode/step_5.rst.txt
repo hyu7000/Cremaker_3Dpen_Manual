@@ -486,7 +486,7 @@
             previousError = error;
 
             // PID 계산
-            outputValue = Kp*error + Ki*integral + Kp*derivaitve;
+            outputValue = Kp*error + Ki*integral + Kd*derivaitve;
 
             // output 값이 0~255 범위를 벗어나면 최대, 최소 값을 대신 저장
             if(outputValue > 255)
