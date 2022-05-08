@@ -12,7 +12,11 @@
 #
 import os
 import sys
+
+sys.path.append("C:/Users/hk910/AppData/Local/Programs/Python/Python310/Lib/site-packages")
+
 sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('..'))
 
 autodoc_mock_imports = ["myst_parser"]
 
