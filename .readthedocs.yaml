@@ -9,8 +9,8 @@ build:
     # rust: "1.55"
     # golang: "1.17"
 
-conda:
-  environment: docs/environment.yaml
+#conda:
+#  environment: docs/environment.yaml
 
 sphinx:
    builder: html
