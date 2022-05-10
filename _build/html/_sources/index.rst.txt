@@ -19,5 +19,7 @@
    level3
    uploadFw
    manual
+   test_1
+   test_2
    
 
