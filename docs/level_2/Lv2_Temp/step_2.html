@@ -68,7 +68,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_1_3Dpen_principle.html">3D 펜의 원리</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_2_PartsList.html">부품 리스트</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_3_Assembly.html">조립 과정</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lv2_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_4_ReadyToCoding.html">코딩을 위한 준비</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_5_LED_Example.html">LED 전구 On, Off</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_6_Arduino_Basic.html">아두이노 기초</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_7_Button.html">스위치 버튼 사용</a></li>
@@ -85,8 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../level3.html">레벨 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test_1.html">레벨 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test_2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyword_index.html">색인</a></li>
 </ul>
 
         </div>
@@ -134,7 +133,7 @@
 <div class="line">아두이노는 아날로그 핀을 입력핀으로 설정하면, 현재 핀의 전압을 측정할 수 있습니다.</div>
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/Step2_11.jpg"><img alt="../../_images/Step2_11.jpg" class="align-center" src="../../_images/Step2_11.jpg" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Step2_12.jpg"><img alt="../../_images/Step2_12.jpg" class="align-center" src="../../_images/Step2_12.jpg" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">현재 3D 펜의 열선은 디지털 9번핀에, 온도센서는 A0에 연결되어 있습니다.</div>
@@ -142,7 +141,7 @@
 <div class="line">생략된것이 있더라도 작동되는 핀은 동일합니다.</div>
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/Step2_22.jpg"><img alt="../../_images/Step2_22.jpg" class="align-center" src="../../_images/Step2_22.jpg" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Step2_2.jpg"><img alt="../../_images/Step2_2.jpg" class="align-center" src="../../_images/Step2_2.jpg" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">현재 아날로그 핀의 전압 값을 읽어 올 수 있는 함수가 analogRead 입니다. 함수의 자료형이 int임으로 반환값이 정수입니다. 0V는 0을 반환하고, 5V는 1023을 반환합니다. 2.5V 라면 511을 반환합니다.</div>
@@ -167,7 +166,9 @@
 <div class="line"><br /></div>
 <div class="line">작성된 코드를 업로드하고, 시리얼 모니터를 실행합니다.</div>
 <div class="line"><br /></div>
-<div class="line">[시리얼 통신 사진]</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Serial_Monitor.jpg"><img alt="../../_images/Serial_Monitor.jpg" class="align-center" src="../../_images/Serial_Monitor.jpg" style="width: 600px;" /></a>
+<div class="line-block">
 <div class="line"><br /></div>
 <div class="line">보통 1023이나 1022가 많이 나타날 것입니다. 지금은 거의 5V 가까이 값을 나타내고 있습니다.</div>
 <div class="line">예열을 시작하면, 아날로그 신호 값은 아래의 온도표처럼 실제 온도에 따라 변경됩니다. (아직 예열 부분은 구현하지 않았습니다.)</div>
@@ -185,71 +186,74 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>10</p></td>
-<td><p>1008</p></td>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1023</p></td>
 </tr>
-<tr class="row-odd"><td><p>20</p></td>
-<td><p>994</p></td>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>1022</p></td>
 </tr>
-<tr class="row-even"><td><p>30</p></td>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>1020</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>1016</p></td>
+</tr>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>1011</p></td>
+</tr>
+<tr class="row-odd"><td><p>50</p></td>
+<td><p>1009</p></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>1006</p></td>
+</tr>
+<tr class="row-odd"><td><p>70</p></td>
+<td><p>1004</p></td>
+</tr>
+<tr class="row-even"><td><p>80</p></td>
+<td><p>1000</p></td>
+</tr>
+<tr class="row-odd"><td><p>90</p></td>
 <td><p>990</p></td>
 </tr>
-<tr class="row-odd"><td><p>40</p></td>
-<td><p>985</p></td>
-</tr>
-<tr class="row-even"><td><p>50</p></td>
+<tr class="row-even"><td><p>100</p></td>
 <td><p>983</p></td>
 </tr>
-<tr class="row-odd"><td><p>60</p></td>
-<td><p>981</p></td>
+<tr class="row-odd"><td><p>110</p></td>
+<td><p>976</p></td>
 </tr>
-<tr class="row-even"><td><p>70</p></td>
-<td><p>978</p></td>
+<tr class="row-even"><td><p>120</p></td>
+<td><p>972</p></td>
 </tr>
-<tr class="row-odd"><td><p>80</p></td>
-<td><p>975</p></td>
+<tr class="row-odd"><td><p>130</p></td>
+<td><p>964</p></td>
 </tr>
-<tr class="row-even"><td><p>90</p></td>
-<td><p>965</p></td>
+<tr class="row-even"><td><p>140</p></td>
+<td><p>955</p></td>
 </tr>
-<tr class="row-odd"><td><p>100</p></td>
-<td><p>959</p></td>
+<tr class="row-odd"><td><p>150</p></td>
+<td><p>942</p></td>
 </tr>
-<tr class="row-even"><td><p>110</p></td>
-<td><p>952</p></td>
+<tr class="row-even"><td><p>160</p></td>
+<td><p>929</p></td>
 </tr>
-<tr class="row-odd"><td><p>120</p></td>
-<td><p>948</p></td>
+<tr class="row-odd"><td><p>170</p></td>
+<td><p>910</p></td>
 </tr>
-<tr class="row-even"><td><p>130</p></td>
-<td><p>941</p></td>
+<tr class="row-even"><td><p>180</p></td>
+<td><p>895</p></td>
 </tr>
-<tr class="row-odd"><td><p>140</p></td>
-<td><p>932</p></td>
+<tr class="row-odd"><td><p>190</p></td>
+<td><p>864</p></td>
 </tr>
-<tr class="row-even"><td><p>150</p></td>
-<td><p>920</p></td>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>839</p></td>
 </tr>
-<tr class="row-odd"><td><p>160</p></td>
-<td><p>908</p></td>
+<tr class="row-odd"><td><p>210</p></td>
+<td><p>800</p></td>
 </tr>
-<tr class="row-even"><td><p>170</p></td>
-<td><p>890</p></td>
-</tr>
-<tr class="row-odd"><td><p>180</p></td>
-<td><p>875</p></td>
-</tr>
-<tr class="row-even"><td><p>190</p></td>
-<td><p>845</p></td>
-</tr>
-<tr class="row-odd"><td><p>200</p></td>
-<td><p>820</p></td>
-</tr>
-<tr class="row-even"><td><p>210</p></td>
-<td><p>790</p></td>
-</tr>
-<tr class="row-odd"><td><p>220</p></td>
-<td><p>765</p></td>
+<tr class="row-even"><td><p>220</p></td>
+<td><p>744</p></td>
 </tr>
 </tbody>
 </table>
@@ -279,8 +283,6 @@
 </div>
 <div class="line-block">
 <div class="line">위의 코드처럼 작성되지만, 위의 코드는 문제가 있습니다. 온도가 계속 상승하는 것만 있기 때문에 적절한 온도일때, 예열을 중단해주어야 합니다.</div>
-<div class="line">예열을 할때와 하지 않을 때의 아날로그 신호 값이 약간의 차이가 있습니다. 그래서 예열을 하지 않을 때 analogRead 로 신호 값을 조정합니다. 이 순서는 다음 코드 작성함에 있어서 중요합니다.</div>
-<div class="line">레벨2에서는 예열 OnOff에 따라 신호 값이 차이나는 이유는 전원의 저항 때문이라고 알고 계시면 됩니다.</div>
 <div class="line"><br /></div>
 <div class="line">온도가 60도 이상올라갈 경우 예열을 중단하는 코드를 작성하면 다음과 같이 작성될 수 있습니다.</div>
 </div>
@@ -296,44 +298,41 @@
 <span class="linenos">10</span>
 <span class="linenos">11</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">12</span><span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
-<span class="linenos">13</span><span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
-<span class="linenos">14</span><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">    </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 아날로그 신호 값을 tempValueA0 저장</span>
-<span class="linenos">16</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">isHeating</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
-<span class="linenos">19</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">20</span>
-<span class="linenos">21</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tempValueA0</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">22</span>
-<span class="linenos">23</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
-<span class="linenos">26</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 약간의 대기시간 추가</span>
-<span class="linenos">27</span>
-<span class="linenos">28</span><span class="w">        </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">    </span><span class="k">else</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
-<span class="linenos">33</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 약간의 대기시간 추가</span>
-<span class="linenos">34</span>
-<span class="linenos">35</span><span class="w">        </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">37</span>
-<span class="linenos">38</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span><span class="w">    </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 아날로그 신호 값을 tempValueA0 저장</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tempValueA0</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
+<span class="linenos">20</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 약간의 대기시간 추가</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">        </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">23</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
+<span class="linenos">27</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 약간의 대기시간 추가</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span><span class="w">        </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="line-block">
-<div class="line">먼저 예열이 시작된 상태로 아날로그 신호 값을 읽습니다. (12줄)</div>
-<div class="line">예열되고 있지 않은 상태라면, 아날로그 신호 값을 조정합니다. 디지털 9번핀이 HIGH인 상태와 LOW 상태에 따라 아날로그 A0 의 신호값이 약간의 오차가 있기 때문에 이 오차를 보정하기 위해서 아날로그 A0 신호를 읽기전에 디지털 9번핀을 HIGH 로 출력해줍니다.</div>
+<div class="line">※예열을 하기 위해 3D 펜의 전원 플러그를 연결합니다. 열을 올리는 부분이 전력을 많이 소비하기 때문입니다.</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step3_11.png"><img alt="../../_images/Step3_11.png" class="align-center" src="../../_images/Step3_11.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
 <div class="line">읽어온 아날로그 신호값이 981일때 온도가 60도 임으로 981값보다 아래면, 예열을 중단하고, 981값보다 크면 예열을 시작하는 코드를 추가하였습니다. 약간의 시간차를 두기 위해 <a class="reference internal" href="../Lv2_5_LED_Example.html#targetl2c5s1-9"><span class="std std-ref">delay</span></a> 함수를 추가했습니다.</div>
 <div class="line"><br /></div>
 <div class="line">업로드를 하고, 신호 값을 확인 하기 위해, 시리얼 모니터를 켜줍니다.</div>
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><a class="reference internal image-reference" href="../../_images/Step2_32.png"><img alt="../../_images/Step2_32.png" class="align-center" src="../../_images/Step2_32.png" style="width: 500px;" /></a>
+<div><a class="reference internal image-reference" href="../../_images/Step2_34.png"><img alt="../../_images/Step2_34.png" class="align-center" src="../../_images/Step2_34.png" style="width: 500px;" /></a>
 </div></blockquote>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -355,72 +354,59 @@
 <div class="toggle docutils container">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kt">int</span><span class="w"> </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// A0 신호 값 저장용</span>
 <span class="linenos"> 2</span><span class="kt">bool</span><span class="w"> </span><span class="n">isPressedBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 버튼이 눌러졌는지 확인하는 bool 변수</span>
-<span class="linenos"> 3</span><span class="kt">bool</span><span class="w"> </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 온도가 목표보다 높은지 확인하는 bool 변수</span>
-<span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
-<span class="linenos"> 7</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
-<span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// C 버튼 디지털핀은 11</span>
-<span class="linenos">10</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// D 버튼 디지털핀은 12</span>
-<span class="linenos">11</span>
-<span class="linenos">12</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">13</span><span class="p">}</span><span class="w"></span>
-<span class="linenos">14</span>
-<span class="linenos">15</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
-<span class="linenos">17</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isPressedBtn</span><span class="p">)</span><span class="w"> </span><span class="c1">// isPressedBtn이 false일때 true를 반환하고, 아래를 실행합니다.</span>
-<span class="linenos">18</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
-<span class="linenos">20</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">21</span>
-<span class="linenos">22</span><span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;OFF&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열이 되고 있지 않음을 시리얼 모니터에 표시</span>
-<span class="linenos">23</span>
-<span class="linenos">24</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">            </span><span class="n">isPressedBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="c1">// isPressedBtn이 true일때 아래를 실행합니다.</span>
-<span class="linenos">30</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">        </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 아날로그 신호 값을 tempValueA0 저장</span>
-<span class="linenos">32</span>
-<span class="linenos">33</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
-<span class="linenos">34</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">        </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 아날로그 신호 값을 tempValueA0 저장</span>
-<span class="linenos">36</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isHeating</span><span class="p">)</span><span class="w"></span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// C 버튼 디지털핀은 11</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w"> </span><span class="c1">// D 버튼 디지털핀은 12</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">12</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">15</span><span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
+<span class="linenos">16</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">isPressedBtn</span><span class="p">)</span><span class="w"> </span><span class="c1">// isPressedBtn이 false일때 true를 반환하고, 아래를 실행합니다.</span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">18</span><span class="w">        </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;OFF&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열이 되고 있지 않음을 시리얼 모니터에 표시</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">24</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">25</span><span class="w">            </span><span class="n">isPressedBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">26</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">28</span><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="c1">// isPressedBtn이 true일때 아래를 실행합니다.</span>
+<span class="linenos">29</span><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">30</span><span class="w">        </span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 아날로그 신호 값을 tempValueA0 저장</span>
+<span class="linenos">31</span>
+<span class="linenos">32</span><span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;ON &quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열이 되고 있음을 시리얼 모니터에 표시</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tempValueA0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 신호 값을 시리얼 모니터에 출력</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="w"></span>
 <span class="linenos">37</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
 <span class="linenos">38</span><span class="w">            </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
-<span class="linenos">39</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">40</span>
-<span class="linenos">41</span><span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;ON &quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열이 되고 있음을 시리얼 모니터에 표시</span>
-<span class="linenos">42</span>
-<span class="linenos">43</span><span class="w">        </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tempValueA0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 신호 값을 시리얼 모니터에 출력</span>
-<span class="linenos">44</span>
-<span class="linenos">45</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">tempValueA0</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">46</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">47</span><span class="w">            </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 종료</span>
-<span class="linenos">48</span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 약간의 대기시간 추가</span>
-<span class="linenos">49</span>
-<span class="linenos">50</span><span class="w">            </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">51</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">52</span><span class="w">        </span><span class="k">else</span><span class="w"></span>
-<span class="linenos">53</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">54</span><span class="w">            </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
-<span class="linenos">55</span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 약간의 대기시간 추가</span>
-<span class="linenos">56</span>
-<span class="linenos">57</span><span class="w">            </span><span class="n">isHeating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">58</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">59</span>
-<span class="linenos">60</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
-<span class="linenos">61</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">62</span><span class="w">            </span><span class="n">isPressedBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">63</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">64</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">65</span><span class="p">}</span><span class="w"></span>
-<span class="linenos">66</span>
-<span class="linenos">67</span><span class="o">|</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tempValue를</span><span class="w"> </span><span class="n">선언하고</span><span class="w"> </span><span class="o">?</span><span class="n">줄에서</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">)</span><span class="w"> </span><span class="n">값을</span><span class="w"> </span><span class="n">저장했습니다</span><span class="p">.</span><span class="w"></span>
-<span class="linenos">68</span><span class="o">|</span><span class="w"> </span><span class="o">?+</span><span class="mi">2</span><span class="w"> </span><span class="n">줄에서</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">tempValue</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="w"> </span><span class="n">대신</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="n">를</span><span class="w"> </span><span class="n">사용할</span><span class="w"> </span><span class="n">수도</span><span class="w"> </span><span class="n">있었지만</span><span class="p">,</span><span class="w"> </span><span class="n">함수를</span><span class="w"> </span><span class="n">호출하는</span><span class="w"> </span><span class="n">것</span><span class="w"> </span><span class="n">보다</span><span class="w"> </span><span class="n">변수에</span><span class="w"> </span><span class="n">접근하는</span><span class="w"> </span><span class="n">것이</span><span class="w"> </span><span class="n">더</span><span class="w"> </span><span class="n">연산속도가</span><span class="w"> </span><span class="n">빠르기</span><span class="w"> </span><span class="n">때문입니다</span><span class="p">.</span><span class="w"></span>
+<span class="linenos">39</span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 약간의 대기시간 추가</span>
+<span class="linenos">40</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="linenos">42</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">43</span><span class="w">            </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span><span class="c1">// 예열 시작</span>
+<span class="linenos">44</span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 약간의 대기시간 추가</span>
+<span class="linenos">45</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">46</span>
+<span class="linenos">47</span><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
+<span class="linenos">48</span><span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="linenos">49</span><span class="w">            </span><span class="n">isPressedBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="linenos">50</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">51</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">52</span><span class="p">}</span><span class="w"></span>
+<span class="linenos">53</span>
+<span class="linenos">54</span><span class="o">|</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tempValue를</span><span class="w"> </span><span class="n">선언하고</span><span class="w"> </span><span class="o">?</span><span class="n">줄에서</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">)</span><span class="w"> </span><span class="n">값을</span><span class="w"> </span><span class="n">저장했습니다</span><span class="p">.</span><span class="w"></span>
+<span class="linenos">55</span><span class="o">|</span><span class="w"> </span><span class="o">?+</span><span class="mi">2</span><span class="w"> </span><span class="n">줄에서</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">tempValue</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="w"> </span><span class="n">대신</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="n">A0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">981</span><span class="p">)</span><span class="n">를</span><span class="w"> </span><span class="n">사용할</span><span class="w"> </span><span class="n">수도</span><span class="w"> </span><span class="n">있었지만</span><span class="p">,</span><span class="w"> </span><span class="n">함수를</span><span class="w"> </span><span class="n">호출하는</span><span class="w"> </span><span class="n">것</span><span class="w"> </span><span class="n">보다</span><span class="w"> </span><span class="n">변수에</span><span class="w"> </span><span class="n">접근하는</span><span class="w"> </span><span class="n">것이</span><span class="w"> </span><span class="n">더</span><span class="w"> </span><span class="n">연산속도가</span><span class="w"> </span><span class="n">빠르기</span><span class="w"> </span><span class="n">때문입니다</span><span class="p">.</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

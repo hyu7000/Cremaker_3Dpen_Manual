@@ -40,7 +40,7 @@
 | 4. 온도가 60도 근처에 도달 할 경우, 디스플레이에 OK 표시
 | 5. 예열을 하지 않거나, 온도가 60도 근처가 아닐 경우 디스플레이에 OFF 표시
 | 6. A,B 버튼에 따라 모터는 서로 다른 방향으로 회전하도록 동작
-| 7. 모터의 회전속도는 시계, 반시계 모두 150으로 설정
+| 7. 모터의 회전속도는 시계, 반시계 모두 255으로 설정
 |
 | 작성후 잘 동작하는지 확인하고, 아래 코드와 비교합니다.
 
@@ -54,7 +54,6 @@
 
         bool isPressedBtn = false; // 버튼이 눌러졌는지 확인하는 bool 변수
         bool is60Deg = false; // 온도 도달 상태 확인용
-        bool isHeating = false; // 온도가 목표보다 높은지 확인하는 bool 변수
         int tempValueA0 = 0; // A0 신호 값 저장용
 
         void setup() 
@@ -102,27 +101,17 @@
             }
             else // isPressedBtn이 true면 아래 코드 실행
             {
-                digitalWrite(9, HIGH); // 예열 시작
-                delay(1);
                 tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
-                if(!isHeating)
-                {
-                    digitalWrite(9, LOW); // 예열 종료
-                }
 
                 if(tempValueA0 < 981) // 온도 60도 유지
                 {
                     digitalWrite(9, LOW); // 예열 종료
                     delay(5);
-
-                    isHeating = false;
                 }
                 else
                 {
                     digitalWrite(9, HIGH); // 예열 시작
                     delay(5); // 약간의 대기시간 추가
-
-                    isHeating = true;
                 }
 
                 if(tempValueA0>979 && tempValueA0<983) // 온도가 60도에 도달했는지 확인
@@ -153,12 +142,12 @@
                     if(digitalRead(8)==LOW) // A 버튼 눌렸을 경우
                     {
                         digitalWrite(6,LOW);
-                        analogWrite(10,150); //모터 속도 150 설정
+                        analogWrite(10,255); //모터 속도 255 설정
                     }
                     else if(digitalRead(7)==LOW) // B 버튼 눌렸을 경우
                     {
                         digitalWrite(6,HIGH);
-                        analogWrite(10,150); //모터 속도 150 설정
+                        analogWrite(10,0); //모터 속도 255 설정
                     }
                     else
                     {

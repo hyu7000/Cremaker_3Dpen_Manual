@@ -69,7 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lv3_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_4_ReadyToCoding.html">코딩을 위한 준비</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv3_5_Arduino_Basic.html">아두이노 기초</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv3_6_Time.html">delay와 시간</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv3_7_Button.html">스위치 버튼 사용</a></li>
@@ -87,8 +87,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test_1.html">레벨 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test_2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyword_index.html">색인</a></li>
 </ul>
 
         </div>
@@ -137,7 +136,7 @@
 <div class="line">이 디스플레이 라이브러리를 사용하기전에 예제를 먼저 살펴보겠습니다.</div>
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/Step2_16.png"><img alt="../../_images/Step2_16.png" class="align-center" src="../../_images/Step2_16.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Step2_13.png"><img alt="../../_images/Step2_13.png" class="align-center" src="../../_images/Step2_13.png" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><span class="orangecircle">●</span> 메뉴 중 파일을 클릭합니다.</div>
@@ -207,9 +206,7 @@
 <span class="linenos">18</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="line-block">
-<div class="line">[출력된 사진]</div>
-</div>
+<a class="reference internal image-reference" href="../../_images/Step2_1_2.png"><img alt="../../_images/Step2_1_2.png" class="align-center" src="../../_images/Step2_1_2.png" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">오른손 잡이 분들은 3D 펜 디스플레이 글자가 반대로 보여서 보기 힘드실 겁니다.</div>
@@ -241,7 +238,7 @@
 <div class="line">왼손 잡이 분들은 9,10줄을 작성하지 않으셔도 됩니다.</div>
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/Step2_21.jpg"><img alt="../../_images/Step2_21.jpg" class="align-center" src="../../_images/Step2_21.jpg" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Step2_22.jpg"><img alt="../../_images/Step2_22.jpg" class="align-center" src="../../_images/Step2_22.jpg" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">디스플레이가 이런 문자를 표시해주는 원리를 잠시 설명드리면 예를 들어 해상도 128x32가 아니라 6x8 디스플레이가 있다고 합시다. 이 디스플레이에는 총 6x8 = 42개의 led(정확히는 oled)가 있습니다. 각 좌표의 LED를 글자모양에 맞춰 켜주면 우리가 디스플레이에서 보는 글자가 됩니다.</div>
@@ -280,7 +277,7 @@
 <div class="line">아두이노에는 i2c 통신을 하기 위한 핀에 연결만하면, 따로 코드를 작성하지 않아도 작동됩니다.</div>
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../../_images/Step2_12.jpg"><img alt="../../_images/Step2_12.jpg" class="align-center" src="../../_images/Step2_12.jpg" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Step2_13.jpg"><img alt="../../_images/Step2_13.jpg" class="align-center" src="../../_images/Step2_13.jpg" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">i2c 통신은 디스플레이의 핀에도 나와있는 SCL, SDA 핀으로 통신을 하게됩니다. 아두이노에도 SCL(A5), SDA(A4) 핀이 있습니다. 이 부분은 연결만 되어 있으면 나노와 통신이 됩니다.</div>

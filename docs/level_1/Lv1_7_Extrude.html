@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>필라멘트 연결하기 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+  <title>필라멘트 압출하기 &mdash; 크리메이커 3D PEN 1.0 문서</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
@@ -41,7 +41,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="색인" href="../genindex.html" />
     <link rel="search" title="검색" href="../search.html" />
-    <link rel="next" title="레벨 2" href="../level2.html" />
+    <link rel="next" title="디스플레이 표시" href="Lv1_8_Display.html" />
     <link rel="prev" title="Step.3 예열하기" href="Lv1_Temperature/step_3.html" /> 
 </head>
 
@@ -70,15 +70,15 @@
 <li class="toctree-l2"><a class="reference internal" href="Lv1_4_Sw_Start.html">코딩 맛보기</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Lv1_5_Motor.html">모터 작동시키기</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Lv1_6_Temperature.html">온도 읽기</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">필라멘트 연결하기</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">필라멘트 압출하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv1_8_Display.html">디스플레이 표시</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../level2.html">레벨 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../level3.html">레벨 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../uploadFw.html">업로드하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manual.html">사용 매뉴얼</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../test_1.html">레벨 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../test_2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyword_index.html">색인</a></li>
 </ul>
 
         </div>
@@ -96,7 +96,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../level1.html">레벨 1</a> &raquo;</li>
-      <li>필라멘트 연결하기</li>
+      <li>필라멘트 압출하기</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -106,7 +106,7 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>필라멘트 연결하기<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<h1>필라멘트 압출하기<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
 <style>
 .orangecircle {color:#ff5300; font-size:20px}
 .blackcircle {color:black; font-size:20px}
@@ -117,9 +117,9 @@
 .blackbold {color:black; font-weight:bold;}
 .redbold {color:red; font-weight:bold;}
 </style><div class="line-block">
-<div class="line">이제 필라멘트를 연결해보려 합니다.</div>
-<div class="line">필라멘트는 온도가 올라간 상태에서 모터로 밀어내야 노즐 쪽에서 나옵니다.</div>
-<div class="line">따라서 온도가 올라가지 않은 상태에서는 모터 작동이 안되고, 온도가 올라간 상태에서만 모터 작동이 되어야 합니다.</div>
+<div class="line">이제 버튼을 누르면 필라멘트가 압출되도록 해보려 합니다.</div>
+<div class="line">먼저 필라멘트가 압출될려면 온도가 예열된 상태여야 하기 때문에 온도가 목표온도에 도달했는지 부터 확인하는 블록이 필요합니다.</div>
+<div class="line">온도가 올라가지 않은 상태에서는 모터 작동이 안되고, 온도가 올라간 상태에서만 모터 작동이 되어야 합니다.</div>
 <div class="line">이 조건을 블록으로 만들어 봅니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
@@ -127,107 +127,86 @@
 <a class="reference internal image-reference" href="../_images/Step1_1.png"><img alt="../_images/Step1_1.png" class="align-center" src="../_images/Step1_1.png" style="width: 800px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="blackcircle">●</span> 모터 작동시키기와 온도 읽기에서 만들었던 블록들을 가져옵니다.</div>
-<div class="line"><span class="blackcircle">●</span> 혹여나 지웠다면 다시 만들어 보세요.</div>
+<div class="line"><span class="orangecircle">●</span> 흐름 블록으로 이동합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">만일 참 (이)라면</span> 블록을 <span class="blackbold">만일 참 (이)라면 ~ 아니면 ~</span> 블록의 아래에 이동시켜줍니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/Step1_2.png"><img alt="../_images/Step1_2.png" class="align-center" src="../_images/Step1_2.png" style="width: 800px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="orangecircle">●</span> <span class="blackbold">q 키를 눌렀을 때</span> 블록을 마우스 오른쪽 클릭합니다.</div>
-<div class="line"><span class="yellowcircle">●</span> 메뉴 중 코드 복사&amp;붙여넣기를 클릭합니다.</div>
+<div class="line"><span class="orangecircle">●</span> 판단 블록으로 이동합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">10&gt;10</span> 블록을 <span class="blackbold">만일 참 (이)라면</span> 블록의 아래에 이동시켜줍니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/Step1_3.png"><img alt="../_images/Step1_3.png" class="align-center" src="../_images/Step1_3.png" style="width: 800px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="yellowcircle">●</span> 복사된 블록을 오른편으로 이동시켜줍니다.</div>
+<div class="line"><span class="orangecircle">●</span> 자료 블록으로 이동합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">온도 값 값</span> 블록을 <span class="blackbold">10&gt;10</span> 블록의 왼편에 이동시켜줍니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/Step1_4.png"><img alt="../_images/Step1_4.png" class="align-center" src="../_images/Step1_4.png" style="width: 800px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="orangecircle">●</span> <span class="blackbold">q 키를 눌렀을 때</span> 블록에서 q를 클릭합니다.</div>
-<div class="line"><span class="yellowcircle">●</span> 원하는 키를 선택해줍니다. 그림에서는 w를 선택했습니다.</div>
+<div class="line"><span class="orangecircle">●</span> <span class="blackbold">온도 값 값 &gt; 10</span> 블록의 오른편 값을 55로 입력합니다.</div>
+<div class="line"><span class="blackcircle">●</span> 온도 값을 55 이상으로 설정하는 이유는 60도를 유지를 하려 하지만 60도 이하로 내려갈 수 있기 때문에 여유롭게 모터가 움직이도록 하려고 약간 낮게 움직였습니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/Step1_5.png"><img alt="../_images/Step1_5.png" class="align-center" src="../_images/Step1_5.png" style="width: 800px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="orangecircle">●</span> <span class="blackbold">디지털 6번 핀 켜기</span> 블록에서 켜기를 클릭합니다.</div>
-<div class="line"><span class="yellowcircle">●</span> 끄기로 변경해줍니다.</div>
+<div class="line"><span class="orangecircle">●</span> 흐름 블록으로 이동합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">만일 참 (이)라면 ~ 아니면 ~</span> 블록을 <span class="blackbold">만일 온도값 값 &gt; 55 (이)라면</span> 블록의 안쪽에 이동시켜줍니다.</div>
 <div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line">여기까지하면 q와 w를 누르면 모터가 정회전, 역회전을 하게끔 됩니다. 여기에서 온도가 60도에 도달했을 때 모터가 움직일 수 있게 해야합니다.</div>
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/Step1_6.png"><img alt="../_images/Step1_6.png" class="align-center" src="../_images/Step1_6.png" style="width: 800px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="orangecircle">●</span> 흐름 블록을 클릭합니다.</div>
+<div class="line"><span class="orangecircle">●</span> 하드웨어 블록으로 이동합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">A 버튼이 눌렸는가</span> 블록을 <span class="blackbold">만일 참 (이)라면</span> 블록의 참 부분에 이동시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 여기까지는 온도가 55도 이상이고, A버튼이 눌릴때에만 작동하도록 준비가 되었습니다. 각각의 칸에 모터 작동코드를 넣어주면 됩니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/Step1_7.png"><img alt="../_images/Step1_7.png" class="align-center" src="../_images/Step1_7.png" style="width: 800px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">만약 참 (이)라면 ~</span> 블록을 <span class="blackbold">q키를 눌럿을 때</span> 와 <span class="blackbold">w키를 눌럿을 때</span> 아래에 각각 이동시켜줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">모터 활성화</span>, <span class="blackbold">모터를 반시계 방향으로 설정</span>, <span class="blackbold">모터 속도를 255으로 설정</span> 블록을 <span class="blackbold">만일 A버튼이 눌렸는가 (이)라면 ~ 아니면 ~</span> 블록의 아래에 이동시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 여기까지의 코드는 A 버튼을 누르면 모터가 작동을 하고, 한번 눌리면 버튼을 떼어도 모터가 작동됩니다. A 버튼이 눌린 상태에만 작동하려면 모터 정지 블록을 만들어야 합니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/Step1_8.png"><img alt="../_images/Step1_8.png" class="align-center" src="../_images/Step1_8.png" style="width: 800px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">디지털 5번 핀 켜기</span> 블록을 드래그하여, <span class="blackbold">만일 참 (이)라면</span> 블록에 이동시켜줍니다.</div>
-<div class="line"><span class="blackcircle">●</span> 두 군데 모두 같은 작업을 진행합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">모터 활성화</span> 블록을 <span class="blackbold">~아니면 ~</span> 에 이동시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 이어서 활성화를 비활성화로 변경시켜줍니다.</div>
 <div class="line"><br /></div>
 </div>
 <div class="line-block">
-<div class="line">이제 ‘참’에 해당되는 부분이 온도가 60도에 도달했는지 여부를 넣어주면 됩니다.</div>
+<div class="line">지금까지의 블록 순서는 온도, 신호 값을 받아오고, 온도가 60도 를 유지하도록 합니다.</div>
+<div class="line">온도가 60도 근처가 되면, 모터를 작동할 수 있게 합니다. A 버튼이 눌린 상태에서만 모터가 회전합니다.</div>
 <div class="line"><br /></div>
+<div class="line">충분히 온도가 오르고, A 버튼을 누르면, 필라멘트가 들어갈 수 있게 됩니다. 이때에는 3D 펜 처럼 사용이 가능합니다.</div>
+<div class="line">이제 필라멘트를 제거하는 기능을 추가해야 합니다. 아래와 같은 기능이 작동되도록 코드를 작성해봅니다.</div>
 <div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="../_images/Step1_9.png"><img alt="../_images/Step1_9.png" class="align-center" src="../_images/Step1_9.png" style="width: 800px;" /></a>
-<div class="line-block">
+<div class="line">1. B 버튼을 누르면 필라멘트가 제거되는 방향으로 회전 동작</div>
+<div class="line">2. A 버튼이 눌린 상태에는 B 버튼을 눌러도 작동하지 않음</div>
+<div class="line">3. B 버튼이 눌린 상태에서도 A 버튼이 작동되지 않도록 함</div>
 <div class="line"><br /></div>
-<div class="line"><span class="orangecircle">●</span> 판단 블록을 클릭합니다.</div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="../_images/Step1_10.png"><img alt="../_images/Step1_10.png" class="align-center" src="../_images/Step1_10.png" style="width: 800px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">10 = 10</span> 블록을 <span class="blackbold">만일 참 (이)라면</span> 블록의 ‘참’에 이동시켜줍니다.</div>
-<div class="line"><span class="blackcircle">●</span> 두 군데 모두 같은 작업을 진행합니다.</div>
-<div class="line"><br /></div>
+<div class="line">작성이 완료되면, 아래 버튼을 눌러 코드를 비교해봅니다.</div>
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../_images/Step1_11.png"><img alt="../_images/Step1_11.png" class="align-center" src="../_images/Step1_11.png" style="width: 800px;" /></a>
+<div class="toggle docutils container">
+<a class="reference internal image-reference" href="../_images/Step1_91.jpg"><img alt="../_images/Step1_91.jpg" class="align-center" src="../_images/Step1_91.jpg" style="width: 800px;" /></a>
 <div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><span class="orangecircle">●</span> 자료 블록을 클릭합니다.</div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> <span class="blackbold">참 (이)가 아니다</span> 블록은 판단 블록에 있으며, 참과 거짓을 바꿔주는 블록입니다.</div>
 </div>
-<a class="reference internal image-reference" href="../_images/Step1_12.png"><img alt="../_images/Step1_12.png" class="align-center" src="../_images/Step1_12.png" style="width: 800px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">온도 값 값</span> 블록을 <span class="blackbold">10 = 10</span> 블록의 오른편으로 이동시켜줍니다.</div>
-<div class="line"><span class="blackcircle">●</span> 두 군데 모두 이동시켜 줍니다.</div>
-<div class="line"><span class="orangecircle">●</span> <span class="blackbold">10 = 온도 값 값</span> 블록의 왼쪽 값을 60으로 변경시켜줍니다.</div>
-<div class="line"><br /></div>
-<div class="line">현재 q, w 키를 누르면, 온도값이 60인지 확인하고, 60이라면 모터를 작동하도록 블록을 코딩하였습니다.</div>
-<div class="line">실제로 <span class="blackbold">시작하기</span> 버튼을 눌러 작동을 확인합니다.</div>
-<div class="line"><br /></div>
-<div class="line">여기까지 진행하느라 수고하셨습니다. 네이버 엔트리로 배워보는 과정은 여기가 마지막입니다. 이제 다음으로 실제 코드를 업로드를 해보고 직접 3D 펜을 사용해보시길 바랍니다.</div>
-<div class="line">업로드하는 방법은 <a class="reference internal" href="../uploadFw.html#targetuploadfw"><span class="std std-ref">여기</span></a> 를 클릭해주세요.</div>
-<div class="line"><br /></div>
 </div>
 </section>
 
@@ -236,7 +215,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Lv1_Temperature/step_3.html" class="btn btn-neutral float-left" title="Step.3 예열하기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../level2.html" class="btn btn-neutral float-right" title="레벨 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Lv1_8_Display.html" class="btn btn-neutral float-right" title="디스플레이 표시" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

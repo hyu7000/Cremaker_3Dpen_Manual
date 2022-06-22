@@ -34,15 +34,13 @@
 
         int material_index = 0; // 재료 구조체 배열의 위치를 가리키는 인덱스
         int setTemperature = 0; // 설정된 온도
-        int setMotorSpeed  = 0; // 설정된 모터 속도
 
         struct setting {
             int temperature;
-            int motorSpeed;
             char* materialName;
         };
 
-        struct setting materials[] = {{0, 0, "OFF"}, {60, 100, "PCL"}, {200, 90,"PLA"}};
+        struct setting materials[] = {{0, "OFF"}, {60, "PCL"}, {200, "PLA"}};
 
 | 구조체에는 서로 다른 자료형을 포함할 수 있습니다. 따라서 구조체 배열을 통해 
 | OFF 일 경우 설정온도와 속도가 0 
@@ -80,24 +78,20 @@
 
         String strToShow; // 디스플레이에 보여줄 문자열을 저장하는 변수
 
-        bool isHeating = false; // 온도가 목표보다 높은지 확인하는 bool 변수
-
         int curTemp = 0; // 현재온도
 
         long timeInterval  = millis(); // 50ms 에 1회씩 작동하기 위한 시간 변수
 
         int material_index = 0; // 재료 구조체 배열의 위치를 가리키는 인덱스
         int setTemperature = 0; // 설정된 온도
-        int setMotorSpeed  = 0; // 설정된 모터 속도
 
         // 온도, 속도, 재료명을 포함한 구조체 선언
         struct setting {
             int temperature;
-            int motorSpeed;
             char* materialName;
         };
 
-        struct setting materials[] = {{0, 0, "OFF"}, {60, 100, "PCL"}, {200, 90,"PLA"}};
+        struct setting materials[] = {{0, "OFF"}, {60, "PCL"}, {200, "PLA"}};
 
         /*
          *  온도 테이블 배열
@@ -105,28 +99,28 @@
          */
         int temptable[23][2] = {
             {1023,0},
-            {1008,10},
-            {994,20},
-            {990,30},
-            {985,40},
-            {983,50},
-            {981,60},
-            {978,70},
-            {975,80},
-            {965,90},
-            {959,100},
-            {952,110},
-            {948,120},
-            {941,130},
-            {932,140},
-            {920,150},
-            {908,160},
-            {890,170},
-            {875,180},
-            {845,190},
-            {820,200},
-            {790,210},
-            {765,220}
+            {1022,10},
+            {1020,20},
+            {1016,30},
+            {1011,40},
+            {1009,50},
+            {1006,60},
+            {1004,70},
+            {1000,80},
+            {990,90},
+            {983,100},
+            {976,110},
+            {972,120},
+            {964,130},
+            {955,140},
+            {942,150},
+            {929,160},
+            {910,170},
+            {895,180},
+            {864,190},
+            {839,200},
+            {800,210},
+            {744,220}
         };
 
         /*
@@ -140,26 +134,6 @@
             ssd1306_printFixedN(x, y, ch, STYLE_NORMAL, FONT_SIZE_2X);
         }
 
-        /* 
-         * 아날로그 A0 핀의 신호 값을 디지털 9번핀(열선)이 HIGH인 상태에서 체크하도록 하는 함수
-         */
-        int checkA0()
-        {
-            int tempValueA0 = 0;
-
-            digitalWrite(9, HIGH); // 예열 시작
-            delay(1);
-
-            tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
-
-            if(!isHeating)
-            {
-                digitalWrite(9, LOW); // 예열 종료
-            }
-
-            return tempValueA0;
-        }
-
         /*
          * 온도를 읽고, 정확한 온도로 계산 후 결과 값을 화면에 표시하고 반환하는 함수
          * VALUE_TEMPTB = 0, CELSIUS_TEMPTB = 1 으로 온도표의 각 항목을 지시함
@@ -167,7 +141,7 @@
         int getTemperature()
         {  
             float ratioTemp;
-            float tempADU = checkA0();
+            float tempADU = analogRead(A0);
             int result;
             
             for(int i=1; i<23; i++){
@@ -240,21 +214,15 @@
 
             // 목표 온도, 속도 항목에 현재 인덱스의 구조체 값을 저장
             setTemperature = materials[index].temperature;
-            setMotorSpeed  = materials[index].motorSpeed;
 
             // 화면 클리어
             ssd1306_clearScreen();
 
             // 화면에 목표 온도, 재료 명, 속도를 표시
             // 재료명은 좌표 0,0 에 표시
-            // 목표 속도는 좌표 80, 0 에 표시
             // 목표 온도는 좌표 52, 16 에 표시
-            // 온도 단위인 °C는 좌표 91, 16 에 표시
             strToShow = materials[index].materialName;
             showTextToScreen(0,0, strToShow);
-
-            strToShow = String(setMotorSpeed) + "%";
-            showTextToScreen(80,0, strToShow);
 
             strToShow = "/" + String(setTemperature);
             showTextToScreen(52,16,strToShow);
@@ -353,7 +321,6 @@
 
         String strToShow;              // 디스플레이에 보여줄 문자열을 저장하는 변수
 
-        bool isHeating = false; // 온도가 목표보다 높은지 확인하는 bool 변수
         bool isNeedUpdateScreen = true;      // 업데이트가 필요한지 확인하는 bool 변수 생성
         bool isPressedC_BTN, isPressedD_BTN; // 버튼이 눌러져 있는지 확인하는 bool 변수 생성
 
@@ -362,17 +329,15 @@
         long timeInterval  = millis(); // 50ms 에 1회씩 작동하기 위한 시간 변수
 
         int material_index = 0;        // 재료 구조체 배열의 위치를 가리키는 인덱스
-        int setTemperature = 0;        // 설정된 온도
-        int setMotorSpeed  = 0;        // 설정된 모터 속도        
+        int setTemperature = 0;        // 설정된 온도   
 
         // 온도, 속도, 재료명을 포함한 구조체 선언
         struct setting {
             int temperature;
-            int motorSpeed;
             char* materialName;
         };
 
-        struct setting materials[] = {{0, 0, "OFF"}, {60, 100, "PCL"}, {200, 90,"PLA"}};
+        struct setting materials[] = {{0, "OFF"}, {60, "PCL"}, {200,"PLA"}};
 
         /*
          *  온도 테이블 배열
@@ -380,28 +345,28 @@
          */
         int temptable[23][2] = {
             {1023,0},
-            {1008,10},
-            {994,20},
-            {990,30},
-            {985,40},
-            {983,50},
-            {981,60},
-            {978,70},
-            {975,80},
-            {965,90},
-            {959,100},
-            {952,110},
-            {948,120},
-            {941,130},
-            {932,140},
-            {920,150},
-            {908,160},
-            {890,170},
-            {875,180},
-            {845,190},
-            {820,200},
-            {790,210},
-            {765,220}
+            {1022,10},
+            {1020,20},
+            {1016,30},
+            {1011,40},
+            {1009,50},
+            {1006,60},
+            {1004,70},
+            {1000,80},
+            {990,90},
+            {983,100},
+            {976,110},
+            {972,120},
+            {964,130},
+            {955,140},
+            {942,150},
+            {929,160},
+            {910,170},
+            {895,180},
+            {864,190},
+            {839,200},
+            {800,210},
+            {744,220}
         };
 
         /*
@@ -415,26 +380,6 @@
             ssd1306_printFixedN(x, y, ch, STYLE_NORMAL, FONT_SIZE_2X);
         }
 
-        /* 
-         * 아날로그 A0 핀의 신호 값을 디지털 9번핀(열선)이 HIGH인 상태에서 체크하도록 하는 함수
-         */
-        int checkA0()
-        {
-            int tempValueA0 = 0;
-
-            digitalWrite(9, HIGH); // 예열 시작
-            delay(1);
-
-            tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
-
-            if(!isHeating)
-            {
-                digitalWrite(9, LOW); // 예열 종료
-            }
-
-            return tempValueA0;
-        }
-
         /*
          * 온도를 읽고, 정확한 온도로 계산 후 결과 값을 화면에 표시하고 반환하는 함수
          * VALUE_TEMPTB = 0, CELSIUS_TEMPTB = 1 으로 온도표의 각 항목을 지시함
@@ -442,7 +387,7 @@
         int getTemperature()
         {  
             float ratioTemp;
-            float tempADU = checkA0();
+            float tempADU = analogRead(A0);
             int result;
             
             for(int i=1; i<23; i++){
@@ -534,14 +479,9 @@
 
             // 화면에 목표 온도, 재료 명, 속도를 표시
             // 재료명은 좌표 0,0 에 표시
-            // 목표 속도는 좌표 80, 0 에 표시
             // 목표 온도는 좌표 52, 16 에 표시
-            // 온도 단위인 °C는 좌표 91, 16 에 표시
             strToShow = materials[index].materialName;
             showTextToScreen(0,0, strToShow);
-
-            strToShow = String(setMotorSpeed) + "%";
-            showTextToScreen(80,0, strToShow);
 
             strToShow = "/" + String(setTemperature);
             showTextToScreen(52,16,strToShow);

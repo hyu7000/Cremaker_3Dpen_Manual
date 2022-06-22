@@ -69,7 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Lv3_2_PartsList.html">부품 리스트</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Lv3_3_Assembly.html">조립 과정</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Lv3_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lv3_4_ReadyToCoding.html">코딩을 위한 준비</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Lv3_5_Arduino_Basic.html">아두이노 기초</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Lv3_6_Time.html">delay와 시간</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">스위치 버튼 사용</a></li>
@@ -81,8 +81,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../uploadFw.html">업로드하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manual.html">사용 매뉴얼</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../test_1.html">레벨 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../test_2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keyword_index.html">색인</a></li>
 </ul>
 
         </div>
@@ -126,22 +125,20 @@
 <div class="line">먼저 살펴볼 것은 버튼 입니다. 이번 챕터에서는 <span class="blackbold">버튼을 이용해서 LED를 껏다가 킬수있도록</span> 구현하는 것이 목표입니다.</div>
 <div class="line"><br /></div>
 </div>
-<div class="line-block">
-<div class="line">[실제 사진추가]</div>
-</div>
+<a class="reference internal image-reference" href="../_images/Step1_0.jpg"><img alt="../_images/Step1_0.jpg" class="align-center" src="../_images/Step1_0.jpg" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">3D 펜에 버튼은 총 4개가 있습니다. 앞쪽 2개(A,B) 뒤쪽 2개(C,D) 입니다.</div>
 <div class="line">이 버튼은 각각 아두이노에 연결되어 있습니다.</div>
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../_images/Step1_12.jpg"><img alt="../_images/Step1_12.jpg" class="align-center" src="../_images/Step1_12.jpg" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/Step1_1.jpg"><img alt="../_images/Step1_1.jpg" class="align-center" src="../_images/Step1_1.jpg" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">위와 같이 A,B,C,D 버튼은 각각 아두이노 디지털 핀의 D8,D7,D11,D12에 연결되어 있습니다. 그렇다면, 이제 버튼이 눌릴 때 마다 신호를 받게 하는 코드를 작성해볼 겁니다.</div>
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../_images/Step1_26.png"><img alt="../_images/Step1_26.png" class="align-center" src="../_images/Step1_26.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/Step1_25.png"><img alt="../_images/Step1_25.png" class="align-center" src="../_images/Step1_25.png" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><span class="orangecircle">●</span> 먼저 아두이노를 실행하고, 메뉴에서 파일 - 새 파일을 선택합니다.</div>
@@ -221,22 +218,20 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/Step1_31.jpg"><img alt="../_images/Step1_31.jpg" class="align-center" src="../_images/Step1_31.jpg" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../_images/Step1_3.jpg"><img alt="../_images/Step1_3.jpg" class="align-center" src="../_images/Step1_3.jpg" style="width: 700px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">digitalRead 함수는 디지털핀의 상태를 읽어오는 기능을 합니다. 3D 펜에서 스위치 버튼은 누르게 되면 각 핀에 0V(LOW)로 인식됩니다.</div>
 <div class="line">즉 <span class="blackbold">if(digitalRead(8) == LOW)</span> 를 해석하면 <span class="blackbold">디지털 8번핀이 눌리면</span> 과 동일합니다. 즉 디지털 8번 버튼을 누르면 LED를 켜라 라는 코드입니다.</div>
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../_images/Step1_44.png" id="targetl3c7s1-4"><img alt="../_images/Step1_44.png" class="align-center" id="targetl3c7s1-4" src="../_images/Step1_44.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/Step1_43.png" id="targetl3c7s1-4"><img alt="../_images/Step1_43.png" class="align-center" id="targetl3c7s1-4" src="../_images/Step1_43.png" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><span class="orangecircle">●</span> 작성된 코드를 업로드 해봅니다. 업로드 버튼을 눌러줍니다.</div>
 <div class="line"><br /></div>
 </div>
 <div class="line-block">
-<div class="line"><br /></div>
-<div class="line">[버튼 사진 추가]</div>
 <div class="line"><br /></div>
 <div class="line">버튼을 누르면, 아두이노의 LED가 켜집니다. 다만 한번 켜지고 꺼지진 않습니다.</div>
 <div class="line">이제 <span class="blackbold">다른 버튼을 코드에 추가하여, LED가 꺼지도록</span> 해봅니다.</div>

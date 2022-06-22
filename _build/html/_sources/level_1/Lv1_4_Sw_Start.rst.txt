@@ -8,6 +8,7 @@
    Lv1_Sw_Start/step_2
    Lv1_Sw_Start/step_3
    Lv1_Sw_Start/step_4
+   Lv1_Sw_Start/step_5
 
 | 코딩에 대한 대략적인 구조와 작동원리를 알아봅니다.
 | 

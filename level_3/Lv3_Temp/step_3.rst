@@ -29,17 +29,14 @@
 | 원하는 온도를 세세하게 설정하기엔 복잡함이 있음으로, :blackbold:`미리 재료에 적절한 온도 값을 저장하고, 그 값을 불러내어 목표온도로 설정하는 방식을 구현` 해보는 것이 목표입니다.
 |
 
-
 | 재료에 맞는 온도 값을 미리 배열로 저장하고 불러오기 위해, 변수와 배열을 선언합니다.
 
 .. code-block:: c++
-    :emphasize-lines: 3, 4, 7
     :linenos:
 
-    int tempValueA0 = 0; // A0 신호 값 저장용
     int curTemp        = 0; // 계산된 온도
-    int targetTemp  = 0; // 설정 온도
-    int presetIndex = 0; // 저장된 설정 온도의 현재 순번
+    int targetTemp     = 0; // 설정 온도
+    int presetIndex    = 0; // 저장된 설정 온도의 현재 순번
 
                       // 기본, PCL, PLA
     int presetTemp[3] = { 0,  60,  200 };
@@ -64,11 +61,9 @@
     .. code-block:: c++
         :linenos:
 
-        int tempValueA0 = 0; // A0 신호 값 저장용
         int curTemp = 0;
         int targetTemp = 0;
         int presetIndex = 0;
-        bool isHeating = false; // 예열 상태를 확인하는 확인하는 bool 변수
 
                          // 기본, PCL, PLA
         int presetTemp[3] = { 0,  60,  200 };
@@ -76,28 +71,28 @@
         int temptable[23][2] = 
         {
             {1023,0},
-            {1008,10},
-            {994,20},
-            {990,30},
-            {985,40},
-            {983,50},
-            {981,60},
-            {978,70},
-            {975,80},
-            {965,90},
-            {959,100},
-            {952,110},
-            {948,120},
-            {941,130},
-            {932,140},
-            {920,150},
-            {908,160},
-            {890,170},
-            {875,180},
-            {845,190},
-            {820,200},
-            {790,210},
-            {765,220}
+            {1022,10},
+            {1020,20},
+            {1016,30},
+            {1011,40},
+            {1009,50},
+            {1006,60},
+            {1004,70},
+            {1000,80},
+            {990,90},
+            {983,100},
+            {976,110},
+            {972,120},
+            {964,130},
+            {955,140},
+            {942,150},
+            {929,160},
+            {910,170},
+            {895,180},
+            {864,190},
+            {839,200},
+            {800,210},
+            {744,220}
         }; // 온도테이블
 
         void setup() {
@@ -127,26 +122,11 @@
             }
         }
 
-        // 아날로그 A0 핀의 신호 값을 디지털 9번핀(열선)이 HIGH인 상태에서 체크하도록 하는 함수
-        void checkA0()
-        {
-            digitalWrite(9, HIGH); // 예열 시작
-            delay(1);
-            tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
-            if(!isHeating)
-            {
-                digitalWrite(9, LOW); // 예열 종료
-            }
-        }
-
         void loop() {
             // put your main code here, to run repeatedly: 
-            checkA0(); // 아날로그 A0의 신호 값을 가져오는 함수
 
-            curTemp = tempCali(tempValueA0); // 온도 보상 함수 호출
-
-            Serial.print("신호 값 : ");        
-            Serial.print(tempValueA0);        
+            curTemp = tempCali(analogRead(A0)); // 온도 보상 함수 호출
+  
             Serial.print(", 현재 온도 값 : ");
             Serial.print(curTemp);   
             Serial.print(", 설정 온도 값 : ");
@@ -156,15 +136,11 @@
             {
                 digitalWrite(9, LOW); // 예열 종료
                 delay(5); // 약간의 대기시간 추가
-
-                isHeating = false;
             }
             else
             {
                 digitalWrite(9, HIGH); // 예열 시작
                 delay(5); // 약간의 대기시간 추가
-
-                isHeating = true;
             }
 
             if(digitalRead(11)==LOW)

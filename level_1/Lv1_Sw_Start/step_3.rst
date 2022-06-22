@@ -94,19 +94,9 @@ Step.3 LED 껏다켜기_1
    :align: center
 
 |
-| :yellowcircle:`●` :blackbold:`디지털 0 번 핀 켜기` 블록 2개를 :blackbold:`10번 반복하기` 블록 안에 넣어줍니다.
+| :yellowcircle:`●` :blackbold:`LED 켜기` 블록 2개를 :blackbold:`10번 반복하기` 블록 안에 넣어줍니다.
 | :blackcircle:`●` 블록은 하나씩 2번 이동시켜 주면 됩니다.
-| :blackcircle:`●` :blackbold:`디지털 0 번 핀 켜기` 블록은 디지털 핀의 신호를 주겠다는 뜻입니다. 신호를 주게 되면, 약간의 전류가 흐를 수 있게 됩니다.
-|
-|
-
-.. image:: ../../images/Lv1/Chapter_4/Step3_8.png
-   :width: 800
-   :align: center
-
-|
-| :yellowcircle:`●` :blackbold:`디지털 0` 이라고 되어 있는 부분을 13으로 변경시켜 줍니다.
-| :blackcircle:`●` 2개의 블록 모두 변경 시켜줍니다.
+| :blackcircle:`●` :blackbold:`LED 켜기` 블록은 아두이노에 부착된 LED를 켜고 끄겠다는 것입니다.이 블록이 실행되면 LED가 켜지고 꺼집니다.
 |
 |
 
@@ -115,7 +105,7 @@ Step.3 LED 껏다켜기_1
    :align: center
 
 |
-| :blackcircle:`●` 아두이노 보드에는 13개의 디지털 핀이 있으며, 디지털 13번핀은 LED에 연결되어 있습니다.
+| :blackcircle:`●` 아두이노 보드에는 작은 LED가 부착되어 있습니다. :blackbold:`LED 켜기` 블록으로 이 LED를 켜고 끌 수 있습니다.
 | :blackcircle:`●` 이 LED 전구를 껏다 켰다 작동시켜볼 계획입니다.
 |
 |
@@ -126,7 +116,7 @@ Step.3 LED 껏다켜기_1
 
 |
 | :yellowcircle:`●` :blackbold:`켜기` 이라고 되어 있는 부분을 :blackbold:`끄기` 로 변경시켜 줍니다.
-| :blackcircle:`●` 여기까지 블록을 완성시키면, :blackbold:`시작하기` 버튼을 누르면 13핀에 연결된 전구가 꺼졋다 켜졌다를 10회 반복하게 되게끔 만들었습니다.
+| :blackcircle:`●` 여기까지 블록을 완성시키면, :blackbold:`시작하기` 버튼을 누르면 LED가 꺼졋다 켜졌다를 10회 반복하게 되게끔 만들었습니다.
 | :blackcircle:`●` :blackbold:`시작하기` 버튼을 누르고 작동이 제대로 하는지 확인합니다.
 |
 |

@@ -7,7 +7,7 @@
    level_2/Lv2_1_3Dpen_principle
    level_2/Lv2_2_PartsList
    level_2/Lv2_3_Assembly
-   level_2/Lv2_4_InstallArduino
+   level_2/Lv2_4_ReadyToCoding
    level_2/Lv2_5_LED_Example
    level_2/Lv2_6_Arduino_Basic
    level_2/Lv2_7_Button

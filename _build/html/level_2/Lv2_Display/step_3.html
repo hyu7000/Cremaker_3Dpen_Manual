@@ -68,7 +68,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_1_3Dpen_principle.html">3D 펜의 원리</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_2_PartsList.html">부품 리스트</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_3_Assembly.html">조립 과정</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lv2_4_InstallArduino.html">아두이노 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv2_4_ReadyToCoding.html">코딩을 위한 준비</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_5_LED_Example.html">LED 전구 On, Off</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_6_Arduino_Basic.html">아두이노 기초</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv2_7_Button.html">스위치 버튼 사용</a></li>
@@ -86,8 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../level3.html">레벨 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test_1.html">레벨 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test_2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyword_index.html">색인</a></li>
 </ul>
 
         </div>
@@ -169,9 +168,7 @@
 <div class="line">실제로 적용하면, 아래와 같은 문제가 발생합니다.</div>
 <div class="line"><br /></div>
 </div>
-<div class="line-block">
-<div class="line">[gif추가]</div>
-</div>
+<a class="reference internal image-reference" href="../../_images/Remaining_Text.gif"><img alt="../../_images/Remaining_Text.gif" class="align-center" src="../../_images/Remaining_Text.gif" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">이런 문제를 해결하려면, 글자를 변경하고자 하는 순간에 화면을 초기화 해주어야 합니다. (10줄 함수 참고)</div>
@@ -180,7 +177,7 @@
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ssd1306.h&quot;</span><span class="c1"> // 라이브러리 포함</span><span class="cp"></span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="p">{</span><span class="w"></span>
+<span class="linenos"> 4</span>
 <span class="linenos"> 5</span><span class="w">    </span><span class="c1">// put your setup code here, to run once:</span>
 <span class="linenos"> 6</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// C 버튼</span>
 <span class="linenos"> 7</span><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="n">INPUT_PULLUP</span><span class="p">);</span><span class="w">  </span><span class="c1">// D 버튼</span>
@@ -192,7 +189,7 @@
 <span class="linenos">13</span><span class="w">    </span><span class="n">ssd1306_flipVertical</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">   </span><span class="c1">// y 화면 대칭 회전</span>
 <span class="linenos">14</span><span class="p">}</span><span class="w"></span>
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"></span>
+<span class="linenos">16</span><span class="kt">void</span><span class="w"> </span><span class="n">loop</span><span class="p">()</span><span class="w"></span>
 <span class="linenos">17</span><span class="p">{</span><span class="w"></span>
 <span class="linenos">18</span><span class="w">    </span><span class="c1">// put your main code here, to run repeatedly:</span>
 <span class="linenos">19</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">digitalRead</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span><span class="o">==</span><span class="n">LOW</span><span class="p">)</span><span class="w"></span>
@@ -213,9 +210,7 @@
 <div class="line-block">
 <div class="line">하지만 이 경우에도 약~간의 문제가 있습니다. 버튼을 길게 누르면 화면이 이상해지는 것을 볼 수있습니다.</div>
 </div>
-<div class="line-block">
-<div class="line">[gif 추가]</div>
-</div>
+<a class="reference internal image-reference" href="../../_images/Blinking.gif"><img alt="../../_images/Blinking.gif" class="align-center" src="../../_images/Blinking.gif" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line">버튼을 1초 누르고 있는 동안에도 여러번의 화면 초기화와 디스플레이에 문자 표시가 반복되면서, 흐릿하게 보이는 증상입니다.</div>

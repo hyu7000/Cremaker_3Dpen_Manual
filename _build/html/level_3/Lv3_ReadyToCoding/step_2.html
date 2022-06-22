@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>알고리즘 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="아두이노 기초" href="../Lv3_5_Arduino_Basic.html" />
+    <link rel="prev" title="아두이노 설치" href="step_1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv3_4_ReadyToCoding.html">코딩을 위한 준비</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">아두이노 설치</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">알고리즘</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_5_Arduino_Basic.html">아두이노 기초</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_6_Time.html">delay와 시간</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_7_Button.html">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_9_Temp.html">온도 조절</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_11_FullCode.html">프로그램 작성</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyword_index.html">색인</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level3.html">레벨 3</a> &raquo;</li>
+          <li><a href="../Lv3_4_ReadyToCoding.html">코딩을 위한 준비</a> &raquo;</li>
+      <li>알고리즘</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>알고리즘<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">알고리즘은 어떤 문제를 해결하거나, 동작을 수행하기 위한 과정을 말합니다. 컴퓨터과학이나 수학에서 사용되곤 합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_11.jpg"><img alt="../../_images/Step2_11.jpg" class="align-center" src="../../_images/Step2_11.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">크리메이커 3D 펜의 소프트웨어에도 알고리즘이 작동합니다.</div>
+<div class="line">3D 펜의 소프트웨어를 개발하는데에 있어서, 알고리즘이 만들어지는 과정을 알아봅니다.</div>
+<div class="line"><br /></div>
+<div class="line">먼저 제품의 동작이 어떤 것들이 있는지 확인해야 합니다.</div>
+<div class="line">3D 펜이 동작은 어떤 것들이 있을까요? 간단하게 생각해보면 필수적인 동작은 5가지 정도가 있을 것 같습니다.</div>
+<div class="line">잠시 생각해보신 뒤, 아래 버튼으로 확인해보세요.</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">1. 필라멘트 압출(모터 회전)</div>
+<div class="line">2. 필라멘트 제거(모터 회전)</div>
+<div class="line">3. 예열</div>
+<div class="line">4. 냉각</div>
+<div class="line">5. 화면 표시</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">기본적으로 생각나는 것들은 위와 같을 겁니다. 물론 기능중에는 부수적인 것은 포함하지 않았습니다.</div>
+<div class="line">하지만 이 것만으로 SW를 작성하기는 약간 무리가 있습니다. 여기에는 조건(입력)이 없습니다.</div>
+<div class="line">전원을 켜면 어떤 것들을 해야하는지 알려줄 조건이 필요합니다.</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">1. A버튼이 눌리면, 필라멘트 압출(모터 회전)</div>
+<div class="line">2. B버튼이 눌리면, 필라멘트 제거(모터 회전)</div>
+<div class="line">3. C버튼이 눌리면, 예열</div>
+<div class="line">4. D버튼이 눌리면, 냉각</div>
+<div class="line">5. 정보가 바뀌면, 화면에 표시</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">입력(조건)을 추가해주었습니다. 5번 동작에서 정보는 여러 값들을 포함합니다. 입력이 없는 상태에서 작동하는 제품은 많지 않습니다.</div>
+<div class="line">위의 추가된 조건도 정상적으로 작동하기에 부족함이 있습니다. 어떤 부분이 부족할까요?</div>
+<div class="line"><br /></div>
+<div class="line">여기에서 부족한 부분을 찾는 것은 알고리즘에서 중요합니다. 컴퓨터의 사고방식이 우리와 다르기 때문에 위의 항목만으로 코딩을 작성한다면, 실제 제품의 작동이 제대로 이루어지지 않을 수 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Push_BTN_S.gif"><img alt="../../_images/Push_BTN_S.gif" class="align-center" src="../../_images/Push_BTN_S.gif" style="width: 600px;" /></a>
+<center-text-for-figure>버튼이 짧게 눌리는 경우</center-text-for-figure><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Push_BTN_L.gif"><img alt="../../_images/Push_BTN_L.gif" class="align-center" src="../../_images/Push_BTN_L.gif" style="width: 600px;" /></a>
+<center-text-for-figure>버튼이 길게 눌리는 경우</center-text-for-figure><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">내용이 부족한 부분은 ‘버튼이 눌리면’ 이라는 부분입니다. 한번 누르고 손을 떼면 작동한다는 건지, 꾹 누르고 있어야 작동한다는 건지, 여러 버튼이 같이 눌리면 어떻게 되는지에 대한 설명이 부족합니다.</div>
+<div class="line">이런 상세한 내용을 생각해보고 아래 버튼을 눌러 확인해보세요.</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">1. A버튼만 눌려져 있으면, 필라멘트 압출</div>
+<div class="line-block">
+<div class="line">(모터 회전, 버튼을 떼면 필라멘트 압출하지 않음)</div>
+</div>
+<div class="line">2. B버튼만 한번 눌려지면, 필라멘트 일정시간 제거</div>
+<div class="line-block">
+<div class="line">(모터 회전, 버튼을 떼도 일정시간 필라멘트가 제거됨)</div>
+</div>
+<div class="line">3. C버튼만 한번 눌려지면, 예열(버튼을 떼도 예열함)</div>
+<div class="line">4. D버튼만 한번 눌려지면, 냉각(버튼을 떼도 냉각함)</div>
+<div class="line">5. 정보가 바뀌면, 화면에 표시</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">버튼을 누르는 방식에 따라 정해진 작동을 하도록 정하였습니다.</div>
+<div class="line">이제 입력(조건)부분이 아니라 출력부분도 한번 살펴보겠습니다. 모터의 회전은 방향만 정해주면 큰 어려움이 없습니다만, 예열부분이 문제가 있습니다.</div>
+<div class="line">3번 동작에서 C 버튼을 누르게 되면 어떻게 될까요? 문구만 봐서는 예열이 되고 어디에서 멈춘다는 것이 없기 때문에 한계까지 온도가 올라갈 것입니다.</div>
+<div class="line">어느정도 온도까지 예열하는지를 정해줘야 합니다.</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">1. A버튼만 눌려져 있으면, 필라멘트 압출</div>
+<div class="line-block">
+<div class="line">(모터 정회전, 버튼을 떼면 필라멘트 압출하지 않음)</div>
+</div>
+<div class="line">2. B버튼만 한번 눌려지면, 필라멘트 일정시간 제거</div>
+<div class="line-block">
+<div class="line">(모터 역회전, 버튼을 떼도 일정시간 필라멘트가 제거됨)</div>
+</div>
+<div class="line">3. C버튼만 한번 눌려지면, 예열을 시작하고, 설정온도에 도달하면 온도를 유지함. (버튼을 떼도 예열함)</div>
+<div class="line">4. D버튼만 한번 눌려지면, 냉각(버튼을 떼도 냉각함)</div>
+<div class="line">5. 정보가 바뀌면, 화면에 표시</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">자 이제 각 동작에 대해 입력과 출력을 제대로 수정했으니, 문제될 것이 없을 것만 같습니다.</div>
+<div class="line">동작 자체 구현에는 문제가 없습니다만, 실제 사용하는 과정에서 문제가 발생합니다.</div>
+<div class="line"><br /></div>
+<div class="line">A버튼을 누르면 필라멘트를 압출하는 방향으로 모터가 회전하는데, 온도가 충분히 예열되지 않으면 어떻게 될까요? 필라멘트가 밀려지지 않고 모터에 의해 갈려질 것입니다.</div>
+<div class="line">B버튼도 마찬가지 입니다. 이 부분을 적용하여 동작을 수정해보면 다음과 같습니다.</div>
+</div>
+<div class="toggle docutils container">
+<div class="line-block">
+<div class="line">1. A버튼만 눌려져 있고 온도가 설정온도에 도달했으면, 필라멘트 압출</div>
+<div class="line-block">
+<div class="line">(모터 정회전, 버튼을 떼면 필라멘트 압출하지 않음)</div>
+</div>
+<div class="line">2. B버튼만 한번 눌려지고 온도가 설정온도에 도달했으면, 필라멘트 일정시간 제거</div>
+<div class="line-block">
+<div class="line">(모터 역회전, 버튼을 떼도 일정시간 필라멘트가 제거됨)</div>
+</div>
+<div class="line">3. C버튼만 한번 눌려지면, 예열을 시작하고, 설정온도에 도달하면 온도를 유지함. (버튼을 떼도 예열함)</div>
+<div class="line">4. D버튼만 한번 눌려지면, 냉각(버튼을 떼도 냉각함)</div>
+<div class="line">5. 정보가 바뀌면, 화면에 표시</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">이제 동작 구현도 완료되었고, 실제 사용에 있어서 생길 문제점도 개선하였습니다. 이제 실제 사용을 할 수 있는 정도의 동작 알고리즘이 되었습니다.</div>
+<div class="line"><br /></div>
+<div class="line">각각의 동작들을 한번 알고리즘으로 표현해보겠습니다.</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">1번 동작</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_23.png"><img alt="../../_images/Step2_23.png" class="align-center" src="../../_images/Step2_23.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">2번 동작</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_33.png"><img alt="../../_images/Step2_33.png" class="align-center" src="../../_images/Step2_33.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">3번 동작</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_43.png"><img alt="../../_images/Step2_43.png" class="align-center" src="../../_images/Step2_43.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">4번 동작</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_52.png"><img alt="../../_images/Step2_52.png" class="align-center" src="../../_images/Step2_52.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">5번 동작</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_62.png"><img alt="../../_images/Step2_62.png" class="align-center" src="../../_images/Step2_62.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">각각의 동작의 알고리즘은 위와 같습니다. 크게 어려움이 없으실 겁니다.</div>
+<div class="line">이 동작들을 작동하는 전체 프로그램의 알고리즘도 다음과 같이 나타낼 수 있습니다.</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Step2_62.png"><img alt="../../_images/Step2_62.png" class="align-center" src="../../_images/Step2_62.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">위의 알고리즘들을 기본삼아 기초부터 코딩을 시작해보도록 하겠습니다.</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_1.html" class="btn btn-neutral float-left" title="아두이노 설치" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Lv3_5_Arduino_Basic.html" class="btn btn-neutral float-right" title="아두이노 기초" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

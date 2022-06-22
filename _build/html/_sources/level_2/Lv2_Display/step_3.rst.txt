@@ -68,7 +68,9 @@
 | 실제로 적용하면, 아래와 같은 문제가 발생합니다.
 | 
 
-| [gif추가]
+.. image:: ../../images/Lv3/Chapter_10/Remaining_Text.gif
+   :width: 600
+   :align: center
 
 |
 | 이런 문제를 해결하려면, 글자를 변경하고자 하는 순간에 화면을 초기화 해주어야 합니다. (10줄 함수 참고)
@@ -80,7 +82,7 @@
     #include "ssd1306.h" // 라이브러리 포함
 
     void setup() 
-    {
+
         // put your setup code here, to run once:
         pinMode(11,INPUT_PULLUP);  // C 버튼 
         pinMode(12,INPUT_PULLUP);  // D 버튼 
@@ -111,7 +113,9 @@
 
 | 하지만 이 경우에도 약~간의 문제가 있습니다. 버튼을 길게 누르면 화면이 이상해지는 것을 볼 수있습니다.
 
-| [gif 추가]
+.. image:: ../../images/Lv3/Chapter_10/Blinking.gif
+   :width: 600
+   :align: center
 
 |
 | 버튼을 1초 누르고 있는 동안에도 여러번의 화면 초기화와 디스플레이에 문자 표시가 반복되면서, 흐릿하게 보이는 증상입니다.

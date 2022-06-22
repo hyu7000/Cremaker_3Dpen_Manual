@@ -29,7 +29,11 @@ DC 모터
 |
 | 정확히는 노즐에는 2개의 부품이 있습니다. 
 |
-| [온도센서 열선 나오게 근접 사진]
+
+.. image:: ../images/Lv1/Chapter_2/Nozzle2.png
+   :width: 600
+   :align: center
+
 |
 | 열선과 온도센서입니다. 열선은 말그대로 온도를 높여주는 역할을 하는 부품이고, 온도센서는 현재온도가 어느 정도인지 측정해주는 역할을 합니다.
 | 이 열선으로 온도를 올리면, 필라멘트가 녹으면서 통과할 수 있게 됩니다.
@@ -49,10 +53,22 @@ DC 모터
 보드 기판
 ^^^^^^^^^^^^
 
+.. image:: ../images/Lv1/Chapter_2/Board.png
+   :width: 600
+   :align: center
+
+
 |
 | 보드 기판에는 여러 부품들이 부착되어 있습니다. 대표적으로 스위치 버튼입니다.
 | 스위치 버튼은 DC모터를 시계방향으로 돌릴 것인지, 반시계 방향으로 돌릴 것인지 아니면, 온도를 어느정도로 설정할 것인지 결정하는데 도움을 주는 부품입니다. 스위치는 총 4개이며, 기판에 붙어 있습니다.
-| [저항, 칩 사진]
+
+.. image:: ../images/Lv1/Chapter_2/Resistance.jpg
+   :width: 30%
+.. image:: ../images/Lv1/Chapter_2/Push_Switch.jpg
+   :width: 30%
+.. image:: ../images/Lv1/Chapter_2/Capacitor.jpg
+   :width: 30%
+
 | 또한 각종 칩, 저항들이 부착되어 있습니다.
 
 메인 보드
@@ -96,7 +112,7 @@ DC 모터
 | 디지털 핀과 아날로그 핀이 담당합니다.
 | 
 
-.. image:: ../images/Lv2/Chapter_2/Aruino_Nano_Pin.png
+.. image:: ../images/Lv2/Chapter_2/Arduino_Nano_Pin.png
    :width: 600
    :align: center
 

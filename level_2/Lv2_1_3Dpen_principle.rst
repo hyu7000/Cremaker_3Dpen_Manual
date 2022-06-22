@@ -3,7 +3,10 @@
 
 | 3D 펜은 플라스틱 재료를 녹여 모양을 그리면 모양대로 만들어지도록 하는 도구입니다.
 
-| [gif] 추가
+.. image:: ../images/Lv1/Chapter_1/use_3Dpen.gif
+   :width: 600
+   :align: center
+
 
 .. image:: ../images/Lv2/Chapter_1/3D_Pen_Structure.jpg
    :width: 800
@@ -21,3 +24,5 @@
 | 현재 상태를 표시하는 디스플레이
 | 각 부품을 컨트롤 하는 메인보드 
 | 그리고 사진에는 나와있지 않지만 모터의 속도, 방향을 조절해주는 버튼들이 있습니다.
+
+| 

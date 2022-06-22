@@ -42,7 +42,11 @@ L293D
 |
 | 정확히는 노즐에는 2개의 부품이 있습니다. 
 |
-| [온도센서 열선 나오게 근접 사진]
+
+.. image:: ../images/Lv1/Chapter_2/Nozzle2.png
+   :width: 600
+   :align: center
+
 |
 | 열선과 온도센서입니다. 열선은 말그대로 온도를 높여주는 역할을 하는 부품이고, 온도센서는 현재온도가 어느 정도인지 측정해주는 역할을 합니다.
 | 이 열선으로 온도를 올리면, 필라멘트가 녹으면서 통과할 수 있게 됩니다.
@@ -74,10 +78,21 @@ L293D
 보드 기판
 ^^^^^^^^^^^^
 
+.. image:: ../images/Lv1/Chapter_2/BreadBoard.png
+   :width: 400
+   :align: center
+
 |
 | 보드 기판에는 여러 부품들이 부착되어 있습니다. 대표적으로 스위치 버튼입니다.
 | 스위치 버튼은 DC모터를 시계방향으로 돌릴 것인지, 반시계 방향으로 돌릴 것인지 아니면, 온도를 어느정도로 설정할 것인지 결정하는데 도움을 주는 부품입니다. 스위치는 총 4개이며, 기판에 붙어 있습니다.
-| [저항, 칩 사진]
+
+.. image:: ../images/Lv1/Chapter_2/Resistance.jpg
+   :width: 30%
+.. image:: ../images/Lv1/Chapter_2/Push_Switch.jpg
+   :width: 30%
+.. image:: ../images/Lv1/Chapter_2/Capacitor.jpg
+   :width: 30%
+
 | 또한 각종 칩, 저항들이 부착되어 있습니다.
 
 메인 보드
@@ -121,7 +136,7 @@ L293D
 | 디지털 핀과 아날로그 핀이 담당합니다.
 | 
 
-.. image:: ../images/Lv2/Chapter_2/Aruino_Nano_Pin.png
+.. image:: ../images/Lv2/Chapter_2/Arduino_Nano_Pin.png
    :width: 600
    :align: center
 
@@ -137,7 +152,13 @@ L293D
 | 디지털 신호는 On인지 Off인지 만을 확인할 수 있고, 
 | 아날로그는 반대로 여러가지 값을 확인 할 수 있습니다.
 |
-| [gif 추가] 
+
+
+.. image:: ../images/Lv3/Chapter_2/AnalogDigital.jpg
+   :width: 600
+   :align: center
+
+
 |
 | 쉬운 예로, 전등이 꺼졋다 켜졌다만 할 수 있는 것은 디지털, 전등의 밝기까지 조절할 수 있으면 아날로그라고 이해하시면 됩니다.
 |

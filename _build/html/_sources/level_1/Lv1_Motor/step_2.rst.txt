@@ -23,17 +23,56 @@ Step.2 모터 작동 시키기
 .. role:: blackbold
 .. role:: redbold
 
-.. image:: ../../images/Lv1/Chapter_5/Step1_2.png
+| 3D 펜의 버튼을 눌러 모터를 회전 시켜볼 계획입니다. 코딩 맛보기에서 버튼을 사용하기 위해 만들었던 코드 블록들을 다시 준비합니다.
+|
+
+
+.. image:: ../../images/Lv1/Chapter_4/Step3_2.png
    :width: 800
    :align: center
 
 |
-| :orangecircle:`●` 시작 블록을 클릭합니다.
-| :yellowcircle:`●` :blackbold:`q 키를 눌렀을 때` 블록을 드래그하여 이동시켜 줍니다.
+| :orangecircle:`●` 시작 블록으로 이동합니다.
 |
 |
 
-.. image:: ../../images/Lv1/Chapter_5/Step1_3.png
+.. image:: ../../images/Lv1/Chapter_4/Step3_3.png
+   :width: 800
+   :align: center
+
+|
+| :yellowcircle:`●` :blackbold:`시작하기 버튼을 클릭했을 때` 를 가져옵니다.
+|
+|
+
+.. image:: ../../images/Lv1/Chapter_4/Step3_4.png
+   :width: 800
+   :align: center
+
+|
+| :orangecircle:`●` 흐름 블록으로 이동합니다.
+|
+|
+
+.. image:: ../../images/Lv1/Chapter_4/Step5_5.png
+   :width: 800
+   :align: center
+
+|
+| :yellowcircle:`●` :blackbold:`계속 반복하기` 블록을 가져옵니다.
+|
+|
+
+.. image:: ../../images/Lv1/Chapter_5/Step2_1.png
+   :width: 800
+   :align: center
+
+|
+| :yellowcircle:`●` :blackbold:`만약 참 (이)라면 ~` 블록을 :blackbold:`계속 반복하기` 블록 안에 이동시켜줍니다.
+|
+|
+
+.. image:: ../../images/Lv1/Chapter_5/Step2_2.png
    :width: 800
    :align: center
 
@@ -42,76 +81,58 @@ Step.2 모터 작동 시키기
 |
 |
 
-.. image:: ../../images/Lv1/Chapter_5/Step1_4.png
+.. image:: ../../images/Lv1/Chapter_5/Step2_3.png
    :width: 800
    :align: center
 
 |
-| :yellowcircle:`●` 먼저 모터를 On, Off 하는 블록부터 만들어 보겠습니다. :blackbold:`디지털 0번 핀 켜기` 블록을 이동시킵니다.
+| :yellowcircle:`●` :blackbold:`A 버튼이 눌렸는가?` 블록을 :blackbold:`만일 참 (이)라면 ~` 에서 `참` 부분에 이동시켜줍니다.
+| :blackbold:`●` 버튼이 눌렸으면 아래 블록을 실행하게 합니다.
 |
 |
 
-.. image:: ../../images/Lv1/Chapter_5/Step1_5.png
+.. image:: ../../images/Lv1/Chapter_5/Step2_4.png
    :width: 800
    :align: center
 
 |
-| :orangecircle:`●` :blackbold:`디지털 0번 핀 켜기` 를 숫자 0을 5로 변경시켜줍니다.
-| :blackcircle:`●` 디지털 5번 핀은 모터의 On,Off를 담당하는 부분에 연결되어 있기 때문입니다. 이 부분은 제작하는 사람이 결정하는 것이라 숫자에는 크게 신경안쓰셔도 됩니다.
-| :blackcircle:`●` 디지털 5번 핀이 켜지면 모터가 작동준비를 하게 되고, 끄기를 선택하면, 방향, 속도가 정해져도 작동하지 않습니다.
+| :yellowcircle:`●` 먼저 모터를 On, Off 하는 블록부터 만들어 보겠습니다. :blackbold:`모터 활성화` 블록을 이동시킵니다.
+| :blackcircle:`●` :blackbold:`모터 활성화` 블록은 모터를 On 해주는 블록입니다.
 |
 |
 
-.. image:: ../../images/Lv1/Chapter_5/Step1_6.png
+.. image:: ../../images/Lv1/Chapter_5/Step2_5.png
    :width: 800
    :align: center
 
 |
-| :orangecircle:`●` 이제 두번째 부분인 회전 방향을 담당하는 블록도 만들어 주기 위해 :blackbold:`디지털 0번 핀 켜기` 블록을 하나 더 이동시켜줍니다.
+| :orangecircle:`●` :blackbold:`모터를 반시계 방향으로 설정` 블록을 가져옵니다.
+| :blackcircle:`●` 이 블록은 모터가 회전하는 방향을 설정해줍니다. 시계, 반시계 중 원하는 방향을 설정합니다.
 |
 |
 
-.. image:: ../../images/Lv1/Chapter_5/Step1_7.png
+.. image:: ../../images/Lv1/Chapter_5/Step2_6.png
    :width: 800
    :align: center
 
 |
-| :orangecircle:`●` :blackbold:`디지털 0번 핀 켜기` 를 숫자 0을 6으로 변경시켜줍니다. 디지털 6번 핀은 모터의 방향을 결정합니다. 키고 끄는 것에 따라 반시계, 시계 방향으로 회전합니다.
+| :orangecircle:`●` :blackbold:`모터 속도를 255으로 설정` 블록을 가져옵니다.
+| :blackcircle:`●` 이 블록은 모터의 회전 속도를 설정합니다 최소 0 에서 최대 255까지 설정할 수 있습니다.
 |
 |
 
-.. image:: ../../images/Lv1/Chapter_5/Step1_8.png
+.. image:: ../../images/Lv1/Chapter_5/Step2_7.png
    :width: 800
    :align: center
 
 |
-| :orangecircle:`●` 마지막으로 속도를 결정하는 블록을 만들기 위해 :blackbold:`디지털 3 번 핀을 255 (으)로 정하기` 블록을 이동시켜줍니다.
-|
-|
-
-.. image:: ../../images/Lv1/Chapter_5/Step1_9.png
-   :width: 800
-   :align: center
-
-|
-| :yellowcircle:`●` :blackbold:`디지털 3 번 핀을 255 (으)로 정하기` 에서 숫자 3을 10으로 변경해줍니다.
-| :blackcircle:`●` 이어서 뒷편에 있는 255는 속도를 뜻합니다. 0~255까지 사용할 수 있으며, 255는 최대 속도, 0은 최소 속도가 되겠습니다.
-|
-|
-
-.. image:: ../../images/Lv1/Chapter_5/Step1_10.png
-   :width: 800
-   :align: center
-
-|
-| :yellowcircle:`●` :blackbold:`시작하기` 버튼을 누른 뒤에 Q 버튼을 눌러 모터의 움직임을 확인해 봅니다.
-|
+| :yellowcircle:`●` :blackbold:`시작하기` 버튼을 누르고 3D 펜이서 A 버튼이 눌러 봅니다.
 |
 
 |
 | :blackcircle:`●` 모터가 움직이나요? 그렇다면 다양한 방법으로 모터를 움직여 봅시다.
 |
-| :blackcircle:`1.` 모터가 정지하는 블록
-| :blackcircle:`2.` 모터가 반시계 방향으로 회전하는 블록
-| :blackcircle:`3.` 모터가 시계 방향으로 회전하는 블록-속도 느리게 해보기
+| :blackcircle:`1.` B 버튼을 누르면, 모터가 정지
+| :blackcircle:`2.` C 버튼을 누르면, 모터가 반대 방향으로 회전
+| :blackcircle:`3.` D 버튼을 누르면, 모터 속도가 절반으로 줄어들기
 | 

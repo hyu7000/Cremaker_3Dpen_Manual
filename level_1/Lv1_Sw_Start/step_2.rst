@@ -129,14 +129,11 @@ Step.2 설정
    :align: center
 
 |
-| :orangecircle:`●` 아두이노 나노를 찾고 클릭해줍니다.
-|
+| :orangecircle:`●` 크리메이커 3D 펜을 찾고 클릭해줍니다.
 |
 
-.. image:: ../../images/Lv1/Chapter_4/Step2_1.png
+.. image:: ../../images/Lv1/Chapter_4/Step2_10.png
    :width: 600
    :align: center
 
-|
-| :orangecircle:`●` 아두이노 나노를 찾고 클릭해줍니다.
 | :orangecircle:`●` 이후 연결 성공이 되면, 네이버 엔트리 사이트로 돌아옵니다.

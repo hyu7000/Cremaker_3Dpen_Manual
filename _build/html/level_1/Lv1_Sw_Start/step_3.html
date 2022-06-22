@@ -41,7 +41,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="색인" href="../../genindex.html" />
     <link rel="search" title="검색" href="../../search.html" />
-    <link rel="next" title="Step.3 LED 껏다켜기_2" href="step_4.html" />
+    <link rel="next" title="Step.4 LED 껏다켜기_2" href="step_4.html" />
     <link rel="prev" title="Step.2 설정" href="step_2.html" /> 
 </head>
 
@@ -71,20 +71,21 @@
 <li class="toctree-l3"><a class="reference internal" href="step_1.html">Step.1 설치</a></li>
 <li class="toctree-l3"><a class="reference internal" href="step_2.html">Step.2 설정</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Step.3 LED 껏다켜기_1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="step_4.html">Step.3 LED 껏다켜기_2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_4.html">Step.4 LED 껏다켜기_2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_5.html">Step.5 버튼 스위치 활용</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv1_5_Motor.html">모터 작동시키기</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lv1_6_Temperature.html">온도 읽기</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lv1_7_Extrude.html">필라멘트 연결하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_7_Extrude.html">필라멘트 압출하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv1_8_Display.html">디스플레이 표시</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../level3.html">레벨 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test_1.html">레벨 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../test_2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyword_index.html">색인</a></li>
 </ul>
 
         </div>
@@ -182,24 +183,16 @@
 <a class="reference internal image-reference" href="../../_images/Step3_7.png"><img alt="../../_images/Step3_7.png" class="align-center" src="../../_images/Step3_7.png" style="width: 800px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">디지털 0 번 핀 켜기</span> 블록 2개를 <span class="blackbold">10번 반복하기</span> 블록 안에 넣어줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">LED 켜기</span> 블록 2개를 <span class="blackbold">10번 반복하기</span> 블록 안에 넣어줍니다.</div>
 <div class="line"><span class="blackcircle">●</span> 블록은 하나씩 2번 이동시켜 주면 됩니다.</div>
-<div class="line"><span class="blackcircle">●</span> <span class="blackbold">디지털 0 번 핀 켜기</span> 블록은 디지털 핀의 신호를 주겠다는 뜻입니다. 신호를 주게 되면, 약간의 전류가 흐를 수 있게 됩니다.</div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="../../_images/Step3_8.png"><img alt="../../_images/Step3_8.png" class="align-center" src="../../_images/Step3_8.png" style="width: 800px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><span class="yellowcircle">●</span> <span class="blackbold">디지털 0</span> 이라고 되어 있는 부분을 13으로 변경시켜 줍니다.</div>
-<div class="line"><span class="blackcircle">●</span> 2개의 블록 모두 변경 시켜줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> <span class="blackbold">LED 켜기</span> 블록은 아두이노에 부착된 LED를 켜고 끄겠다는 것입니다.이 블록이 실행되면 LED가 켜지고 꺼집니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../../_images/Step3_9.png"><img alt="../../_images/Step3_9.png" class="align-center" src="../../_images/Step3_9.png" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="blackcircle">●</span> 아두이노 보드에는 13개의 디지털 핀이 있으며, 디지털 13번핀은 LED에 연결되어 있습니다.</div>
+<div class="line"><span class="blackcircle">●</span> 아두이노 보드에는 작은 LED가 부착되어 있습니다. <span class="blackbold">LED 켜기</span> 블록으로 이 LED를 켜고 끌 수 있습니다.</div>
 <div class="line"><span class="blackcircle">●</span> 이 LED 전구를 껏다 켰다 작동시켜볼 계획입니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
@@ -208,7 +201,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><span class="yellowcircle">●</span> <span class="blackbold">켜기</span> 이라고 되어 있는 부분을 <span class="blackbold">끄기</span> 로 변경시켜 줍니다.</div>
-<div class="line"><span class="blackcircle">●</span> 여기까지 블록을 완성시키면, <span class="blackbold">시작하기</span> 버튼을 누르면 13핀에 연결된 전구가 꺼졋다 켜졌다를 10회 반복하게 되게끔 만들었습니다.</div>
+<div class="line"><span class="blackcircle">●</span> 여기까지 블록을 완성시키면, <span class="blackbold">시작하기</span> 버튼을 누르면 LED가 꺼졋다 켜졌다를 10회 반복하게 되게끔 만들었습니다.</div>
 <div class="line"><span class="blackcircle">●</span> <span class="blackbold">시작하기</span> 버튼을 누르고 작동이 제대로 하는지 확인합니다.</div>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
@@ -227,7 +220,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="step_2.html" class="btn btn-neutral float-left" title="Step.2 설정" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="step_4.html" class="btn btn-neutral float-right" title="Step.3 LED 껏다켜기_2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="step_4.html" class="btn btn-neutral float-right" title="Step.4 LED 껏다켜기_2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

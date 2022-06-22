@@ -109,7 +109,9 @@
     {
     }
 
-| [출력된 사진]
+.. image:: ../../images/Lv2/Chapter_10/Step2_1_2.png
+   :width: 600
+   :align: center
 
 |
 | 오른손 잡이 분들은 3D 펜 디스플레이 글자가 반대로 보여서 보기 힘드실 겁니다.

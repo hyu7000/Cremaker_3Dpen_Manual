@@ -173,7 +173,7 @@
                     break;
 
                 case EXTRUDE:
-                    workMotor(setMotorSpeed, EXT_DIR);
+                    workMotor(255, EXT_DIR);
                     break;
 
                 case REVERSE:
@@ -272,17 +272,15 @@
         long timeInterval  = millis(); // 50ms 에 1회씩 작동하기 위한 시간 변수
 
         int material_index = 0;        // 재료 구조체 배열의 위치를 가리키는 인덱스
-        int setTemperature = 0;        // 설정된 온도
-        int setMotorSpeed  = 0;        // 설정된 모터 속도        
+        int setTemperature = 0;        // 설정된 온도     
 
         // 온도, 속도, 재료명을 포함한 구조체 선언
         struct setting {
             int temperature;
-            int motorSpeed;
             char* materialName;
         };
 
-        struct setting materials[] = {{0, 0, "OFF"}, {60, 100, "PCL"}, {200, 100,"PLA"}};
+        struct setting materials[] = {{0, "OFF"}, {60, "PCL"}, {200, "PLA"}};
 
         /*
          *  온도 테이블 배열
@@ -290,28 +288,28 @@
          */
         int temptable[23][2] = {
             {1023,0},
-            {1008,10},
-            {994,20},
-            {990,30},
-            {985,40},
-            {983,50},
-            {981,60},
-            {978,70},
-            {975,80},
-            {965,90},
-            {959,100},
-            {952,110},
-            {948,120},
-            {941,130},
-            {932,140},
-            {920,150},
-            {908,160},
-            {890,170},
-            {875,180},
-            {845,190},
-            {820,200},
-            {790,210},
-            {765,220}
+            {1022,10},
+            {1020,20},
+            {1016,30},
+            {1011,40},
+            {1009,50},
+            {1006,60},
+            {1004,70},
+            {1000,80},
+            {990,90},
+            {983,100},
+            {976,110},
+            {972,120},
+            {964,130},
+            {955,140},
+            {942,150},
+            {929,160},
+            {910,170},
+            {895,180},
+            {864,190},
+            {839,200},
+            {800,210},
+            {744,220}
         };
 
         /*
@@ -382,7 +380,7 @@
                     break;
 
                 case EXTRUDE:
-                    workMotor(255*setMotorSpeed/100, EXT_DIR);
+                    workMotor(255, EXT_DIR);
                     break;
 
                 case REVERSE:
@@ -405,26 +403,6 @@
             }
         }
 
-        /* 
-         * 아날로그 A0 핀의 신호 값을 디지털 9번핀(열선)이 HIGH인 상태에서 체크하도록 하는 함수
-         */
-        int checkA0()
-        {
-            int tempValueA0 = 0;
-
-            digitalWrite(9, HIGH); // 예열 시작
-            delay(1);
-
-            tempValueA0 = analogRead(A0); // 아날로그 신호 값을 tempValueA0 저장
-
-            if(!isHeating)
-            {
-                digitalWrite(9, LOW); // 예열 종료
-            }
-
-            return tempValueA0;
-        }
-
         /*
          * 온도를 읽고, 정확한 온도로 계산 후 결과 값을 화면에 표시하고 반환하는 함수
          * VALUE_TEMPTB = 0, CELSIUS_TEMPTB = 1 으로 온도표의 각 항목을 지시함
@@ -432,7 +410,7 @@
         int getTemperature()
         {  
             float ratioTemp;
-            float tempADU = checkA0();
+            float tempADU = analogRead(A0);
             int result;
             
             for(int i=1; i<23; i++){
@@ -464,7 +442,7 @@
             return ;
         }
 
-        float Kp=15, Ki=1, Kd=1.0, dT = 0.05;
+        float Kp=36, Ki=2.5, Kd=0.625, dT = 0.05;
         int16_t error, previousError = 0; // 오차 변수
         float integral, derivaitve = 0;   // 적분 미분 변수
 
@@ -474,40 +452,47 @@
         void getPIDoutput(int targetTemp, int actualValue)
         {            
             float outputValue;
-                
-            // 에러 값 저장 
-            error      = targetTemp - actualValue;
-
-            // 적분 값 저장
-            integral   = integral + (float)error*dT;
-
-            // 미분 값 저장
-            derivaitve = ((float)error - (float)previousError)/dT;
-            previousError = error;
-
-            // PID 계산
-            outputValue = Kp*error + Ki*integral + Kd*derivaitve;
-
-            // output 값이 0~255 범위를 벗어나면 최대, 최소 값을 대신 저장
-            if(outputValue > 255)
+            
+            //설정온도에 도달하기 10도 전일때부터 PID 제어 시작            
+             if(curTemp < setTemperature - 10)
             {
                 outputValue = 255;
             }
-            else if(outputValue <0)
-            {
-                outputValue = 0;
-            }
-
-            // outputValue 가 0이라면 예열이 되지 않음으로, isHeating 변수를 false로 저장
-            if(outputValue == 0)
-            {
-                isHeating = false;
-            }
             else
             {
-                isHeating = true;
-            }
+                // 에러 값 저장 
+                error      = targetTemp - actualValue;
 
+                // 적분 값 저장
+                integral   = integral + (float)error*dT;
+
+                // 미분 값 저장
+                derivaitve = ((float)error - (float)previousError)/dT;
+                previousError = error;
+
+                // PID 계산
+                outputValue = Kp*error + Ki*integral + Kd*derivaitve;
+
+                // output 값이 0~255 범위를 벗어나면 최대, 최소 값을 대신 저장
+                if(outputValue > 255)
+                {
+                    outputValue = 255;
+                }
+                else if(outputValue <0)
+                {
+                    outputValue = 0;
+                }
+
+                // outputValue 가 0 혹은 OFF 라면 예열이 되지 않음으로, isHeating 변수를 false로 저장
+                if(outputValue == 0 || material_index == 0)
+                {
+                    isHeating = false;
+                }
+                else
+                {
+                    isHeating = true;
+                }
+            }
             // 계산된 결과값을 디지털 9번핀에 analogWrite 로 입력
             analogWrite(HEATER_EN,outputValue);
         }
@@ -619,7 +604,6 @@
 
             // 목표 온도, 속도 항목에 현재 인덱스의 구조체 값을 저장
             setTemperature = materials[index].temperature;
-            setMotorSpeed  = materials[index].motorSpeed;
 
             // 화면 클리어
             ssd1306_clearScreen();
@@ -630,9 +614,6 @@
             // 목표 온도는 좌표 52, 16 에 표시
             strToShow = materials[index].materialName;
             showTextToScreen(0,0, strToShow);
-
-            strToShow = String(setMotorSpeed) + "%";
-            showTextToScreen(80,0, strToShow);
 
             strToShow = "/" + String(setTemperature);
             showTextToScreen(52,16,strToShow);
