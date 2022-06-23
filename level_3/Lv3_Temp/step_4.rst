@@ -91,7 +91,7 @@
         float outputValue;
     }
 
-| 먼저 getPIDoutput 이라는 함수를 만들어 줍니다. 함수의 매개변수는 targetTemp(목표온도), curTemp(현재온도) 로 되어 있습니다.
+| 먼저 getPIDoutput 이라는 함수를 만들어 줍니다. 함수의 :hoverxref:`매개변수 <hoverxref:parameters>` 는 targetTemp(목표온도), curTemp(현재온도) 로 되어 있습니다.
 | 다양한 변수도 생성했습니다. Error는 오류라는 뜻이 아니고 여기에서는 오차라는 뜻으로 사용됩니다. 목표온도와 현재온도의 차이라고 보시면 됩니다.
 | 
 | integral은 적분 값을 저장하는 변수, derivaitve는 미분 값을 저장하는 변수입니다.
@@ -197,8 +197,8 @@
     }
 
 |
-| 최종적으로 계산되어 반환되는 outputValue 를 노즐 열선과 연결된 디지털 9번핀(D9)에 analogWrite 함수로 입력해주면 됩니다.
-| 디지털 핀에 analogWrite 함수가 사용가능한 이유는 PWM 핀이기 때문입니다.
+| 최종적으로 계산되어 반환되는 outputValue 를 노즐 열선과 연결된 디지털 9번핀(D9)에 :hoverxref:`analogWrite <hoverxref:analogWrite>` 함수로 입력해주면 됩니다.
+| 디지털 핀에 :hoverxref:`analogWrite <hoverxref:analogWrite>` 함수가 사용가능한 이유는 PWM 핀이기 때문입니다.
 
 .. code-block:: c++
         :linenos:

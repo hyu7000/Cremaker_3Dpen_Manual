@@ -82,9 +82,9 @@
     pinMode(13,OUTPUT);
    }
 
-| 이처럼 pinMode를 사용하여 작성되면, 각 핀의 상태 설정이 완료됩니다.
+| 이처럼 :hoverxref:`pinMode <hoverxref:pinMode>` 를 사용하여 작성되면, 각 핀의 상태 설정이 완료됩니다.
 | INPUT 대신 INPUT_PULLUP 작성된 이유가 궁금할 겁니다. 단순히 INPUT을 하게 되면, 간혹 좋지 못한 신호를 얻을 수 있습니다. 이걸 노이즈라고 합니다. 이 부분은 레벨2에서는 INPUT_PULLUP이 여기에선 더 좋다고만 알고 계시면 됩니다.
-| pinMode 함수에 대한 기억이 잘 나지 않는 다면, :ref:`여기 <targetL2C5S1_5>` 로 이동합니다.
+
 |
 | :blackbold:`※ 작성 시 대소문자 구별에 주의하세요. 모든 코드는 대소문자 구별을 합니다.`
 |
@@ -106,7 +106,7 @@
    :align: center
 
 |
-| digitalRead 함수는 디지털핀의 상태를 읽어오는 기능을 합니다. 3D 펜에서 스위치 버튼은 누르게 되면 각 핀에 0V(LOW)로 인식됩니다.
+| :hoverxref:`digitalRead <hoverxref:digitalRead>` 함수는 디지털핀의 상태를 읽어오는 기능을 합니다. 3D 펜에서 스위치 버튼은 누르게 되면 각 핀에 0V(LOW)로 인식됩니다.
 | 즉 :blackbold:`if(digitalRead(8) == LOW)` 를 해석하면 :blackbold:`디지털 8번핀이 눌리면` 과 동일합니다. 즉 디지털 8번 버튼을 누르면 LED를 켜라 라는 코드입니다.
 |
 
@@ -117,7 +117,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 작성된 코드를 업로드 해봅니다. 업로드 버튼을 눌러줍니다.
+| :orangecircle:`●` 작성된 코드를 업로드 해봅니다. :hoverxref:`업로드 <hoverxref:uploadBtn>` 업로드 버튼을 눌러줍니다.
 |
 
 
@@ -125,7 +125,7 @@
 | 버튼을 누르면, 아두이노의 LED가 켜집니다. 다만 한번 켜지고 꺼지진 않습니다.
 | 이제 :blackbold:`다른 버튼을 코드에 추가하여, LED가 꺼지도록` 해봅니다.
 |
-| 스스로 작성을 해보고, 업로드도 해봅니다. 작동이 정상적으로 되는지 확인하고, 아래 코드와 비교 해봅니다.
+| 스스로 작성을 해보고, :hoverxref:`업로드 <hoverxref:uploadBtn>` 해봅니다. 작동이 정상적으로 되는지 확인하고, 아래 코드와 비교 해봅니다.
 
 .. toggle::
 

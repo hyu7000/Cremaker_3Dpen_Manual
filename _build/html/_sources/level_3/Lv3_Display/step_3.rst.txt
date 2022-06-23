@@ -54,7 +54,7 @@
 |
 | :redbold:`cannot convert 'String' to 'const char*' for argument '3'`
 |
-| 이 에러는 3번째 매개변수에서 String에서 const char*로 변환이 안된다는 뜻입니다. * 기호는 포인터개념이 있어야 함으로 여기에서 설명드리진 않고
+| 이 에러는 3번째 :hoverxref:`매개변수 <hoverxref:parameters>` 에서 String에서 const char*로 변환이 안된다는 뜻입니다. * 기호는 포인터개념이 있어야 함으로 여기에서 설명드리진 않고
 | 겉으로는 같은 문자열을 취급하지만 자료형이 달라 사용을 못합니다.
 | String을 사용하려면, String을 char 배열 형태로 바꿔주어야 합니다. 물론 char 를 사용하는 것이 메모리도 적게먹고 번거롭게 하지 안하도 되지만, 메모리 주소등과 같은 복잡한 개념을 이해하고 있어야 하기 때문에 String을 사용합니다.
 | 

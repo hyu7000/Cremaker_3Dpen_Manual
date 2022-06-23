@@ -213,7 +213,7 @@
         }
     }
 
-| 이와 같은 원리로 timeWork의 변수를 선언하였습니다.
+| 이와 같은 원리로 timeWork의 변수를 :hoverxref:`선언 <hoverxref:declaration>` 하였습니다.
 |
 | 기존 코드에서 workMotor, workAction, isReadyToExt 함수를 추가하여 코드를 작성해봅니다.
 | 1. A 버튼을 누른 상태면, 모터가 필라멘트 토출되는 방향으로 회전.

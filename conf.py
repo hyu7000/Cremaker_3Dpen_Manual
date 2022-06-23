@@ -45,6 +45,14 @@ source_suffix={
     '.md': 'markdown',
 }
 
+hoverxref_role_types = {
+    'hoverxref': 'modal',
+    'ref': 'modal',  # for hoverxref_auto_ref config
+    'confval': 'tooltip',  # for custom object
+    'mod': 'tooltip',  # for Python Sphinx Domain
+    'class': 'tooltip',  # for Python Sphinx Domain
+}
+
 # togglebutton_hint = "Displayed when the toggle is closed."
 # togglebutton_hint_hide = "Displayed when the toggle is open."
 togglebutton_hint = "클릭하여 보기"

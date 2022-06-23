@@ -45,8 +45,7 @@
     }
 
 | 보통 9600 속도를 설정합니다. 기타 다른 속도들도 있습니다만 여기에서는 9600을 기준으로 합니다.
-| 속도 설정 함수는 Serial.begin 으로 매개변수로 9600을 설정합니다.
-| ※매개변수에 대해 까먹으신 분들은 :ref:`여기 <targetL2C6S7_1>` 로 이동합니다.
+| 속도 설정 함수는 Serial.begin 으로 :hoverxref:`매개변수 <hoverxref:parameters>` 로 9600을 설정합니다.
 
 .. code-block:: c++
     :emphasize-lines: 8
@@ -62,7 +61,7 @@
     }
 
 | Serial.println 함수를 사용하여 시리얼 모니터에 출력하고자 하는 값을 정합니다. 문자라면 " " 와 같이 따옴표를 적어줘야 합니다.
-| 작성이 다 되었으면, 업로드를 합니다.
+| 작성이 다 되었으면, :hoverxref:`업로드 <hoverxref:uploadBtn>` 를 합니다.
 |
 
 .. image:: ../../images/Lv2/Chapter_9/Step1_1.png
@@ -70,7 +69,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 업로드가 완료되면, 오른편 상단의 시리얼 모니터 버튼을 클릭합니다.
+| :orangecircle:`●` :hoverxref:`업로드 <hoverxref:uploadBtn>` 가 완료되면, 오른편 상단의 시리얼 모니터 버튼을 클릭합니다.
 |
 
 .. image:: ../../images/Lv2/Chapter_9/Step1_2.png
@@ -83,7 +82,7 @@
 |
 
 | 0부터 1씩 증가하는 숫자가 시리얼 모니터에 출력되도록 코드를 작성해봅니다.
-| 실제로 업로드 후 아래 코드랑 비교해봅니다.
+| 실제로 :hoverxref:`업로드 <hoverxref:uploadBtn>` 후 아래 코드랑 비교해봅니다.
 
 .. toggle::
     

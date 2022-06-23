@@ -170,9 +170,10 @@
 </pre></div>
 </div>
 <div class="line-block">
-<div class="line">이처럼 pinMode를 사용하여 작성되면, 각 핀의 상태 설정이 완료됩니다.</div>
+<div class="line">이처럼 <a class="hoverxref modal reference internal" href="../keyword_index.html#hoverxref-pinmode"><span class="std std-ref">pinMode</span></a> 를 사용하여 작성되면, 각 핀의 상태 설정이 완료됩니다.</div>
 <div class="line">INPUT 대신 INPUT_PULLUP 작성된 이유가 궁금할 겁니다. 단순히 INPUT을 하게 되면, 간혹 좋지 못한 신호를 얻을 수 있습니다. 이걸 노이즈라고 합니다. 이 부분은 레벨2에서는 INPUT_PULLUP이 여기에선 더 좋다고만 알고 계시면 됩니다.</div>
-<div class="line">pinMode 함수에 대한 기억이 잘 나지 않는 다면, <a class="reference internal" href="Lv2_5_LED_Example.html#targetl2c5s1-5"><span class="std std-ref">여기</span></a> 로 이동합니다.</div>
+</div>
+<div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><span class="blackbold">※ 작성 시 대소문자 구별에 주의하세요. 모든 코드는 대소문자 구별을 합니다.</span></div>
 <div class="line"><br /></div>
@@ -191,14 +192,14 @@
 <a class="reference internal image-reference" href="../_images/Step1_3.jpg"><img alt="../_images/Step1_3.jpg" class="align-center" src="../_images/Step1_3.jpg" style="width: 700px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line">digitalRead 함수는 디지털핀의 상태를 읽어오는 기능을 합니다. 3D 펜에서 스위치 버튼은 누르게 되면 각 핀에 0V(LOW)로 인식됩니다.</div>
+<div class="line"><a class="hoverxref modal reference internal" href="../keyword_index.html#hoverxref-digitalread"><span class="std std-ref">digitalRead</span></a> 함수는 디지털핀의 상태를 읽어오는 기능을 합니다. 3D 펜에서 스위치 버튼은 누르게 되면 각 핀에 0V(LOW)로 인식됩니다.</div>
 <div class="line">즉 <span class="blackbold">if(digitalRead(8) == LOW)</span> 를 해석하면 <span class="blackbold">디지털 8번핀이 눌리면</span> 과 동일합니다. 즉 디지털 8번 버튼을 누르면 LED를 켜라 라는 코드입니다.</div>
 <div class="line"><br /></div>
 </div>
 <a class="reference internal image-reference" href="../_images/Step1_43.png" id="targetl2c7s1-4"><img alt="../_images/Step1_43.png" class="align-center" id="targetl2c7s1-4" src="../_images/Step1_43.png" style="width: 600px;" /></a>
 <div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><span class="orangecircle">●</span> 작성된 코드를 업로드 해봅니다. 업로드 버튼을 눌러줍니다.</div>
+<div class="line"><span class="orangecircle">●</span> 작성된 코드를 업로드 해봅니다. <a class="hoverxref modal reference internal" href="../keyword_index.html#hoverxref-uploadbtn"><span class="std std-ref">업로드</span></a> 업로드 버튼을 눌러줍니다.</div>
 <div class="line"><br /></div>
 </div>
 <div class="line-block">
@@ -206,7 +207,7 @@
 <div class="line">버튼을 누르면, 아두이노의 LED가 켜집니다. 다만 한번 켜지고 꺼지진 않습니다.</div>
 <div class="line">이제 <span class="blackbold">다른 버튼을 코드에 추가하여, LED가 꺼지도록</span> 해봅니다.</div>
 <div class="line"><br /></div>
-<div class="line">스스로 작성을 해보고, 업로드도 해봅니다. 작동이 정상적으로 되는지 확인하고, 아래 코드와 비교 해봅니다.</div>
+<div class="line">스스로 작성을 해보고, <a class="hoverxref modal reference internal" href="../keyword_index.html#hoverxref-uploadbtn"><span class="std std-ref">업로드</span></a> 해봅니다. 작동이 정상적으로 되는지 확인하고, 아래 코드와 비교 해봅니다.</div>
 </div>
 <div class="toggle docutils container">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>

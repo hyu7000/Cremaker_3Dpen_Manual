@@ -89,7 +89,7 @@
         }
     }
 
-| pinMode는 처음 한번만 호출되면 됨으로 setup에 작성합니다. 5,6,10 모두 OUTPUT으로 설정합니다.
+| :hoverxref:`pinMode <hoverxref:pinMode>` 는 처음 한번만 호출되면 됨으로 setup에 작성합니다. 5,6,10 모두 OUTPUT으로 설정합니다.
 | setup의 digitalWrite(5,HIGH)는 모터 활성화 핀의 출력을 HIGH로 설정합니다. 
 | 전원이 on 되면 모터는 항상 활성화가 되어 있게 됩니다. (모터 활성화 핀을 ROW로 하는 코드가 없기 때문)
 |
@@ -150,11 +150,10 @@
 | 하지만 모터 방향과 함께 사용할 때는 값을 변화를 줘야 합니다. 자세한 내용은 아래쪽에서 설명드리겠습니다.
 
 |
-| 업로드를 진행하고, 동작이 되는지 확인합니다.
-| ※ 업로드 버튼을 찾지 못하였다면 :ref:`여기 <targetL3C7S1_4>` 로 이동합니다.
+| :hoverxref:`업로드 <hoverxref:uploadBtn>` 를 진행하고, 동작이 되는지 확인합니다.
 |
 | 정상적으로 작동된다면, 모터 방향도 한번 설정해보겠습니다.
-| 모터 방향은 digitalWrite를 이용하여, 모터 방향핀을 HIGH, LOW 로 바꿔줄 때마다 방향이 바뀌게 됩니다.
+| 모터 방향은 :hoverxref:`digitalWrite <hoverxref:digitalWrite>` 를 이용하여, 모터 방향핀을 HIGH, LOW 로 바꿔줄 때마다 방향이 바뀌게 됩니다.
 
 .. list-table:: :subtitlesmall:`모터 방향과 속도`
     :widths: 5 5 5

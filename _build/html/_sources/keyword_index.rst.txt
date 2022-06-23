@@ -1,6 +1,7 @@
 색인
 ===============================================
 
+
 .. raw:: html
 
     <style> 
@@ -300,9 +301,55 @@ analogRead
 
 .. _hoverxref:button_PinNumber:
 
-button_PinNumber
+버튼
 +++++++++++++++++++
 
 .. image:: /images/Lv2/Chapter_7/Step1_1.jpg
    :width: 600
    :align: center
+
+
+.. _hoverxref:uploadBtn:
+
+업로드 버튼
++++++++++++++++++++
+
+.. image:: /images/Lv2/Chapter_5/Step1_12.png
+   :width: 600
+   :align: center
+
+
+.. _hoverxref:declaration:
+
+선언
++++++++++++++++++++
+
+| :subtitlesmall:`변수의 선언`
+| 변수를 선언한다는 것은 변수를 만든다라는 뜻입니다. 
+| 선언하는 방법은 다음 그림과 같습니다.
+|
+
+.. image:: /images/Lv2/Chapter_6/Step2_1.jpg
+   :width: 500
+   :align: center
+
+|
+| :subtitlesmall:`배열의 선언`
+| 배열의 선언을 하는 방법은 변수를 선언하는 것과 유사합니다.
+|
+
+.. image:: /images/Lv2/Chapter_6/Step6_1.jpg
+   :width: 600
+   :align: center
+
+
+|
+| :subtitlesmall:`구조체의 선언`
+
+.. image:: /images/Lv3/Chapter_5/Step7_2.jpg
+   :width: 500
+   :align: center
+
+|
+| 구조체는 위와 같이 선언됩니다.
+|
