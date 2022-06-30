@@ -46,8 +46,8 @@ source_suffix={
 }
 
 hoverxref_role_types = {
-    'hoverxref': 'modal',
-    'ref': 'modal',  # for hoverxref_auto_ref config
+    'hoverxref': 'tooltip',
+    'ref': 'tooltip',  # for hoverxref_auto_ref config
     'confval': 'tooltip',  # for custom object
     'mod': 'tooltip',  # for Python Sphinx Domain
     'class': 'tooltip',  # for Python Sphinx Domain

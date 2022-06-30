@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D 모델링이란? &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="프로그램 설치" href="step_2.html" />
+    <link rel="prev" title="3D 모델링" href="../Lv3_12_Modeling.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_4_ReadyToCoding.html">코딩을 위한 준비</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_5_Arduino_Basic.html">아두이노 기초</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_6_Time.html">delay와 시간</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_7_Button.html">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_9_Temp.html">온도 조절</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_11_FullCode.html">프로그램 작성</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv3_12_Modeling.html">3D 모델링</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3D 모델링이란?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">프로그램 설치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">상자 만들기</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_4.html">스케치 그리기 기능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_5.html">스케치 편집 기능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_6.html">스케치 구속 기능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_7.html">파트 디자인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_8.html">필라멘트 투입구 디자인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_9.html">버튼 케이스 디자인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_10.html">메인 케이스 상단 디자인</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyword_index.html">색인</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level3.html">레벨 3</a> &raquo;</li>
+          <li><a href="../Lv3_12_Modeling.html">3D 모델링</a> &raquo;</li>
+      <li>3D 모델링이란?</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="d">
+<h1>3D 모델링이란?<a class="headerlink" href="#d" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line"><span class="subtitle">Modeling의 어원</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_1.jpg"><img alt="../../_images/Modeling_1.jpg" class="align-center" src="../../_images/Modeling_1.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">Model의 어원은 ‘방식, 습관’의 뜻을 가진 Modus입니다. 여기서 파생된 단어는 Mode, Mold, Model 이 있습니다.</div>
+<div class="line">사람 기분이나 기계의 환경의 뜻을 가진 Mode, 물건을 같은 모양으로 찍어내는 (주형) 틀의 뜻을 가진 Mold, 물건이 나 상품 등의 견본, 모형, 기계 등의 작동 방식 등의 뜻을 가진 Model입니다.</div>
+<div class="line">이중에 Modeling 은 어떤 모형을 표현한다는 뜻으로 이것이 3차원이면 3D Modeling이 되는 것입니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="subtitle">모델링의 역사</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_2.jpg"><img alt="../../_images/Modeling_2.jpg" class="align-center" src="../../_images/Modeling_2.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">처음에는 물건의 모형을 기록할 때 종이에 모형을 그리는 것으로 시작했습니다.</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_3.png"><img alt="../../_images/Modeling_3.png" class="align-center" src="../../_images/Modeling_3.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">시간이 흐르면서 종이에 정확한 치수를 기입하고 정면도, 측면도, 평면도로 나눠서 상세하게 그리기 시작했습니다.</div>
+<div class="line">컴퓨터의 발달로 인해 컴퓨터를 통해 정면도, 측면도, 평면도를 작성하게 되는데 이것이 2D Modeling의 시작입니다.</div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_4.png"><img alt="../../_images/Modeling_4.png" class="align-center" src="../../_images/Modeling_4.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">이후 3차원(가로, 세로, 높이)을 표현함으로써 본격적인 3D Modeling이 시작되었습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="subtitle">3D 모델링이 활용되는 분야</span></div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">게임</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_5.jpg"><img alt="../../_images/Modeling_5.jpg" class="align-center" src="../../_images/Modeling_5.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">3D 모델링은 게임에서도 필수적인 요소로 자리 잡았습니다.</div>
+<div class="line">최근에는 대부분 3D게임이 많이 나타났고, 2D 처럼 보이는 게임이라도 3D 모델링을 사용하는 게임이 많아졌습니다.</div>
+<div class="line">게임 내에 캐릭터, 배경, 효과 등을 구현하는데 3D 모델링이 사용됩니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">실내 인테리어</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_6.jpg"><img alt="../../_images/Modeling_6.jpg" class="align-center" src="../../_images/Modeling_6.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">인테리어를 하기 전 실내 인테리어를 어떤 식으로 디자인 할 것인지, 인테리어를 하고 나면 어떤 느낌인지 확인하기 위해 많이 사용되는 것이 3D 모델링입니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">영화</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_7.jpg"><img alt="../../_images/Modeling_7.jpg" class="align-center" src="../../_images/Modeling_7.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">영화에서 사용되는 부분은 주로 폭발 장면이나, 혹은 외계인, 가상공간의 배경, 실제로 발생할 수 없는 현상이지만 영화 속에서는 표현해야 되는 부분들을 3D 모델링으로 표현합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">해석</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_8.png"><img alt="../../_images/Modeling_8.png" class="align-center" src="../../_images/Modeling_8.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">3D 모델링은 물리적인 해석에도 사용됩니다. 유체해석, 구조해석, 열해석, 응력해석 등 여러 가지 해석을 할 수 있습니다.</div>
+<div class="line">모델링의 모형에 따라 어떤 디자인, 형상이 더 좋은 효율을 낼 수 있는지 판단할 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">3D 프린터</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_9.png"><img alt="../../_images/Modeling_9.png" class="align-center" src="../../_images/Modeling_9.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line">3D 프린터를 사용할 때에도 출력할 모델링을 준비해야 합니다. 3D 모형 데이터를 3D 프린터가 인지하고 출력을 합니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">VR&amp;AR</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_10.jpg"><img alt="../../_images/Modeling_10.jpg" class="align-center" src="../../_images/Modeling_10.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">3D 모델링으로 장면을 만들고 그 3D 모델링 안에서 게임이나 애니메이션 등을 VR체험할 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">애니메이션</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Modeling_11.png"><img alt="../../_images/Modeling_11.png" class="align-center" src="../../_images/Modeling_11.png" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line">애니메이션이라고 하면, 그림으로 그린 짱구나 둘리 같은 애니메이션을 떠올릴 수도 있습니다.</div>
+<div class="line">하지만 여기서 언급하는 애니메이션은 뽀로로나 타요 등과 같이 3D 모델링으로 구현한 것들입니다.</div>
+<div class="line">최초의 3D 애니메이션 영화는 월트 디즈니사의 토이스토리이며 비교적 최근에 개봉된 애니메이션 영화인 겨울왕국 1, 2 도 모두 3D 모델링으로 구현되었습니다.</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Lv3_12_Modeling.html" class="btn btn-neutral float-left" title="3D 모델링" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step_2.html" class="btn btn-neutral float-right" title="프로그램 설치" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

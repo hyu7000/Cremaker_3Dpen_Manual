@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스케치 그리기 기능 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="스케치 편집 기능" href="step_5.html" />
+    <link rel="prev" title="상자 만들기" href="step_3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_4_ReadyToCoding.html">코딩을 위한 준비</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_5_Arduino_Basic.html">아두이노 기초</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_6_Time.html">delay와 시간</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_7_Button.html">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_9_Temp.html">온도 조절</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_11_FullCode.html">프로그램 작성</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv3_12_Modeling.html">3D 모델링</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">3D 모델링이란?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">프로그램 설치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">상자 만들기</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">스케치 그리기 기능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_5.html">스케치 편집 기능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_6.html">스케치 구속 기능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_7.html">파트 디자인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_8.html">필라멘트 투입구 디자인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_9.html">버튼 케이스 디자인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_10.html">메인 케이스 상단 디자인</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyword_index.html">색인</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level3.html">레벨 3</a> &raquo;</li>
+          <li><a href="../Lv3_12_Modeling.html">3D 모델링</a> &raquo;</li>
+      <li>스케치 그리기 기능</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>스케치 그리기 기능<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><div class="line-block">
+<div class="line">스케치에서는 각종 도형의 기본 그림이 되는 선, 곡선, 다각형, 원 등을 그릴 수 있습니다.</div>
+<div class="line"><br /></div>
+<div class="line">스케치를 다시 진입합니다. 평면은 어느 평면이나 상관 없습니다.</div>
+<div class="line">스케치 기능 전부를 다 배우기 보다 필요하고, 자주 사용하는 기능들을 위주로 설명드리겠습니다.</div>
+<div class="line">이 스케치 단계를 배우고 나면, 스케치로 원하는 도형들은 대부분 그릴 수 있게 될 겁니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_1.png"><img alt="../../_images/FreeCad_Sketch_1.png" class="align-center" src="../../_images/FreeCad_Sketch_1.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">첫번째로 배워볼 기능은 <span class="blackbold">선</span> 입니다.</div>
+<div class="line">선은 클릭 두번으로 그릴 수 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_2.gif"><img alt="../../_images/FreeCad_Sketch_2.gif" class="align-center" src="../../_images/FreeCad_Sketch_2.gif" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">위와 같이 시작점 클릭 - 이동 - 끝점 클릭으로 선을 그릴 수 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_3.png"><img alt="../../_images/FreeCad_Sketch_3.png" class="align-center" src="../../_images/FreeCad_Sketch_3.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">두번째로 배워볼 기능은 <span class="blackbold">원</span> 입니다.</div>
+<div class="line">원도 마찬가지로 클릭 두번으로 그릴 수 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_4.gif"><img alt="../../_images/FreeCad_Sketch_4.gif" class="align-center" src="../../_images/FreeCad_Sketch_4.gif" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">원은 첫번째 클릭 지점이 원의 중심이 됩니다. 그리고 이동한 만큼 반지름이되어 원이 그려집니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_5.png"><img alt="../../_images/FreeCad_Sketch_5.png" class="align-center" src="../../_images/FreeCad_Sketch_5.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">세번째로 배워볼 기능은 <span class="blackbold">자유곡선</span> 입니다.</div>
+<div class="line">자유곡선은 완전히 곡선이라는 뜻이 아니라 여러개로 이어진 직선들을 말합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_6.gif"><img alt="../../_images/FreeCad_Sketch_6.gif" class="align-center" src="../../_images/FreeCad_Sketch_6.gif" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">직선과 그리는 방식은 비슷하지만, 연속해서 선을 그릴 수 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_7.png"><img alt="../../_images/FreeCad_Sketch_7.png" class="align-center" src="../../_images/FreeCad_Sketch_7.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">네번째로 배워볼 기능은 <span class="blackbold">사각형</span> 입니다.</div>
+<div class="line">이미 이전 단계에서 배웠지만 사각형을 다르게 그리는 방식을 알아보겠습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_8.jpg"><img alt="../../_images/FreeCad_Sketch_8.jpg" class="align-center" src="../../_images/FreeCad_Sketch_8.jpg" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">사각형 옆의 ▼ 버튼을 누르면, 3가지의 사각형 그리는 방식이 나타납니다.</div>
+<div class="line">여기서 <span class="blackbold">centered rectangle</span> 은 원을 그리는 방식과 유사하게 가운데 지점부터 시작합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_9.gif"><img alt="../../_images/FreeCad_Sketch_9.gif" class="align-center" src="../../_images/FreeCad_Sketch_9.gif" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">첫 클릭이 사각형의 중심이 되며, 이동하여 다시 클릭하면, 사각형이 그려집니다.</div>
+<div class="line"><br /></div>
+<div class="line"><span class="blackbold">rounded rectangle</span> 은 꼭지점이 둥그렇게 그려지는 기능입니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_10.gif"><img alt="../../_images/FreeCad_Sketch_10.gif" class="align-center" src="../../_images/FreeCad_Sketch_10.gif" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">그려지는 도형이 다를 뿐 기본 사각형 그리는 방식과 유사합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_11.png"><img alt="../../_images/FreeCad_Sketch_11.png" class="align-center" src="../../_images/FreeCad_Sketch_11.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">다섯번째 기능은 <span class="blackbold">다각형</span> 입니다.</div>
+<div class="line">원을 그리는 방식과 유사합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_12.gif"><img alt="../../_images/FreeCad_Sketch_12.gif" class="align-center" src="../../_images/FreeCad_Sketch_12.gif" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">첫 클릭이 다각형의 중심이며, 이동 후 클릭되는 지점이 꼭지점이 됩니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Sketch_13.jpg"><img alt="../../_images/FreeCad_Sketch_13.jpg" class="align-center" src="../../_images/FreeCad_Sketch_13.jpg" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">▼ 버튼을 누르면, 다른 다각형들도 그릴 수 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">여섯번째 기능은 <span class="blackbold">대칭</span> 입니다.</div>
+<div class="line">대칭은 이미 그려진 선, 도형들을 대칭 복사 하는 기능입니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">[이후 추가]</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_3.html" class="btn btn-neutral float-left" title="상자 만들기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="step_5.html" class="btn btn-neutral float-right" title="스케치 편집 기능" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
