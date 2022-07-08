@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모델링 관련 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="prev" title="코딩 관련" href="code.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level3.html">레벨 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../keyword_index.html">색인</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="code.html">코딩 관련</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">모델링 관련</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-generatesketch">스케치 생성</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-generateplane">평면 생성</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-extrude">돌출</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-revolution">회전</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-extrudecut">돌출 컷</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-groove">그루브</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-linearpattern">선형 패턴</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-fillet">필렛</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-chamfer">모따기</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-createcircle">원 생성</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-createlines">자유곡선 생성</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-createrectangle">사각형 생성</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-createploygon">다각형 생성</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-createslot">직선 홈 생성</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-trim">잘라내기</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometry">외부 Geometry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-changegeometrytype">Geometry 타입 변경</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-arraypoints">제약조건 : 점 일치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-arraypointline">제약조건 : 점을 선에 일치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-vertical">제약조건 : 수직</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-horizontal">제약조건 : 수평</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-parallel">제약조건 : 평행</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-rightangle">제약조건 : 수직(직각)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-tangent">제약조건 : 접함(탄젠트)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-equal">제약조건 : 동일</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-symmetric">제약조건 : 대칭</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-h-distance">제약조건 : 수평 거리</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-v-distance">제약조건 : 수직 거리</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-diameter">제약조건 : 지름</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-angle">제약조건 : 각도</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../keyword_index.html">색인</a> &raquo;</li>
+      <li>모델링 관련</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>모델링 관련<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><section id="hoverxref-generatesketch">
+<span id="id2"></span><h2>스케치 생성<a class="headerlink" href="#hoverxref-generatesketch" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Sketch.png"><img alt="../_images/Icon_Sketch.png" class="align-center" src="../_images/Icon_Sketch.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치를 생성해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-generateplane">
+<span id="id3"></span><h2>평면 생성<a class="headerlink" href="#hoverxref-generateplane" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Plane.png"><img alt="../_images/Icon_Plane.png" class="align-center" src="../_images/Icon_Plane.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">평면을 생성해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-extrude">
+<span id="id4"></span><h2>돌출<a class="headerlink" href="#hoverxref-extrude" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Extrude.png"><img alt="../_images/Icon_Extrude.png" class="align-center" src="../_images/Icon_Extrude.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치의 모양대로 높이를 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-revolution">
+<span id="id5"></span><h2>회전<a class="headerlink" href="#hoverxref-revolution" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Revolution.png"><img alt="../_images/Icon_Revolution.png" class="align-center" src="../_images/Icon_Revolution.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치의 모양을 특정 축을 기준으로 회전시켜 부피를 생성해 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-extrudecut">
+<span id="id6"></span><h2>돌출 컷<a class="headerlink" href="#hoverxref-extrudecut" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Extrude_Cut.png"><img alt="../_images/Icon_Extrude_Cut.png" class="align-center" src="../_images/Icon_Extrude_Cut.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치의 모양대로 부피를 제거하는 방향으로 높이를 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-groove">
+<span id="id7"></span><h2>그루브<a class="headerlink" href="#hoverxref-groove" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Groove.png"><img alt="../_images/Icon_Groove.png" class="align-center" src="../_images/Icon_Groove.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치의 모양을 특정 축을 기준으로 회전시켜 부피를 제거해 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-linearpattern">
+<span id="id8"></span><h2>선형 패턴<a class="headerlink" href="#hoverxref-linearpattern" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Linearpattern.png"><img alt="../_images/Icon_Linearpattern.png" class="align-center" src="../_images/Icon_Linearpattern.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">만들어진 도형을 직선 방향으로 복사 이동 해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-fillet">
+<span id="id9"></span><h2>필렛<a class="headerlink" href="#hoverxref-fillet" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Fillet.png"><img alt="../_images/Icon_Fillet.png" class="align-center" src="../_images/Icon_Fillet.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">모서리를 둥그렇게 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-chamfer">
+<span id="id10"></span><h2>모따기<a class="headerlink" href="#hoverxref-chamfer" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Chamfer.png"><img alt="../_images/Icon_Chamfer.png" class="align-center" src="../_images/Icon_Chamfer.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">모서리를 깍아 각지게 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-createcircle">
+<span id="id11"></span><h2>원 생성<a class="headerlink" href="#hoverxref-createcircle" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Draw_Circle.png"><img alt="../_images/Icon_Draw_Circle.png" class="align-center" src="../_images/Icon_Draw_Circle.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">원을 그려줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-createlines">
+<span id="id12"></span><h2>자유곡선 생성<a class="headerlink" href="#hoverxref-createlines" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Draw_Lines.png"><img alt="../_images/Icon_Draw_Lines.png" class="align-center" src="../_images/Icon_Draw_Lines.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">이어진 직선을 그려줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-createrectangle">
+<span id="id13"></span><h2>사각형 생성<a class="headerlink" href="#hoverxref-createrectangle" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Draw_Rectangle.png"><img alt="../_images/Icon_Draw_Rectangle.png" class="align-center" src="../_images/Icon_Draw_Rectangle.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">사각형을 그려줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-createploygon">
+<span id="id14"></span><h2>다각형 생성<a class="headerlink" href="#hoverxref-createploygon" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Draw_Ploygon.png"><img alt="../_images/Icon_Draw_Ploygon.png" class="align-center" src="../_images/Icon_Draw_Ploygon.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">다각형을 그려줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-createslot">
+<span id="id15"></span><h2>직선 홈 생성<a class="headerlink" href="#hoverxref-createslot" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Draw_Slot.png"><img alt="../_images/Icon_Draw_Slot.png" class="align-center" src="../_images/Icon_Draw_Slot.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">직선 홈(Slot)을 그려줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-trim">
+<span id="id16"></span><h2>잘라내기<a class="headerlink" href="#hoverxref-trim" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Trim.png"><img alt="../_images/Icon_Trim.png" class="align-center" src="../_images/Icon_Trim.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">그려진 스케치의 일부를 잘라내줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="geometry">
+<span id="hoverxref-externalgeometry"></span><h2>외부 Geometry<a class="headerlink" href="#geometry" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_External_Geometry.png"><img alt="../_images/Icon_External_Geometry.png" class="align-center" src="../_images/Icon_External_Geometry.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">만들어진 도형의 외형을 스케치로 투영합니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-changegeometrytype">
+<span id="id17"></span><h2>Geometry 타입 변경<a class="headerlink" href="#hoverxref-changegeometrytype" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Change_GeometryType.png"><img alt="../_images/Icon_Change_GeometryType.png" class="align-center" src="../_images/Icon_Change_GeometryType.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치에 그려진 객체의 타입을 변경합니다.</div>
+<div class="line">실선 &lt;-&gt; 보조선</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-arraypoints">
+<span id="id18"></span><h2>제약조건 : 점 일치<a class="headerlink" href="#hoverxref-arraypoints" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Array_Points.png"><img alt="../_images/Icon_Array_Points.png" class="align-center" src="../_images/Icon_Array_Points.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치의 점과 점을 일치시켜 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-arraypointline">
+<span id="id19"></span><h2>제약조건 : 점을 선에 일치<a class="headerlink" href="#hoverxref-arraypointline" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Array_Point_Line.png"><img alt="../_images/Icon_Array_Point_Line.png" class="align-center" src="../_images/Icon_Array_Point_Line.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치의 점을 선에 일치시켜 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-vertical">
+<span id="id20"></span><h2>제약조건 : 수직<a class="headerlink" href="#hoverxref-vertical" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Vertical.png"><img alt="../_images/Icon_Vertical.png" class="align-center" src="../_images/Icon_Vertical.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치의 선을 수직으로 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-horizontal">
+<span id="id21"></span><h2>제약조건 : 수평<a class="headerlink" href="#hoverxref-horizontal" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Horizontal.png"><img alt="../_images/Icon_Horizontal.png" class="align-center" src="../_images/Icon_Horizontal.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">스케치의 선을 수평으로 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-parallel">
+<span id="id22"></span><h2>제약조건 : 평행<a class="headerlink" href="#hoverxref-parallel" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Parallel.png"><img alt="../_images/Icon_Parallel.png" class="align-center" src="../_images/Icon_Parallel.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">두개의 선을 평행으로 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-rightangle">
+<span id="id23"></span><h2>제약조건 : 수직(직각)<a class="headerlink" href="#hoverxref-rightangle" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Right_Angle.png"><img alt="../_images/Icon_Right_Angle.png" class="align-center" src="../_images/Icon_Right_Angle.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">두개의 선을 직각으로 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-tangent">
+<span id="id24"></span><h2>제약조건 : 접함(탄젠트)<a class="headerlink" href="#hoverxref-tangent" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Tangent.png"><img alt="../_images/Icon_Tangent.png" class="align-center" src="../_images/Icon_Tangent.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">곡선과 직선이 접하도록 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-equal">
+<span id="id25"></span><h2>제약조건 : 동일<a class="headerlink" href="#hoverxref-equal" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Equal.png"><img alt="../_images/Icon_Equal.png" class="align-center" src="../_images/Icon_Equal.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">두 개의 객체를 동일한 치수로 변경해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-symmetric">
+<span id="id26"></span><h2>제약조건 : 대칭<a class="headerlink" href="#hoverxref-symmetric" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Symmetric.png"><img alt="../_images/Icon_Symmetric.png" class="align-center" src="../_images/Icon_Symmetric.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">두 개의 객체를 한 축을 기준으로 대칭되게 합니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-h-distance">
+<span id="id27"></span><h2>제약조건 : 수평 거리<a class="headerlink" href="#hoverxref-h-distance" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_H_Distance.png"><img alt="../_images/Icon_H_Distance.png" class="align-center" src="../_images/Icon_H_Distance.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">두 지점의 수평거리를 측정, 설정합니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-v-distance">
+<span id="id28"></span><h2>제약조건 : 수직 거리<a class="headerlink" href="#hoverxref-v-distance" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_V_Distance.png"><img alt="../_images/Icon_V_Distance.png" class="align-center" src="../_images/Icon_V_Distance.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">두 지점의 수직 거리를 측정, 설정합니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-diameter">
+<span id="id29"></span><h2>제약조건 : 지름<a class="headerlink" href="#hoverxref-diameter" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Diameter.png"><img alt="../_images/Icon_Diameter.png" class="align-center" src="../_images/Icon_Diameter.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">원의 지름을 설정해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="hoverxref-angle">
+<span id="id30"></span><h2>제약조건 : 각도<a class="headerlink" href="#hoverxref-angle" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Icon_Angle.png"><img alt="../_images/Icon_Angle.png" class="align-center" src="../_images/Icon_Angle.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">두 선의 사잇각을 설정해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="code.html" class="btn btn-neutral float-left" title="코딩 관련" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

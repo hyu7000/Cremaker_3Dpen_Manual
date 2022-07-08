@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>메인 케이스 상단 디자인 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/js/hoverxref.js"></script>
+        <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="업로드하기" href="../../uploadFw.html" />
+    <link rel="prev" title="메인 케이스 상단 디자인" href="step_10.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../level2.html">레벨 2</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../level3.html">레벨 3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_1_3Dpen_principle.html">3D 펜의 원리</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_2_PartsList.html">부품 리스트</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_3_Assembly.html">조립 과정</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_4_ReadyToCoding.html">코딩을 위한 준비</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_5_Arduino_Basic.html">아두이노 기초</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_6_Time.html">delay와 시간</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_7_Button.html">스위치 버튼 사용</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_8_Motor.html">모터 작동시키기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_9_Temp.html">온도 조절</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_10_Display.html">디스플레이</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lv3_11_FullCode.html">프로그램 작성</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Lv3_12_Modeling.html">3D 모델링</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="step_1.html">3D 모델링이란?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_2.html">프로그램 설치</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_3.html">상자 만들기</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_4.html">스케치 그리기 기능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_5.html">스케치 편집 기능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_6.html">스케치 구속 기능</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_7.html">파트 디자인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_8.html">필라멘트 투입구 디자인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_9.html">버튼 케이스 디자인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step_10.html">메인 케이스 상단 디자인</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">메인 케이스 상단 디자인</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../keyword_index.html">색인</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../level3.html">레벨 3</a> &raquo;</li>
+          <li><a href="../Lv3_12_Modeling.html">3D 모델링</a> &raquo;</li>
+      <li>메인 케이스 상단 디자인</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>메인 케이스 상단 디자인<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.redcircle {color:red; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><a class="reference internal image-reference" href="../../_images/FreeCad_EX4_1.jpg"><img alt="../../_images/FreeCad_EX4_1.jpg" class="align-center" src="../../_images/FreeCad_EX4_1.jpg" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">네 번째로 진행해볼 부품은 3D 펜의 메인 케이스중 하단부품입니다.</div>
+<div class="line">디자인은 위와 같습니다. 4개의 부품 중에 가장 복잡해보입니다만 시작해보면 크게(?) 어렵진 않습니다.</div>
+<div class="line">시작해보겠습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.1</span></div>
+</div>
+<div class="line-block">
+<div class="line">FreeCad 프로그램을 실행해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Box_1.png"><img alt="../../_images/FreeCad_Box_1.png" class="align-center" src="../../_images/FreeCad_Box_1.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <span class="blackbold">새로 만들기</span> 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.2</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_Box_2.png"><img alt="../../_images/FreeCad_Box_2.png" class="align-center" src="../../_images/FreeCad_Box_2.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 화면이 바뀌면 상단의 <span class="blackbold">Start</span> 버튼을 <span class="blackbold">Part Design</span> 으로 변경해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.3</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_2.png"><img alt="../../_images/FreeCad_EX4_2.png" class="align-center" src="../../_images/FreeCad_EX4_2.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XY 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> x,y,z 축과 만나는 선을 그릴 때는 먼저 선을 다른 곳에 그리고, ‘점을 선에 일치’ 버튼으로 붙여줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 작성 후 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.4</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_3.png"><img alt="../../_images/FreeCad_EX4_3.png" class="align-center" src="../../_images/FreeCad_EX4_3.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 회전 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 축 항목을 ‘절대좌표계 Y축’ 으로 변경해줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> 각도 항목을 180°로 입력합니다.</div>
+<div class="line"><span class="redcircle">●</span> 작업을 편하게 하기 위해 Reverse 항목을 체크하여, 아래쪽으로 회전되도록 합니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.5</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_4.png"><img alt="../../_images/FreeCad_EX4_4.png" class="align-center" src="../../_images/FreeCad_EX4_4.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 다시 XY 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 왼편, 오른편은 서로 대칭입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 작성 후 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.6</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_5.png"><img alt="../../_images/FreeCad_EX4_5.png" class="align-center" src="../../_images/FreeCad_EX4_5.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목 3.75mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.7</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_6.png"><img alt="../../_images/FreeCad_EX4_6.png" class="align-center" src="../../_images/FreeCad_EX4_6.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XZ 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.8</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_7.png"><img alt="../../_images/FreeCad_EX4_7.png" class="align-center" src="../../_images/FreeCad_EX4_7.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span><a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrude"><span class="std std-ref">돌출</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 78mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.9</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_8.png"><img alt="../../_images/FreeCad_EX4_8.png" class="align-center" src="../../_images/FreeCad_EX4_8.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 다시 XZ 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.10</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_9.png"><img alt="../../_images/FreeCad_EX4_9.png" class="align-center" src="../../_images/FreeCad_EX4_9.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrude"><span class="std std-ref">돌출</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 8mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.11</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_10.png"><img alt="../../_images/FreeCad_EX4_10.png" class="align-center" src="../../_images/FreeCad_EX4_10.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 다시 XZ 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.12</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_11.png"><img alt="../../_images/FreeCad_EX4_11.png" class="align-center" src="../../_images/FreeCad_EX4_11.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 8mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">여기에서는 튜브가 들어가는 공간을 만들어 줘야 합니다. 기울어진 홈이 있기 때문에 선과 평면을 만들어 줘야 합니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.13</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_12.png"><img alt="../../_images/FreeCad_EX4_12.png" class="align-center" src="../../_images/FreeCad_EX4_12.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> YZ 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.14</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_13.png"><img alt="../../_images/FreeCad_EX4_13.png" class="align-center" src="../../_images/FreeCad_EX4_13.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-generateplane"><span class="std std-ref">평면 생성</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> 그림과 같이 가운데 원형 모양을 선택해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.15</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_14.png"><img alt="../../_images/FreeCad_EX4_14.png" class="align-center" src="../../_images/FreeCad_EX4_14.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 평면이 뒤로 살짝 이동하도록 왼쪽 창의 항목 중 In Z-direction 을 -5mm 로 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.16</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_15.png"><img alt="../../_images/FreeCad_EX4_15.png" class="align-center" src="../../_images/FreeCad_EX4_15.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 생성한 평면에 스케치를 생성해주고, 그림과 같이 스케치를 작성합니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.17</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_16.png"><img alt="../../_images/FreeCad_EX4_16.png" class="align-center" src="../../_images/FreeCad_EX4_16.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> Length 항목은 46.5mm 를 입력해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.18</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_17.png"><img alt="../../_images/FreeCad_EX4_17.png" class="align-center" src="../../_images/FreeCad_EX4_17.png" style="width: 800px;" /></a>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_17_2.png"><img alt="../../_images/FreeCad_EX4_17_2.png" class="align-center" src="../../_images/FreeCad_EX4_17_2.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> Direction/edge 항목은 select reference.. 로 변경해줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> step.13에서 만든 선을 선택합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 잘 보이지 않는다면, 보기 - 그리기 스타일 - 와이어 프레임을 선택해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 방향이 달라서 적용이 안된 것 처럼 보일 수 있으니 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.19</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_18.png"><img alt="../../_images/FreeCad_EX4_18.png" class="align-center" src="../../_images/FreeCad_EX4_18.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 작업 편의를 위해 평면을 숨겨줍니다.</div>
+<div class="line"><span class="orangecircle">●</span> 생성된 평면을 선택합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 보기 - 표시 여부 - 선택영역 숨기기를 선택해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.20</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_19.png"><img alt="../../_images/FreeCad_EX4_19.png" class="align-center" src="../../_images/FreeCad_EX4_19.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XZ 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.21</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_20.png"><img alt="../../_images/FreeCad_EX4_20.png" class="align-center" src="../../_images/FreeCad_EX4_20.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrude"><span class="std std-ref">돌출</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 4mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">노즐은 온도가 높게 올라가기 때문에, 노즐쪽에 열기를 빠져나갈 수 있는 통로를 만들어 줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.22</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_21.png"><img alt="../../_images/FreeCad_EX4_21.png" class="align-center" src="../../_images/FreeCad_EX4_21.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XY 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.23</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_22.png"><img alt="../../_images/FreeCad_EX4_22.png" class="align-center" src="../../_images/FreeCad_EX4_22.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 20mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.24</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_23.png"><img alt="../../_images/FreeCad_EX4_23.png" class="align-center" src="../../_images/FreeCad_EX4_23.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XY 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> Y축을 기준으로 좌우 대칭입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.25</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_24.png"><img alt="../../_images/FreeCad_EX4_24.png" class="align-center" src="../../_images/FreeCad_EX4_24.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrude"><span class="std std-ref">돌출</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 2.25mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">이제는 모터가 들어갈 공간과 필라멘트가 투입할 수 있는 부분을 모델링 해보겠습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.26</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_25.png"><img alt="../../_images/FreeCad_EX4_25.png" class="align-center" src="../../_images/FreeCad_EX4_25.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XY 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> Y축을 기준으로 좌우 대칭입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.27</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_26.png"><img alt="../../_images/FreeCad_EX4_26.png" class="align-center" src="../../_images/FreeCad_EX4_26.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 20mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.28</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_27.png"><img alt="../../_images/FreeCad_EX4_27.png" class="align-center" src="../../_images/FreeCad_EX4_27.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XY 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> Y축을 기준으로 좌우 대칭입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.29</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_28.png"><img alt="../../_images/FreeCad_EX4_28.png" class="align-center" src="../../_images/FreeCad_EX4_28.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 9.2mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.30</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_29.png"><img alt="../../_images/FreeCad_EX4_29.png" class="align-center" src="../../_images/FreeCad_EX4_29.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XY 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> Y축을 기준으로 좌우 대칭입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.31</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_30.png"><img alt="../../_images/FreeCad_EX4_30.png" class="align-center" src="../../_images/FreeCad_EX4_30.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 1.2mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.32</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_31.png"><img alt="../../_images/FreeCad_EX4_31.png" class="align-center" src="../../_images/FreeCad_EX4_31.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XY 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> Y축을 기준으로 좌우 대칭입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.33</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_32.png"><img alt="../../_images/FreeCad_EX4_32.png" class="align-center" src="../../_images/FreeCad_EX4_32.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 20mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.34</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_33.png"><img alt="../../_images/FreeCad_EX4_33.png" class="align-center" src="../../_images/FreeCad_EX4_33.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> 평면 생성 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 모형의 뒷면을 선택해줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.35</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_34.png"><img alt="../../_images/FreeCad_EX4_34.png" class="align-center" src="../../_images/FreeCad_EX4_34.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 방금 생성한 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.36</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_35.png"><img alt="../../_images/FreeCad_EX4_35.png" class="align-center" src="../../_images/FreeCad_EX4_35.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 30mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.37</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_36.png"><img alt="../../_images/FreeCad_EX4_36.png" class="align-center" src="../../_images/FreeCad_EX4_36.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> XY 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> Y축을 기준으로 좌우 대칭입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.38</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_37.png"><img alt="../../_images/FreeCad_EX4_37.png" class="align-center" src="../../_images/FreeCad_EX4_37.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 15mm 를 입력합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 2nd Length 항목은 -11mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">여기까지 모터와 필라멘트 투입구를 마무리 하였습니다. 이제 부품을 조립함에 있어서 메인케이스 상단과 하단을 연결시켜주는 부분을 만들어 보도록 하겠습니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.39</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_38.png"><img alt="../../_images/FreeCad_EX4_38.png" class="align-center" src="../../_images/FreeCad_EX4_38.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> Step.34에서 생성한 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.40</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_39.png"><img alt="../../_images/FreeCad_EX4_39.png" class="align-center" src="../../_images/FreeCad_EX4_39.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrude"><span class="std std-ref">돌출</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 5mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 방향이 다르다면 Reverse 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.41</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_40.png"><img alt="../../_images/FreeCad_EX4_40.png" class="align-center" src="../../_images/FreeCad_EX4_40.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> Step.34에서 생성한 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 파란선은 보조선입니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.42</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_41.png"><img alt="../../_images/FreeCad_EX4_41.png" class="align-center" src="../../_images/FreeCad_EX4_41.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 73.5mm 를 입력합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 2nd Length 항목은 -5mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.43</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_42.png"><img alt="../../_images/FreeCad_EX4_42.png" class="align-center" src="../../_images/FreeCad_EX4_42.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> 작업 편의를 위해 평면을 숨겨줍니다.</div>
+<div class="line"><span class="orangecircle">●</span> 생성된 평면을 선택합니다.</div>
+<div class="line"><span class="yellowcircle">●</span> 보기 - 표시 여부 - 선택영역 숨기기를 선택해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">메인 케이스의 상단, 하단을 연결 시켜주는 부분까지 모델링도 했습니다. 이제는 모델링의 뾰족한 부분을 모따기로 다듬어 주도록 합니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.44</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_43.png"><img alt="../../_images/FreeCad_EX4_43.png" class="align-center" src="../../_images/FreeCad_EX4_43.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> 두 개의 모서리 부분을 선택해줍니다. 2개 이상 선택시 ctrl 키를 누른 상태에서 클릭합니다.</div>
+<div class="line"><span class="orangecircle">●</span> <cite>:hoverxref:모따기 &lt;hoverxref:chamfer&gt;</cite> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> 크기를 2.2mm 로 입력합니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.45</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_44.png"><img alt="../../_images/FreeCad_EX4_44.png" class="align-center" src="../../_images/FreeCad_EX4_44.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> 두 개의 모서리 부분을 선택해줍니다. 2개 이상 선택시 ctrl 키를 누른 상태에서 클릭합니다.</div>
+<div class="line"><span class="orangecircle">●</span> <cite>:hoverxref:모따기 &lt;hoverxref:chamfer&gt;</cite> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> 크기를 0.5mm 로 입력합니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 모따기 중 치수 관련 에러가 나타날 수 있습니다. 치수를 변경해줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.46</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_45.png"><img alt="../../_images/FreeCad_EX4_45.png" class="align-center" src="../../_images/FreeCad_EX4_45.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> 세 개의 모서리 부분을 선택해줍니다. 2개 이상 선택시 ctrl 키를 누른 상태에서 클릭합니다.</div>
+<div class="line"><span class="orangecircle">●</span> <cite>:hoverxref:모따기 &lt;hoverxref:chamfer&gt;</cite> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> 크기를 0.5mm 로 입력합니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.47</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_46.png"><img alt="../../_images/FreeCad_EX4_46.png" class="align-center" src="../../_images/FreeCad_EX4_46.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> 안쪽의 필라멘트가 투입되는 모서리 부분을 선택해줍니다.</div>
+<div class="line"><span class="orangecircle">●</span> <cite>:hoverxref:모따기 &lt;hoverxref:chamfer&gt;</cite> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> 크기를 0.5mm 로 입력합니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.48</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_47.png"><img alt="../../_images/FreeCad_EX4_47.png" class="align-center" src="../../_images/FreeCad_EX4_47.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="blackcircle">●</span> YZ 평면에 위와 같은 스케치를 작성해 줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 스케치 그리기 전 View section 기능을 사용해줍니다.</div>
+<div class="line"><span class="blackcircle">●</span> 닫기 버튼을 눌러 스케치를 빠져나옵니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.49</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_48.png"><img alt="../../_images/FreeCad_EX4_48.png" class="align-center" src="../../_images/FreeCad_EX4_48.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="orangecircle">●</span> <a class="hoverxref tooltip reference internal" href="../../keyword_Index/modeling.html#hoverxref-extrudecut"><span class="std std-ref">돌출 컷</span></a> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="yellowcircle">●</span> Length 항목은 10mm 를 입력합니다.</div>
+<div class="line"><span class="bluecircle">●</span> symmetric to plane 항목을 체크해줍니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><span class="subtitle">Step.50</span></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/FreeCad_EX4_49.png"><img alt="../../_images/FreeCad_EX4_49.png" class="align-center" src="../../_images/FreeCad_EX4_49.png" style="width: 800px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="yellowcircle">●</span> 두 개의 모서리 부분을 선택해줍니다. 2개 이상 선택시 ctrl 키를 누른 상태에서 클릭합니다.</div>
+<div class="line"><span class="orangecircle">●</span> <cite>:hoverxref:모따기 &lt;hoverxref:chamfer&gt;</cite> 버튼을 눌러줍니다.</div>
+<div class="line"><span class="bluecircle">●</span> 크기를 1mm 로 입력합니다.</div>
+<div class="line"><span class="skybluecircle">●</span> 확인 버튼을 눌러줍니다.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">모서리 부분도 전부 모따기를 해주었습니다.</div>
+<div class="line">네 번쨰 부품인 메인 케이스 하단 모델링도 완성이 되었습니다.</div>
+<div class="line">어려웠다면 어렵고, 쉽다면 쉬울 수 있었는 모델링이었습니다.</div>
+<div class="line">이 모형들을 실제로 3D 프린터로 출력하면, 부품으로 사용이 될 수 있습니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="step_10.html" class="btn btn-neutral float-left" title="메인 케이스 상단 디자인" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../uploadFw.html" class="btn btn-neutral float-right" title="업로드하기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

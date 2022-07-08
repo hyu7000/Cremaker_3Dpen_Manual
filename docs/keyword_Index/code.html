@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>코딩 관련 &mdash; 크리메이커 3D PEN 1.0 문서</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sphinx_rtd_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/js/hoverxref.js"></script>
+        <script src="../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../_static/js/micromodal.min.js"></script>
+        <script>let toggleHintShow = '클릭하여 보기';</script>
+        <script>let toggleHintHide = '클릭하여 숨기기';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="모델링 관련" href="modeling.html" />
+    <link rel="prev" title="색인" href="../keyword_index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 크리메이커 3D PEN
+            <img src="../_static/cremaker_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">크리메이커 3D PEN 소개</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level1.html">레벨 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level2.html">레벨 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level3.html">레벨 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uploadFw.html">업로드하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual.html">사용 매뉴얼</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../keyword_index.html">색인</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">코딩 관련</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#boolean">boolean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#char">char</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#byte">byte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#int">int</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unsigned-int">unsigned int</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#long">long</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unsigned-long">unsigned long</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#float">float</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#double">double</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#string">string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-namingvariable">변수 이름 규칙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-operator-priority">연산자 우선순위</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-function">함수 정의</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-parameters">매개변수</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-local-global-variable">지역변수, 전역변수</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pinmode">pinMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#digitalwrite">digitalWrite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#digitalread">digitalRead</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delay">delay</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analogwrite">analogWrite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analogread">analogRead</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-button-pinnumber">버튼</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-uploadbtn">업로드 버튼</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoverxref-declaration">선언</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modeling.html">모델링 관련</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">크리메이커 3D PEN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../keyword_index.html">색인</a> &raquo;</li>
+      <li>코딩 관련</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>코딩 관련<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<style>
+.orangecircle {color:#ff5300; font-size:20px}
+.blackcircle {color:black; font-size:20px}
+.bluecircle {color:#3172f4; font-size:20px}
+.skybluecircle {color:#00FFFF; font-size:20px}
+.yellowcircle {color:#fbbc05; font-size:20px}
+.subtitle {color:black; font-weight:bold; font-size:28px}
+.subtitlesmall {color:black; font-weight:bold; font-size:24px}
+.blackbold {color:black; font-weight:bold;}
+.redbold {color:red; font-weight:bold;}
+</style><section id="boolean">
+<span id="hoverxref-boolean"></span><h2>boolean<a class="headerlink" href="#boolean" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">boolean의 이름은 영국의 수학자 조지 불(George boole)이 창안해서 붙여진 이름으로 논리값을 나타냅니다. 논리값이라는 것은 <span class="blackbold">참, 거짓</span> 을 뜻합니다. 영어로는 true, false입니다.</div>
+<div class="line">아두이노에서는 boolean과 bool 을 함께 사용할 수 있습니다. <span class="blackbold">아두이노에서는 숫자로도 true와 false를 구별하기도 합니다.</span> 0 은 false이며, 다른 나머지 숫자들은 true로 인식합니다.</div>
+</div>
+</section>
+<section id="char">
+<span id="hoverxref-char"></span><h2>char<a class="headerlink" href="#char" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">char는 글자, 문자를 뜻하는 character에서 앞부분만 사용된 것으로, <span class="blackbold">문자를 저장</span> 합니다.</div>
+<div class="line">문자를 저장하는데 범위는 왜 숫자냐? 고 물으실 수 있습니다.</div>
+<div class="line">간단하게 설명드리면, 프로그래밍에서 문자를 ASCII 코드를 숫자로 표시 되곤합니다. ASCII 코드에는 ‘A’라는 글자가 65라는 값을 가지고 있습니다.</div>
+</div>
+</section>
+<section id="byte">
+<span id="hoverxref-byte"></span><h2>byte<a class="headerlink" href="#byte" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">byte는 말 그대로 1바이트를 사용하는 정수 자료형이며 char와 다른 점은 - 값이 범위에 없다는 것입니다.</div>
+</div>
+</section>
+<section id="int">
+<span id="hoverxref-int"></span><h2>int<a class="headerlink" href="#int" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">int는 정수라는 뜻을 가진 integer라는 단어에서 만들어 졌습니다. 정수값을 저장하며 범위는 -32,768 ~ 32,767 입니다.</div>
+</div>
+</section>
+<section id="unsigned-int">
+<span id="hoverxref-unsigned-int"></span><h2>unsigned int<a class="headerlink" href="#unsigned-int" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">unsigned int 는 int 와 마찬가지로 정수를 다루지만, 범위만 다릅니다 unsigned 의 뜻 그대로 음수를 포함하지 않는 범위를 가집니다. 범위는 0 ~ 65,535 입니다. unsigned int는 65,535에서 1을 더하는 계산을 하면 0 이됩니다.</div>
+</div>
+</section>
+<section id="long">
+<span id="hoverxref-long"></span><h2>long<a class="headerlink" href="#long" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">long은 int와 마찬가지로 정수값을 저장하지만, int보다 범위가 훨씬 큰 자료형입니다. <span class="blackbold">큰 수를 다루는 경우에 사용</span> 되며, 범위는 -2,147,483,648 ~ 2,147,483,647 입니다.</div>
+</div>
+</section>
+<section id="unsigned-long">
+<span id="hoverxref-unsigned-long"></span><h2>unsigned long<a class="headerlink" href="#unsigned-long" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">unsigned long 는 long 와 마찬가지로 정수를 다루지만, 범위만 다릅니다 unsigned 의 뜻 그대로 음수를 포함하지 않는 범위를 가집니다. 범위는 0 ~ 4,294,967,295 입니다. unsigned long는 4,294,967,295에서 1을 더하는 계산을 하면 0 이됩니다.</div>
+</div>
+</section>
+<section id="float">
+<span id="hoverxref-float"></span><h2>float<a class="headerlink" href="#float" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">float은 <span class="blackbold">소수점을 포함하는 실수</span> 를 다룹니다. 단어의 유래는 실수를 표현하는 방법이 여러가지가 있는데, 부동소수점(floating point) 방식을 사용한다고 하여 붙여졌습니다. ※부동소수점이 뭔지는 모르셔도 됩니다.</div>
+<div class="line">범위는 약 1.2x10^-38 ~ 3.4x10^38 입니다.</div>
+</div>
+</section>
+<section id="double">
+<span id="hoverxref-double"></span><h2>double<a class="headerlink" href="#double" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">double는 float과 같이 실수를 다루지만, 범위만 다릅니다. 범위는 약 2.3x10^-308 ~ 1.7x10^308 입니다.</div>
+</div>
+</section>
+<section id="string">
+<span id="hoverxref-string"></span><h2>string<a class="headerlink" href="#string" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">string은 문자열을 뜻합니다. char 자료형은 문자 하나만을 취급하는 반면, string은 여러개로 이어진 문자열을 취급합니다.</div>
+</div>
+</section>
+<section id="hoverxref-namingvariable">
+<span id="id2"></span><h2>변수 이름 규칙<a class="headerlink" href="#hoverxref-namingvariable" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line"><span class="blackbold">1.</span> 영어, _(밑줄), 숫자만 가능.</div>
+<div class="line"><span class="blackbold">2.</span> 첫 글자는 영어, _(밑줄)만 가능.</div>
+<div class="line"><span class="blackbold">3.</span> 공백(띄어쓰기)는 불가능.</div>
+<div class="line"><span class="blackbold">4.</span> 대, 소문자를 구별. tE 변수명과 te 변수명은 다른 것.</div>
+<div class="line"><span class="blackbold">5.</span> 프로그램 용어로 사용되는 단어는 불가능.</div>
+</div>
+</section>
+<section id="hoverxref-operator-priority">
+<span id="id3"></span><h2>연산자 우선순위<a class="headerlink" href="#hoverxref-operator-priority" title="이 표제에 대한 퍼머링크"></a></h2>
+<table class="colwidths-given docutils align-center" id="id10">
+<caption><span class="caption-text"><span class="subtitlesmall">연산자 우선순위</span></span><a class="headerlink" href="#id10" title="이 표에 대한 퍼머링크"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>우선순위</p></th>
+<th class="head"><p>연산자</p></th>
+<th class="head"><p>방향</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>() [] -&gt; . ++ –</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>sizeof ++ – &amp; ~ ! * + -</p></td>
+<td><p>&lt;-</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><cite>* / %</cite></p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><cite>+ -</cite></p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>&gt;&gt; &lt;&lt;</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>&gt; &gt;= &lt; &lt;=</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>== !=</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>&amp;</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>^</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p><cite>|</cite></p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>&amp;&amp;</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>||</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>?</p></td>
+<td><p>&lt;-</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p><cite>= += *= /= %= &amp;= |= &lt;&lt;= &gt;&gt;=</cite></p></td>
+<td><p>&lt;-</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>,</p></td>
+<td><p>-&gt;</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="hoverxref-function">
+<span id="id4"></span><h2>함수 정의<a class="headerlink" href="#hoverxref-function" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Step7_2.jpg"><img alt="../_images/Step7_2.jpg" class="align-center" src="../_images/Step7_2.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">오른쪽을 보시면, 더하기라는 함수 이름이 있습니다. 뭔지 모르지만 a와 b를 더하고, 그 계산된 값을 반환하는 것 같습니다. 함수 이름처럼 a와 b를 더한 값을 반환하는 함수입니다.</div>
+<div class="line">이처럼 함수가 어떤 동작을 하는지 코드로 작성하는 것을 함수를 정의한다고 표현합니다.</div>
+<div class="line"><br /></div>
+<div class="line">※실제 코드에서는 <span class="blackbold">한글 사용이 불가능</span> 합니다. 한글로 표시한 것은 이해를 돕기 위함입니다.</div>
+</div>
+</section>
+<section id="hoverxref-parameters">
+<span id="id5"></span><h2>매개변수<a class="headerlink" href="#hoverxref-parameters" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line">다시 돌아와서, 함수에는 매개변수가 있습니다. 이는 함수이름 옆 괄호에 있는 변수들입니다. 외부에서 전달되는 값들이 대입되어, 함수 내부에서 사용됩니다.</div>
+<div class="line">매개변수는 여러 개가 될 수 있으며, 없을 수 도 있습니다. 필수 요소가 아니기 때문에, 매개변수가 없는 함수도 정상적인 함수입니다.</div>
+</div>
+</section>
+<section id="hoverxref-local-global-variable">
+<span id="id6"></span><h2>지역변수, 전역변수<a class="headerlink" href="#hoverxref-local-global-variable" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line"><span class="blackbold">지역변수는 함수내에서만 사용가능</span> 하며, <span class="blackbold">전역변수는 코드 전체에서 사용</span> 할 수 있습니다.</div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//float은 정수와 소수를 포함하는 실수형입니다.</span>
+</span><span class="hll"><span class="linenos"> 2</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+</span><span class="hll"><span class="linenos"> 3</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+</span><span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">area</span><span class="p">()</span><span class="w"></span>
+<span class="linenos"> 6</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="hll"><span class="linenos"> 7</span><span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w"></span>
+</span><span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="mf">3.14</span><span class="p">;</span><span class="w"> </span><span class="c1">//c는 전역변수임으로 함수내에서 사용 가능</span>
+<span class="linenos">10</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area</span><span class="p">();</span><span class="w"></span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span><span class="w"> </span><span class="c1">//pi는 지역변수로 함수 밖에서는 에러를 발생</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">a,b는 함수 밖 코드에서 작성되었기 때문에 전역변수입니다.</div>
+<div class="line">pi는 함수 안에서 작성되었기 때문에 지역변수입니다.</div>
+<div class="line">반면 c는 전역변수임으로 area 함수내에서도 사용되는 것을 볼 수 있습니다.</div>
+</div>
+</section>
+<section id="pinmode">
+<span id="hoverxref-pinmode"></span><h2>pinMode<a class="headerlink" href="#pinmode" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Step1_5.jpg"><img alt="../_images/Step1_5.jpg" class="align-center" src="../_images/Step1_5.jpg" style="width: 800px;" /></a>
+</section>
+<section id="digitalwrite">
+<span id="hoverxref-digitalwrite"></span><h2>digitalWrite<a class="headerlink" href="#digitalwrite" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Step1_7.jpg"><img alt="../_images/Step1_7.jpg" class="align-center" src="../_images/Step1_7.jpg" style="width: 800px;" /></a>
+</section>
+<section id="digitalread">
+<span id="hoverxref-digitalread"></span><h2>digitalRead<a class="headerlink" href="#digitalread" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Step1_3.jpg"><img alt="../_images/Step1_3.jpg" class="align-center" src="../_images/Step1_3.jpg" style="width: 700px;" /></a>
+</section>
+<section id="delay">
+<span id="hoverxref-delay"></span><h2>delay<a class="headerlink" href="#delay" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Step1_9.jpg"><img alt="../_images/Step1_9.jpg" class="align-center" src="../_images/Step1_9.jpg" style="width: 800px;" /></a>
+</section>
+<section id="analogwrite">
+<span id="hoverxref-analogwrite"></span><h2>analogWrite<a class="headerlink" href="#analogwrite" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Step1_31.jpg"><img alt="../_images/Step1_31.jpg" class="align-center" src="../_images/Step1_31.jpg" style="width: 600px;" /></a>
+</section>
+<section id="analogread">
+<span id="hoverxref-analogread"></span><h2>analogRead<a class="headerlink" href="#analogread" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Step2_2.jpg"><img alt="../_images/Step2_2.jpg" class="align-center" src="../_images/Step2_2.jpg" style="width: 600px;" /></a>
+</section>
+<section id="hoverxref-button-pinnumber">
+<span id="id7"></span><h2>버튼<a class="headerlink" href="#hoverxref-button-pinnumber" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Step1_1.jpg"><img alt="../_images/Step1_1.jpg" class="align-center" src="../_images/Step1_1.jpg" style="width: 600px;" /></a>
+</section>
+<section id="hoverxref-uploadbtn">
+<span id="id8"></span><h2>업로드 버튼<a class="headerlink" href="#hoverxref-uploadbtn" title="이 표제에 대한 퍼머링크"></a></h2>
+<a class="reference internal image-reference" href="../_images/Step1_12.png"><img alt="../_images/Step1_12.png" class="align-center" src="../_images/Step1_12.png" style="width: 600px;" /></a>
+</section>
+<section id="hoverxref-declaration">
+<span id="id9"></span><h2>선언<a class="headerlink" href="#hoverxref-declaration" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="line-block">
+<div class="line"><span class="subtitlesmall">변수의 선언</span></div>
+<div class="line">변수를 선언한다는 것은 변수를 만든다라는 뜻입니다.</div>
+<div class="line">선언하는 방법은 다음 그림과 같습니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step2_1.jpg"><img alt="../_images/Step2_1.jpg" class="align-center" src="../_images/Step2_1.jpg" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="subtitlesmall">배열의 선언</span></div>
+<div class="line">배열의 선언을 하는 방법은 변수를 선언하는 것과 유사합니다.</div>
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step6_1.jpg"><img alt="../_images/Step6_1.jpg" class="align-center" src="../_images/Step6_1.jpg" style="width: 600px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><span class="subtitlesmall">구조체의 선언</span></div>
+</div>
+<a class="reference internal image-reference" href="../_images/Step7_21.jpg"><img alt="../_images/Step7_21.jpg" class="align-center" src="../_images/Step7_21.jpg" style="width: 500px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">구조체는 위와 같이 선언됩니다.</div>
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../keyword_index.html" class="btn btn-neutral float-left" title="색인" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modeling.html" class="btn btn-neutral float-right" title="모델링 관련" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, cremaker.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

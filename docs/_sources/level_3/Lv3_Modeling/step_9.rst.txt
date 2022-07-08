@@ -83,7 +83,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 돌출 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`돌출 <hoverxref:extrude>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` Length를 33mm 를 입력해줍니다.
 | :bluecircle:`●` 확인 버튼을 눌러줍니다.
 |
@@ -95,7 +95,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 스케치 생성 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`스케치 생성 <hoverxref:generateSketch>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 사진과 같이 생성된 옆면을 선택해줍니다.
 |
 
@@ -119,7 +119,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 돌출 컷 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`돌출 컷 <hoverxref:extrudeCut>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` Length를 27.38mm 를 입력해줍니다.
 | :bluecircle:`●` 확인 버튼을 눌러줍니다.
 | 
@@ -166,7 +166,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 돌출 컷 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`돌출 컷 <hoverxref:extrudeCut>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` Length를 20mm로 설정합니다.
 | :skybluecircle:`●` 도형에 돌출 컷이 반영이 안된다면, 방향이 다른 것일 수 있기 때문에 Reversed 항목을 체크해줍니다.
 | :bluecircle:`●` 확인 버튼을 눌러줍니다.
@@ -192,7 +192,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 돌출 컷 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`돌출 컷 <hoverxref:extrudeCut>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` Length를 20mm로 설정합니다.
 | :skybluecircle:`●` 도형에 돌출 컷이 반영이 안된다면, 방향이 다른 것일 수 있기 때문에 Reversed 항목을 체크해줍니다.
 | :bluecircle:`●` 확인 버튼을 눌러줍니다.
@@ -205,7 +205,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 선형 패턴 버튼을 눌러줍니다.
+| :orangecircle:`●` `:hoverxref:선형 패턴 <hoverxref:linearPattern>` 버튼을 눌러줍니다.
 | :blackcircle:`●` 선형 패턴은 이미 만들어진 작업을 복사해주는 기능입니다.
 | 
 
@@ -253,7 +253,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 돌출 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`돌출 <hoverxref:extrude>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` Type 을 '2개의 치수 이용' 으로 변경해줍니다.
 | :bluecircle:`●` Length는 13.5mm, 2nd Length는 -10mm 를 입력해줍니다.
 | :redcircle:`●` 돌출 적용이 안보인다면, Reverse 항목을 체크해봅니다.
@@ -268,7 +268,7 @@
 
 |
 | :yellowcircle:`●` 모따기를 할 모서리 2개를 클릭해줍니다. ctrl 키를 누르고 클릭해야 2개 모두 클릭됩니다.
-| :orangecircle:`●` 모따기 버튼을 눌러줍니다.
+| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 |
 
 | :subtitle:`Step.20`
@@ -289,7 +289,7 @@
 
 |
 | :bluecircle:`●` 모따기를 할 모서리 2개를 클릭해줍니다. ctrl 키를 누르고 클릭해야 2개 모두 클릭됩니다.
-| :orangecircle:`●` 모따기 버튼을 눌러줍니다.
+| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 |
 
 | :subtitle:`Step.22`
@@ -330,7 +330,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 돌출 컷 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`돌출 컷 <hoverxref:extrudeCut>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` Length는 3mm를 입력합니다.
 | :bluecircle:`●` 좌우로 돌출 컷을 해야 하기 때문에 symmetric to plane 을 체크합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
@@ -343,7 +343,7 @@
    :align: center
 
 |
-| :orangecircle:`●` 선형 패턴 버튼을 눌러줍니다.
+| :orangecircle:`●` `:hoverxref:선형 패턴 <hoverxref:linearPattern>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 최근 작업한 돌출 컷을 선택합니다. (그림상 Pocket003)
 | :bluecircle:`●` 확인 버튼을 눌러줍니다.
 |

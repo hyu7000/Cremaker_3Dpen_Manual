@@ -14,6 +14,7 @@
    Lv3_Modeling/step_8
    Lv3_Modeling/step_9
    Lv3_Modeling/step_10
+   Lv3_Modeling/step_11
 
 | 3D 모델링의 기초와 맛보기를 통해 실제 크리메이커 3D 펜에 사용된 부품들을 모델링 해봅니다.
 
