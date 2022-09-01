@@ -188,7 +188,7 @@
    :align: center
 
 |
-| 둥그렇게 해줄 모서리를 선택합니다. 이후 `:hoverxref:필렛 <hoverxref:fillet>` 버튼을 누르면, 1mm 만큼 둥글어집니다.
+| 둥그렇게 해줄 모서리를 선택합니다. 이후 :hoverxref:`필렛 <hoverxref:fillet>` 버튼을 누르면, 1mm 만큼 둥글어집니다.
 | 왼편의 창에서 치수를 변경하여, 원하는 크기만큼 변경시켜 줍니다.
 |
 

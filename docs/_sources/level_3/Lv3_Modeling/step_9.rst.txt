@@ -95,7 +95,7 @@
    :align: center
 
 |
-| :orangecircle:`●` :hoverxref:`스케치 생성 <hoverxref:generateSketch>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`평면 생성 <hoverxref:generatePlane>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 사진과 같이 생성된 옆면을 선택해줍니다.
 |
 
@@ -205,7 +205,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:선형 패턴 <hoverxref:linearPattern>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`선형 패턴 <hoverxref:linearPattern>` 버튼을 눌러줍니다.
 | :blackcircle:`●` 선형 패턴은 이미 만들어진 작업을 복사해주는 기능입니다.
 | 
 
@@ -268,7 +268,7 @@
 
 |
 | :yellowcircle:`●` 모따기를 할 모서리 2개를 클릭해줍니다. ctrl 키를 누르고 클릭해야 2개 모두 클릭됩니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 |
 
 | :subtitle:`Step.20`
@@ -289,7 +289,7 @@
 
 |
 | :bluecircle:`●` 모따기를 할 모서리 2개를 클릭해줍니다. ctrl 키를 누르고 클릭해야 2개 모두 클릭됩니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 |
 
 | :subtitle:`Step.22`
@@ -343,7 +343,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:선형 패턴 <hoverxref:linearPattern>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`선형 패턴 <hoverxref:linearPattern>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 최근 작업한 돌출 컷을 선택합니다. (그림상 Pocket003)
 | :bluecircle:`●` 확인 버튼을 눌러줍니다.
 |

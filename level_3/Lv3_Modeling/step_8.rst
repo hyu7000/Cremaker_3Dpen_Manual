@@ -70,7 +70,7 @@
    :align: center
 
 |
-| :orangecircle:`●` : :hoverxref:`스케치 생성 <hoverxref:generateSketch>` 버튼을 누르고, XZ 평면을 선택해줍니다.
+| :orangecircle:`●` :hoverxref:`스케치 생성 <hoverxref:generateSketch>` 버튼을 누르고, XZ 평면을 선택해줍니다.
 |
 
 | :subtitle:`Step.4`
@@ -150,7 +150,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:사각형  <hoverxref:createRectangle>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`사각형  <hoverxref:createRectangle>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 그림과 같이 사각형을 그려줍니다.
 |
 
@@ -161,7 +161,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
 | :blackcircle:`●` 사각형의 상단 직선을 클릭하고, 11.4mm 를 입력해줍니다.
 |
 
@@ -172,7 +172,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:수직 거리 설정 <hoverxref:v_Distance>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`수직 거리 설정 <hoverxref:v_Distance>` 버튼을 눌러줍니다.
 | :blackcircle:`●` 사각형의 옆 직선을 클릭하고, 9.15mm 를 입력해줍니다.
 |
 
@@ -183,7 +183,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 중심점을 먼저 선택해줍니다.
 | :yellowcircle:`●` 사각형의 꼭지점을 이어서 선택해주고, 길이를 5.7mm 를 입력해줍니다.
 | :blackcircle:`●` 입력이 완료되면 사각형이 좌우로 중심에 맞춰집니다.
@@ -196,7 +196,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 중심점을 먼저 선택해줍니다.
 | :yellowcircle:`●` 사각형의 아래부분 꼭지점을 이어서 선택해주고, 길이를 6.85mm 를 입력해줍니다.
 | :blackcircle:`●` 닫기 버튼을 눌러 스케치를 빠져나옵니다.
@@ -209,7 +209,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:원 <hoverxref:createCircle>` 버튼을 선택해줍니다.
+| :orangecircle:`●` :hoverxref:`원 <hoverxref:createCircle>` 버튼을 선택해줍니다.
 | :bluecircle:`●` 중심을 기준으로 지름 4.6mm 원을 그려줍니다.
 |
 
@@ -244,7 +244,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:원 <hoverxref:createCircle>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`원 <hoverxref:createCircle>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 중심에 지름 4.6mm 인 원을 그려줍니다.
 |
 
@@ -255,7 +255,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:사각형  <hoverxref:createRectangle>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`사각형  <hoverxref:createRectangle>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 그려진 도형의 상단쯤에 그려줍니다.
 |
 
@@ -266,7 +266,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:수직 거리 설정 <hoverxref:v_Distance>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`수직 거리 설정 <hoverxref:v_Distance>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 중심점을 선택해주고,
 | :yellowcircle:`●` 사각형 아래꼭지점을 선택해줍니다.
 | :blackcircle:`●` 거리는 2.3mm 를 입력합니다.
@@ -304,7 +304,7 @@
 |
 | :orangecircle:`●` 방금 그린 직선을 클릭합니다.
 | :bluecircle:`●` 중심에 있는 축(초록색)을 클릭합니다.
-| :yellowcircle:`●` 이후 `:hoverxref:대칭 <hoverxref:symmetric>` 버튼을 클릭해주면, 초록색 축의 반대편에 대칭으로 직선이 그려집니다.
+| :yellowcircle:`●` 이후 :hoverxref:`대칭 <hoverxref:symmetric>` 버튼을 클릭해주면, 초록색 축의 반대편에 대칭으로 직선이 그려집니다.
 | 
 
 | :subtitle:`Step.23`
@@ -316,7 +316,7 @@
 |
 | :orangecircle:`●` 방금 그린 직선을 클릭합니다.
 | :bluecircle:`●` 중심에 있는 축(초록색)을 클릭합니다.
-| :yellowcircle:`●` 이후 `:hoverxref:대칭 <hoverxref:symmetric>` 버튼을 클릭해주면, 초록색 축의 반대편에 대칭으로 직선이 그려집니다.
+| :yellowcircle:`●` 이후 :hoverxref:`대칭 <hoverxref:symmetric>` 버튼을 클릭해주면, 초록색 축의 반대편에 대칭으로 직선이 그려집니다.
 | 
 
 | :subtitle:`Step.24`
@@ -338,7 +338,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:제약조건 : 점을 선에 일치 <hoverxref:arrayPointLine>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`제약조건 : 점을 선에 일치 <hoverxref:arrayPointLine>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 사각형 아래 선을 선택해줍니다.
 | :yellowcircle:`●` 이어서 왼편 직선의 윗 점을 클릭해주면, 사각형 아래 선과 점이 만나게 됩니다.
 | :blackcircle:`●` 곂쳐있지만 실제로 고정되어 있지 않을 수 있기 때문에 구속을 넣어주어야 합니다.
@@ -351,7 +351,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 사각형과 직선이 만나는 왼편의 점을 선택하고
 | :yellowcircle:`●` 오른편의 점을 선택합니다. 거리는 3.5mm 를 입력합니다.
 |
@@ -367,7 +367,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:잘라내기 <hoverxref:trim>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`잘라내기 <hoverxref:trim>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 파란원으로 표시된 부분들을 클릭하여 제거합니다.
 | :blackcircle:`●` 아래 사진 처럼 만들어 줍니다.
 | :blackcircle:`●` 완료되면, 닫기 버튼을 눌러 스케치를 빠져나옵니다.
@@ -436,7 +436,7 @@
    :align: center
    
 |
-| :orangecircle:`●` `:hoverxref:외부 Geometry <hoverxref:externalGeometry>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`외부 Geometry <hoverxref:externalGeometry>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 그림에서 나타나는 사각형의 상단부분을 클릭해줍니다.
 | :blackcircle:`●` 외부 Geometry는 만들어진 모형에 나타나는 선을 스케치로 가져오는 기능입니다.
 | :blackcircle:`●` 완료되면 상단부분에 선이 나타난 것을 확인할 수 있습니다.
@@ -450,7 +450,7 @@
    :align: center
    
 |
-| :orangecircle:`●` `:hoverxref:원 <hoverxref:createCircle>` 버튼을 선택해줍니다.
+| :orangecircle:`●` :hoverxref:`원 <hoverxref:createCircle>` 버튼을 선택해줍니다.
 | :bluecircle:`●` 사각형 가운데 쯤 원을 그려줍니다.
 |
 
@@ -495,7 +495,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:외부 Geometry <hoverxref:externalGeometry>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`외부 Geometry <hoverxref:externalGeometry>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 원 부분을 클릭해줍니다.
 | :blackcircle:`●` 선택이 완료되면, 원 모양의 보조선이 생성됩니다.
 |
@@ -507,7 +507,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:다각형  <hoverxref:createPloygon>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`다각형  <hoverxref:createPloygon>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 원의 중심을 클릭해줍니다.
 | :yellowcircle:`●` 두번째 클릭은 아래로 살짝 이동 후 초록색 선에 클릭해줍니다.
 | :blackcircle:`●` 완료되면 다각형이 그려집니다.
@@ -520,7 +520,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`수평 거리 설정 <hoverxref:h_Distance>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 육각형 왼편 아래 부분의 꼭지점을 클릭해줍니다.
 | :yellowcircle:`●` 육각형 오른편 아래 부분의 꼭지점을 클릭해줍니다.
 | :blackcircle:`●` 치수는 5mm 를 입력해줍니다.
@@ -560,7 +560,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:잘라내기 <hoverxref:trim>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`잘라내기 <hoverxref:trim>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 직선 위로 남는 부분을 제거해줍니다.
 | :yellowcircle:`●` 육각형의 윗 부분 2개의 선도 제거해줍니다.
 | :blackcircle:`●` 닫기 버튼을 눌러 스케치를 빠져나옵니다.
@@ -612,7 +612,7 @@
 
 |
 | :bluecircle:`●` 3개의 모서리를 모따기를 하기 위해 선택해줍니다. 여러개 선택시 Ctrl 키를 눌러주세요.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 버튼을 누르면 에러가 나타납니다. 이 에러는 길이가 적절하지 않다는 표시입니다.
 | :yellowcircle:`●` 왼쪽 창에서 크기를 0.5mm로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
@@ -627,7 +627,7 @@
 
 |
 | :bluecircle:`●` 화면을 이동시켜, 2개의 모서리를 모따기를 하기 위해 선택해줍니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 왼쪽 창에서 크기가 1mm 인것을 확인합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 |

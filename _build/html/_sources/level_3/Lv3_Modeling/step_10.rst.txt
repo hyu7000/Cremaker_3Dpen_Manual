@@ -168,7 +168,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:잘라내기 <hoverxref:trim>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`잘라내기 <hoverxref:trim>` 버튼을 눌러줍니다.
 | :blackcircle:`●` 필요없는 부분을 그림과 같이 제거해줍니다.
 | :blackcircle:`●` 닫기 버튼을 눌러 스케치를 빠져나옵니다.
 |
@@ -466,7 +466,7 @@
    :align: center
 
 |
-| :orangecircle:`●` `:hoverxref:선형 패턴 <hoverxref:linearPattern>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`선형 패턴 <hoverxref:linearPattern>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 왼쪽창에서 피처(Feature) 선택에서 최근에 작성한 2개의 작업을 선택해줍니다.
 | :blackcircle:`●` 연속 선택은 ctrl 키를 누른 상태에서 클릭합니다.
 | :bluecircle:`●` 확인 버튼을 눌러줍니다.
@@ -493,7 +493,7 @@
 |
 | :bluecircle:`●` step.32에서 생성된 윗면 모서리 2개를 클릭해줍니다.
 | :blackcircle:`●` 두 개 선택시 ctrl 키를 누른 상태에서 클릭합니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 크기를 1.2mm 로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 |
@@ -507,7 +507,7 @@
 |
 | :bluecircle:`●` step.32에서 생성된 아랫면 모서리 2개를 클릭해줍니다.
 | :blackcircle:`●` 두 개 선택시 ctrl 키를 누른 상태에서 클릭합니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 크기를 1mm 로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 |
@@ -523,7 +523,7 @@
 
 |
 | :bluecircle:`●` 모형의 앞 부분의 아랫 모서리를 클릭합니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 크기를 0.5mm 로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 |
@@ -537,7 +537,7 @@
 |
 | :bluecircle:`●` 모형의 뒷 부분의 윗 모서리 2개를 클릭합니다.
 | :blackcircle:`●` 두 개 선택시 ctrl 키를 누른 상태에서 클릭합니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 크기를 1.5mm 로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 |
@@ -547,7 +547,7 @@
 | 사진 추가
 
 | L293D의 공간을 마련하기 위해 만들어 준 부분의 모서리입니다.
-| `:hoverxref:그루브 <hoverxref:groove>` 라는 기능을 이용해서 모따기 처럼 효과를 주도록 하겠습니다.
+| :hoverxref:`그루브 <hoverxref:groove>` 라는 기능을 이용해서 모따기 처럼 효과를 주도록 하겠습니다.
 
 |
 | :subtitle:`Step.39`
@@ -559,7 +559,7 @@
 |
 | :blackcircle:`●` 이번에는 YZ 평면에 스케치를 생성해줍니다.
 | :blackcircle:`●` 스케치 그리기 전 View section 기능을 사용해줍니다.
-| :orangecircle:`●` `:hoverxref:외부 Geometry <hoverxref:externalGeometry>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`외부 Geometry <hoverxref:externalGeometry>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 그림과 같이 세로로 길게 된 부분을 클릭해줍니다.
 |
 
@@ -594,7 +594,7 @@
    :align: center
 
 |
-| :blackcircle:`●` `:hoverxref:그루브 <hoverxref:groove>` 는 회전과 유사하지만, 부피를 생성하는것이 아닌 제거합니다.
+| :blackcircle:`●` :hoverxref:`그루브 <hoverxref:groove>` 는 회전과 유사하지만, 부피를 생성하는것이 아닌 제거합니다.
 | :orangecircle:`●` 그루브 버튼을 눌러줍니다.
 | :yellowcircle:`●` 축 항목을 '절대좌표계 Y축' 으로 변경해줍니다.
 | :blackcircle:`●` 스케치 모양을 y축으로 회전시키면서 만나는 부분을 제거해줍니다.

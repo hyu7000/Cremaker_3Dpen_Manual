@@ -7,7 +7,10 @@
 ===============================================
 
 | 크리메이커 3D PEN의 교재입니다.
-| 크리메이커의 공식 카페는 http://www.cremaker.com 입니다.
+| 크리메이커의 공식 사이트는 http://www.cremaker.com 입니다.
+
+| 둘러보시고 설문지 참여 부탁드립니다.
+| https://forms.gle/7TgRS3DjkJPvsWik7
 
 .. toctree::
    :maxdepth: 2

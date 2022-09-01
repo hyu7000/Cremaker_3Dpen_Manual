@@ -129,7 +129,7 @@
    :align: center
 
 |
-| :orangecircle:`●`:hoverxref:`돌출 <hoverxref:extrude>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`돌출 <hoverxref:extrude>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` Length 항목은 78mm 를 입력합니다.
 | :bluecircle:`●` 방향이 다르다면 Reverse 항목을 체크해줍니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
@@ -471,7 +471,7 @@
    :align: center
 
 | 
-| :orangecircle:`●` 평면 생성 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`평면 생성 <hoverxref:generatePlane>` 버튼을 눌러줍니다.
 | :yellowcircle:`●` 모형의 뒷면을 선택해줍니다.
 | :bluecircle:`●` 확인 버튼을 눌러줍니다.
 |
@@ -604,7 +604,7 @@
 
 |
 | :yellowcircle:`●` 두 개의 모서리 부분을 선택해줍니다. 2개 이상 선택시 ctrl 키를 누른 상태에서 클릭합니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 크기를 2.2mm 로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 |
@@ -617,7 +617,7 @@
 
 |
 | :yellowcircle:`●` 두 개의 모서리 부분을 선택해줍니다. 2개 이상 선택시 ctrl 키를 누른 상태에서 클릭합니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 크기를 0.5mm 로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 | :blackcircle:`●` 모따기 중 치수 관련 에러가 나타날 수 있습니다. 치수를 변경해줍니다.
@@ -631,7 +631,7 @@
 
 |
 | :yellowcircle:`●` 세 개의 모서리 부분을 선택해줍니다. 2개 이상 선택시 ctrl 키를 누른 상태에서 클릭합니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 크기를 0.5mm 로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 |
@@ -644,7 +644,7 @@
 
 |
 | :yellowcircle:`●` 안쪽의 필라멘트가 투입되는 모서리 부분을 선택해줍니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 크기를 0.5mm 로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 |
@@ -682,7 +682,7 @@
 
 |
 | :yellowcircle:`●` 두 개의 모서리 부분을 선택해줍니다. 2개 이상 선택시 ctrl 키를 누른 상태에서 클릭합니다.
-| :orangecircle:`●` `:hoverxref:모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
+| :orangecircle:`●` :hoverxref:`모따기 <hoverxref:chamfer>` 버튼을 눌러줍니다.
 | :bluecircle:`●` 크기를 1mm 로 입력합니다.
 | :skybluecircle:`●` 확인 버튼을 눌러줍니다.
 | 
