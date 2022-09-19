@@ -28,11 +28,13 @@
 
 | :subtitle:`Step.1`
 
-.. image:: ../images/Lv1/Chapter_3/Step1.jpg
+.. image:: ../images/Lv1/Chapter_3/Step1.png
    :width: 800
    :align: center
 
-| :orangecircle:`●` 노즐 커버(A)를 보드 기판(B)의 앞부분에 삽입시켜줍니다.
+| :orangecircle:`●` L293D 모터드라이버(A)를 보드 기판(B)의 홈 부분에 삽입시켜줍니다.
+| :bluecircle:`●` L293D에는 홈이 반원 모양 홈이 있는데, 이것이 그림과 같이 뒷편을 바라보도록 삽입해줍니다.
+| :blackcircle:`●` L293D는 모터를 조종할 수 있게 해주는 부품입니다.
 |
 
 | :subtitle:`Step.2`
@@ -46,39 +48,43 @@
 
 | :subtitle:`Step.3`
 
-.. image:: ../images/Lv1/Chapter_3/Step3.jpg
+.. image:: ../images/Lv1/Chapter_3/Step3.png
    :width: 800
    :align: center
 
-| :bluecircle:`●` 테프론 튜브(E)를 2번 케이스(F)의 중앙에 삽입시켜줍니다.
+| :orangecircle:`●` M3-6볼트(E)를 사용하여 step2에서 조립한 부품과 하단 케이스(F)를 서로 체결해줍니다.
 |
 
 | :subtitle:`Step.4`
 
-.. image:: ../images/Lv1/Chapter_3/Step4.jpg
+.. image:: ../images/Lv1/Chapter_3/Step4.png
    :width: 800
    :align: center
 
-| :orangecircle:`●` M3-6볼트(G)를 사용하여 step2,3에서 조립한 부품을 서로 체결해줍니다.
+| :orangecircle:`●` 보드 기판 아래에는 테프론 튜브(G)가 연결되어 있습니다.
+| :bluecircle:`●` 튜브를 하단 케이스(F)의 앞 부분에서 삽입시켜줍니다.
 |
 
 | :subtitle:`Step.5`
 
-.. image:: ../images/Lv1/Chapter_3/Step5.jpg
+.. image:: ../images/Lv1/Chapter_3/Step5.png
    :width: 800
    :align: center
 
-| :bluecircle:`●` step1과 step2에서 조립된 부품을 위 아래로 조립시켜줍니다.
+.. image:: ../images/Lv1/Chapter_3/Case_Board_Assemble.gif
+   :width: 600
+   :align: center   
+
+| :bluecircle:`●` Step.4에서 삽입한 채로 보드와 하단 케이스를 조립해 줍니다.
 |
 
 | :subtitle:`Step.6`
 
-.. image:: ../images/Lv1/Chapter_3/Step6.jpg
+.. image:: ../images/Lv1/Chapter_3/Step6.png
    :width: 800
    :align: center
 
-| :bluecircle:`●` 이어서 DC모터(H)를 보드기판 중앙에 삽입시켜줍니다.
-| :bluecircle:`●` 모터 방향에 주의합니다.
+| :orangecircle:`●` 노즐 커버를 앞에서 삽입시켜줍니다.
 |
 
 | :subtitle:`Step.7`
@@ -87,8 +93,9 @@
    :width: 800
    :align: center
 
-| :bluecircle:`●` 1번 케이스(I)를 위에서 아래로 조립시켜줍니다.
-| 
+| :bluecircle:`●` 이어서 DC모터(H)를 보드기판 중앙에 삽입시켜줍니다.
+| :bluecircle:`●` 모터 방향에 주의합니다.
+|
 
 | :subtitle:`Step.8`
 
@@ -96,7 +103,7 @@
    :width: 800
    :align: center
 
-| :bluecircle:`●` 디스플레이(J)를 삽입시켜줍니다.
+| :bluecircle:`●` 1번 케이스(I)를 위에서 아래로 조립시켜줍니다.
 | 
 
 | :subtitle:`Step.9`
@@ -105,13 +112,22 @@
    :width: 800
    :align: center
 
-| :bluecircle:`●` 아두이노(J)를 아래에서 위로 삽입시켜줍니다.
-| :orangecircle:`●` 커넥터 단자가 뒤로 오도록 삽입시켜줍니다.
-|
+| :bluecircle:`●` 디스플레이(J)를 삽입시켜줍니다.
+| 
 
 | :subtitle:`Step.10`
 
 .. image:: ../images/Lv1/Chapter_3/Step10.jpg
+   :width: 800
+   :align: center
+
+| :bluecircle:`●` 아두이노(J)를 아래에서 위로 삽입시켜줍니다.
+| :orangecircle:`●` 커넥터 단자가 뒤로 오도록 삽입시켜줍니다.
+|
+
+| :subtitle:`Step.11`
+
+.. image:: ../images/Lv1/Chapter_3/Step11.jpg
    :width: 800
    :align: center
 
