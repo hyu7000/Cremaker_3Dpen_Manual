@@ -51,10 +51,6 @@
 |
 | :subtitle:`Step.3`
 
-.. image:: images/Lv3/Chapter_7/Step1_0.jpg
-   :width: 600
-   :align: center
-
 .. image:: images/Manual/Btn.png
    :width: 600
    :align: center
@@ -70,8 +66,13 @@
    :width: 800
    :align: center
 
-| 예열이 완료되면, 필라멘트를 삽입해줍니다. 삽입한 상태에서 A버튼을 꾹 눌러줍니다. 누르고 있으면 필라멘트가 당겨짐을 느낄 수 있습니다. 잠시 후 필라멘트가 노즐에서 나옵니다.
+.. image:: images/Lv3/Chapter_7/Step1_0.jpg
+   :width: 600
+   :align: center
+
+| 예열이 완료되면, 필라멘트를 삽입해줍니다. 삽입한 상태에서 필라멘트를 연결하려면, A버튼을 꾹 눌러줍니다. 누르고 있으면 필라멘트가 당겨짐을 느낄 수 있습니다. 잠시 후 필라멘트가 노즐에서 나옵니다.
 | 제거를 하기 위해서는 B버튼을 한번 눌러주면 계속해서 필라멘트를 제거합니다.
+| 삽입시 아래에서 필라멘트가 잘 삽입되는지 확인해줍니다.
 
 |
 | :subtitle:`Step.5`

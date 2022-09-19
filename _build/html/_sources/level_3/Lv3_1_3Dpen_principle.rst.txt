@@ -7,6 +7,7 @@
    :width: 600
    :align: center
 
+| <위 영상은 배속입니다.>
 
 .. image:: ../images/Lv3/Chapter_1/3D_Pen_Structure.jpg
    :width: 800
