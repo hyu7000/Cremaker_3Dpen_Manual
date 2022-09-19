@@ -139,3 +139,6 @@
 .. image:: ../images/Lv1/Chapter_3/pull.jpg
    :width: 800
    :align: center
+
+|
+| 교육과정없이 바로 사용을 원하시면 :ref:`매뉴얼 <targetUseManual>` 을 참고해주세요.

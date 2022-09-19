@@ -1,3 +1,5 @@
+.. _targetUseManual:
+
 사용 매뉴얼
 ===============================================
 
@@ -53,6 +55,10 @@
    :width: 600
    :align: center
 
+.. image:: images/Manual/Btn.png
+   :width: 600
+   :align: center
+
 | C,D 버튼 중 하나를 눌러 예열을 시작해줍니다. 
 | 재료에 맞게 설정해줍니다.
 | 온도가 올라간 상태에서는 뜨거우니 노즐 주변을 주의하세요.!
@@ -60,8 +66,8 @@
 |
 | :subtitle:`Step.4`
 
-.. image:: images/Lv3/Chapter_7/Step1_0.jpg
-   :width: 600
+.. image:: images/Lv1/Chapter_3/insert_filament.jpg
+   :width: 800
    :align: center
 
 | 예열이 완료되면, 필라멘트를 삽입해줍니다. 삽입한 상태에서 A버튼을 꾹 눌러줍니다. 누르고 있으면 필라멘트가 당겨짐을 느낄 수 있습니다. 잠시 후 필라멘트가 노즐에서 나옵니다.
