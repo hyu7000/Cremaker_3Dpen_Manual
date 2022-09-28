@@ -109,6 +109,7 @@
    :align: center
 
 | :bluecircle:`●` 1번 케이스(I)를 홈에 맞추어 조립해 줍니다.
+| :blackcircle:`●` 모터선이 끼여서 조립이 안될 수 있으니 모터선을 정리한 상태로 조립해줍니다.
 | 
 
 | :subtitle:`Step.9`

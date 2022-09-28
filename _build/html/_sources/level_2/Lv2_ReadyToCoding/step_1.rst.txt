@@ -144,4 +144,13 @@
 |
 |
 
+.. image:: ../../images/Lv1/Chapter_4/Step2_2.png
+   :width: 600
+   :align: center
+
+|
+| :blackcircle:`●` USB 케이블을 이용하여, 컴퓨터와 3D 펜의 보드를 연결시켜줍니다.
+|
+|
+
 | 이제 코딩을 할 준비가 완료되었습니다. 다음 단계로 갑니다.
