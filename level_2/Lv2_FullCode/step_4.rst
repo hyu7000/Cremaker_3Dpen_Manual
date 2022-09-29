@@ -30,7 +30,7 @@
 | 지금의 여러분의 코드로 3D 펜을 사용할 수 있지만, 불완전한 부분이 없지 않아 있습니다. 이 부분은 레벨 3에서 다루도록 하고,
 | 3D 펜을 사용할 수 있는 프로그램을 :hoverxref:`업로드 <hoverxref:uploadBtn>` 해보도록 합니다.
 
-:download:`코드 파일 <../../codefile/Cremaker3DPen.zip>`
+:download:`코드 파일 <../../codefile/Cremaker3DPen_V1.zip>`
 
 | 위 코드 파일을 다운로드하고 압축을 푼 뒤, :hoverxref:`업로드 <hoverxref:uploadBtn>` 를 합니다.
 
