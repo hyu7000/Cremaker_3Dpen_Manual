@@ -100,7 +100,7 @@
 
 .. _targetUpload:
 
-:download:`코드 파일 </codefile/Cremaker3DPen.zip>`
+:download:`코드 파일 </codefile/Cremaker3DPen_V1.zip>`
 
 |
 | :blackcircle:`●` 위의 코드 파일을 다운로드 받습니다.
@@ -182,7 +182,7 @@
 | :blackcircle:`●` 보드의 프로세서도 선택합니다.
 | :orangecircle:`●` 메뉴중 툴을 클릭합니다.
 | :bluecircle:`●` 프로세서 항목을 클릭합니다.
-| :yellowcircle:`●` ATmega328P (Old bootloader) 를 선택해줍니다.
+| :yellowcircle:`●` ATmega328P (Old bootloader) 를 선택해 줍니다. 
 |
 |
 

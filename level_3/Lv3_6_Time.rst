@@ -83,7 +83,6 @@ delay와 시간
 | ※ LED는 디지털 12번핀, 13번핀에 연결되어 있다고 가정합니다.
 |
 | 작성하고 :hoverxref:`업로드 <hoverxref:uploadBtn>` 후, 동작을 확인합니다. 그리고 아래 코드랑 비교해봅니다.
-| ※ 업로드가 되지 않고 에러가 뜬다면, 메뉴에서 툴-프로세서를 ATmega328P <-> ATmega328P(Old Bootloader) 변경해 줍니다.
 
 .. toggle::
 

@@ -161,7 +161,7 @@ Step.5 버튼 스위치 활용
 |
 |
 
-.. image:: ../../images/Lv3/Chapter_7/Step1_0.jpg
+.. image:: ../../images/Lv1/Chapter_4/3DPen_Btn.jpg
    :width: 600
    :align: center
 

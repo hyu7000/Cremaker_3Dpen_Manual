@@ -235,7 +235,6 @@ LED 전구 On, Off
 |
 | :orangecircle:`●` 마지막으로 왼편 상단의 :blackbold:`화살표 모양의 업로드 버튼` 을 눌러줍니다.
 | :blackcircle:`●` 업로드 후 아래와 같이 작동하는지 확인합니다.
-| :blackcircle:`●` 업로드가 되지 않고 에러가 뜬다면, 메뉴에서 툴-프로세서를 ATmega328P <-> ATmega328P(Old Bootloader) 변경해 줍니다.
 |
 |
 
