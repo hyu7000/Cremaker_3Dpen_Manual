@@ -82,7 +82,7 @@ Step.2 설정
 | :download:`엔트리 펌웨어 파일 <../../codefile/cremaker_3Dpen_E.hex>`
 | :download:`실사용 펌웨어 파일 <../../codefile/cremaker_3Dpen_R.hex>`
 |
-| 압축을 푼 파일을 EntryHw가 설치된 폴더에서 firmwares 폴더에(ex C:\Entry_HW\resources\firmwares) 복사&덮어씌워 줍니다.
+| 압축을 푼 파일을 EntryHw가 설치된 폴더에서 resources/firmwares 폴더에(ex :blackbold:`C:\\Entry_HW\\resources\\firmwares` ) 복사&덮어씌워 줍니다.
 | 네이버 entry가 한 달마다 업데이트를 하기 때문에 이번 10월말에 있을 업데이트에 적용되는 부분입니다. 현재는 적용되지 않았기 때문이 이 과정을 필수로 진행해주세요.
 | :redbold:`※그렇지 않으면 작동 오류가 발생합니다.`
 |
