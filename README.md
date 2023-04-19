@@ -4,8 +4,14 @@ Cremaker 3D pen is the DIY 3D Pen for education.
 The purpose of this content is to tell you how what you've learned is used.
 The process covered in this content ranges from assembling parts and programming to modeling and usage.
 
+<br />
+
 Also, it has levels of education: levels 1, 2, and 3.
 Each level provides different instructions for the same content.
+
+<br />
+
+Hosted on a link at https://cremaker3dpen.readthedocs.io/en/latest/ .
 
 <br />
 <br />
@@ -14,8 +20,14 @@ Each level provides different instructions for the same content.
 이 콘텐츠의 목적은 배운 내용이 어떻게 활용되는지 알려주는 것입니다.
 콘텐츠 전반에 걸쳐서 부품 조립과 프로그래밍, 모델링 그리고 활용까지 다룹니다.
 
+<br />
+
 또한, 교육에는 레벨이 있고, 1,2,3으로 구분됩니다.
 각 레벨은 같은 내용을 다르게 설명해주고 있습니다.
+
+<br />
+
+https://cremaker3dpen.readthedocs.io/en/latest/ 의 링크에 호스팅 되어 있습니다.
 
 # Lv1
 
